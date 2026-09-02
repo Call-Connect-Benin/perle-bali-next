@@ -35,6 +35,15 @@ const articles = [
     href: "/carnet-de-voyages/le-massage-a-travers-le-temps",
     category: "Histoire",
   },
+  {
+    title: "L'Islande, hostile et merveilleuse",
+    excerpt:
+      "Geysers, plongée dans la faille de Silfra entre deux continents, sources chaudes et Diamond Beach : récit d'un voyage au pays du feu et de la glace.",
+    date: "À venir",
+    readTime: "4 min",
+    href: "/carnet-de-voyages/islande",
+    category: "Voyage",
+  },
 ];
 
 export default function CarnetDeVoyagesPage() {
