@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export default function MassageAmincissantPage() {
   return (
     <>
       <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, rgba(192,114,138,0.5) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>
@@ -33,10 +34,13 @@ export default function MassageAmincissantPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="w-full aspect-video rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #C0728A 0%, #4A6B4A 100%)" }}>
-                <div className="w-full h-full flex items-end p-4">
-                  <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/massages/amincissant-raffermissant/</p>
-                </div>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/massages/amincissant-raffermissant/massage-amincissant-1.jpg"
+                  alt="Massage Amincissant et Raffermissant"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un programme ciblé pour votre silhouette</h2>
@@ -65,7 +69,7 @@ export default function MassageAmincissantPage() {
                   </ul>
                 </div>
                 <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(192,114,138,0.6) 0%, transparent 60%)" }} />
+                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(186, 127, 127,0.6) 0%, transparent 60%)" }} />
                   <div className="relative">
                     <p className="font-body text-xs text-bali-gold font-semibold uppercase tracking-wider mb-2">Cure 10 séances</p>
                     <div className="flex items-baseline gap-1 mb-4">

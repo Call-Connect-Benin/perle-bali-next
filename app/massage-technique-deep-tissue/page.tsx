@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -39,10 +40,13 @@ export default function DeepTissuePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="w-full aspect-video rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #2E1A24 0%, #4A6B4A 100%)" }}>
-                <div className="w-full h-full flex items-end p-4">
-                  <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/massages/deep-tissue/</p>
-                </div>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/massages/deep-tissue/massage-deep-tissue-1.jpg"
+                  alt="Massage Deep Tissue"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">

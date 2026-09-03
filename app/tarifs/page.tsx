@@ -195,7 +195,7 @@ export default function TarifsPage() {
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 30% 60%, rgba(192,114,138,0.4) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 30% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
@@ -282,7 +282,7 @@ export default function TarifsPage() {
                 <div
                   className="absolute inset-0 opacity-10"
                   style={{
-                    backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(192,114,138,0.6) 0%, transparent 60%)",
+                    backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(186, 127, 127,0.6) 0%, transparent 60%)",
                   }}
                 />
                 <div className="relative">

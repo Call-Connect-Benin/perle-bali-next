@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceLinks = [
   { label: "Massage Bali Bien-être", href: "/services-massage/massage-bali-bien-etre" },
@@ -36,7 +37,14 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="font-display text-2xl font-semibold text-white">
+            <Link href="/" className="flex items-center gap-2.5 font-display text-2xl font-semibold text-white">
+              <Image
+                src="/images/logo/logo.png"
+                alt="Perle de Bali"
+                width={40}
+                height={40}
+                className="w-9 h-9 shrink-0"
+              />
               Perle de Bali
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-bali-sand/80 font-body">

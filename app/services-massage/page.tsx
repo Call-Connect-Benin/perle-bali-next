@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ const services = [
     duration: "1h",
     href: "/services-massage/massage-bali-bien-etre",
     imagePath: "/images/massages/bali-bien-etre/",
+    image: "/images/massages/bali-bien-etre/massage-bali-bien-etre-1.jpg",
   },
   {
     title: "Massage Bali Évasion",
@@ -25,6 +27,7 @@ const services = [
     duration: "1h30",
     href: "/services-massage/massage-bali-evasion",
     imagePath: "/images/massages/bali-evasion/",
+    image: "/images/massages/bali-evasion/massage-bali-evasion-1.jpg",
   },
   {
     title: "Massage Bali Pure Détente",
@@ -34,6 +37,7 @@ const services = [
     duration: "1h30",
     href: "/services-massage/massage-bali-pure-detente",
     imagePath: "/images/massages/bali-pure-detente/",
+    image: "/images/massages/bali-pure-detente/massage-bali-pure-detente-1.jpg",
     tag: "Premium",
   },
   {
@@ -44,6 +48,7 @@ const services = [
     duration: "50mn",
     href: "/massage-technique-deep-tissue",
     imagePath: "/images/massages/deep-tissue/",
+    image: "/images/massages/deep-tissue/massage-deep-tissue-1.jpg",
     tag: "Sportif",
   },
   {
@@ -54,6 +59,7 @@ const services = [
     duration: "50mn",
     href: "/services-massage/massage-californien",
     imagePath: "/images/massages/californien/",
+    image: "/images/massages/californien/massage-californien-1.jpg",
   },
   {
     title: "Massage Drainage Manuel",
@@ -63,6 +69,7 @@ const services = [
     duration: "50mn",
     href: "/services-massage/massage-drainage-manuel",
     imagePath: "/images/massages/drainage-manuel/",
+    image: "/images/massages/drainage-manuel/massage-drainage-1.jpg",
   },
   {
     title: "Massage Chi Nei Tsang",
@@ -72,6 +79,7 @@ const services = [
     duration: "50mn",
     href: "/services-massage/massage-chi-nei-tsang",
     imagePath: "/images/massages/chi-nei-tsang/",
+    image: "/images/massages/chi-nei-tsang/massage-chi-nei-tsang-1.jpg",
   },
   {
     title: "Massage Amincissant & Raffermissant",
@@ -81,6 +89,7 @@ const services = [
     duration: "Cure 5 × 50mn",
     href: "/services-massage/massage-amincissant-et-raffermissant",
     imagePath: "/images/massages/amincissant-raffermissant/",
+    image: "/images/massages/amincissant-raffermissant/massage-amincissant-1.jpg",
     tag: "Cure",
   },
   {
@@ -91,6 +100,7 @@ const services = [
     duration: "30mn",
     href: "/services-massage/massage-enfant",
     imagePath: "/images/massages/enfant/",
+    image: "/images/massages/enfant/massage-enfant-pizza-1.jpg",
   },
 ];
 
@@ -103,7 +113,7 @@ export default function ServicesMassagePage() {
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 40% 60%, rgba(192,114,138,0.4) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 40% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
@@ -137,23 +147,13 @@ export default function ServicesMassagePage() {
                 href={s.href}
                 className="group bg-bali-white rounded-2xl overflow-hidden shadow-sm border border-bali-sand/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
-                {/* Image placeholder */}
                 <div className="w-full aspect-video bg-gradient-to-br from-bali-deep/5 to-bali-gold/10 relative overflow-hidden">
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse at 40% 50%, rgba(107,145,114,0.12) 0%, rgba(192,114,138,0.08) 60%, transparent 100%)",
-                    }}
-                  />
+                  <Image src={s.image} alt={s.title} fill className="object-cover" />
                   {s.tag && (
                     <span className="absolute top-3 right-3 font-body text-xs font-semibold bg-bali-gold text-white px-2.5 py-1 rounded-full z-10">
                       {s.tag}
                     </span>
                   )}
-                  <p className="absolute bottom-2 left-3 font-body text-xs text-bali-dark/30 italic">
-                    Photo à venir
-                  </p>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-baseline justify-between mb-3">
@@ -183,7 +183,7 @@ export default function ServicesMassagePage() {
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 50% 50%, rgba(192,114,138,0.5) 0%, transparent 65%)",
+              "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.5) 0%, transparent 65%)",
           }}
         />
         <div className="relative max-w-2xl mx-auto">

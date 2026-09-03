@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function MassageBaliPage() {
   return (
     <>
       <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 30% 60%, rgba(192,114,138,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 30% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold transition-colors">Accueil</Link>
@@ -54,11 +55,13 @@ export default function MassageBaliPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              {/* Image placeholder */}
-              <div className="w-full aspect-video rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #F5EAE5 0%, #D4909F 100%)" }}>
-                <div className="w-full h-full flex items-end p-4">
-                  <p className="font-body text-xs text-bali-dark/30 italic">Photo à venir — /images/massages/bali-bien-etre/</p>
-                </div>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/massages/bali-bien-etre/massage-bali-bien-etre-1.jpg"
+                  alt="Massage Bali Bien-être"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               <div>

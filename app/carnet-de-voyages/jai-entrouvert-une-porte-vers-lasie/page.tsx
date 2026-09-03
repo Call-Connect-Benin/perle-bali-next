@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export default function ArticleBaliPage() {
   return (
     <>
       <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 40% 60%, rgba(192,114,138,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 40% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto">
           <nav className="flex items-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>
@@ -35,10 +36,13 @@ export default function ArticleBaliPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2E1A24 0%, #6B9172 50%, #C0728A 100%)" }}>
-            <div className="w-full h-full flex items-end p-4">
-              <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/blog/porte-asie.jpg</p>
-            </div>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-10">
+            <Image
+              src="/images/blog/porte-asie.jpg"
+              alt="J'ai entrouvert une porte vers l'Asie"
+              fill
+              className="object-cover"
+            />
           </div>
 
           <div className="prose prose-lg max-w-none font-body text-bali-dark/80 leading-relaxed space-y-6">

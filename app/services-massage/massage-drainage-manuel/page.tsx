@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -35,10 +36,13 @@ export default function MassageDrainagePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="w-full aspect-video rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #6B9172 0%, #4A6B4A 100%)" }}>
-                <div className="w-full h-full flex items-end p-4">
-                  <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/massages/drainage-manuel/</p>
-                </div>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/massages/drainage-manuel/massage-drainage-1.jpg"
+                  alt="Massage Drainage Manuel"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Détoxifiez votre corps en profondeur</h2>

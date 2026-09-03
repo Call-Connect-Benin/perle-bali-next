@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export default function MassageEnfantPage() {
   return (
     <>
       <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(192,114,138,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>
@@ -39,10 +40,13 @@ export default function MassageEnfantPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="w-full aspect-video rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #EDD0CA 0%, #FDF8F6 100%)" }}>
-                <div className="w-full h-full flex items-end p-4">
-                  <p className="font-body text-xs text-bali-dark/40 italic">Photo à venir — /images/massages/enfant/</p>
-                </div>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/massages/enfant/massage-enfant-pizza-1.jpg"
+                  alt="Massage Enfant Pizza"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un moment de douceur parent-enfant</h2>

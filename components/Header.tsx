@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   { label: "Massage Bali Bien-être", href: "/services-massage/massage-bali-bien-etre" },
@@ -94,8 +95,16 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display text-2xl md:text-3xl font-semibold text-bali-deep tracking-wide"
+            className="flex items-center gap-2.5 font-display text-2xl md:text-3xl font-semibold text-bali-deep tracking-wide"
           >
+            <Image
+              src="/images/logo/logo.png"
+              alt="Perle de Bali"
+              width={48}
+              height={48}
+              className="w-10 h-10 md:w-12 md:h-12 shrink-0"
+              priority
+            />
             Perle de Bali
           </Link>
 

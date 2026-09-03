@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
@@ -15,6 +16,7 @@ const services = [
     href: "/services-massage/massage-bali-bien-etre",
     duration: "1h",
     price: "70€",
+    image: "/images/massages/bali-bien-etre/massage-bali-bien-etre-1.jpg",
   },
   {
     title: "Massage Bali Pure Détente",
@@ -22,6 +24,7 @@ const services = [
     href: "/services-massage/massage-bali-pure-detente",
     duration: "1h30",
     price: "120€",
+    image: "/images/massages/bali-pure-detente/massage-bali-pure-detente-1.jpg",
   },
   {
     title: "Massage Bali Évasion",
@@ -29,6 +32,7 @@ const services = [
     href: "/services-massage/massage-bali-evasion",
     duration: "1h30",
     price: "90€",
+    image: "/images/massages/bali-evasion/massage-bali-evasion-1.jpg",
   },
   {
     title: "Massage Deep Tissue",
@@ -36,6 +40,7 @@ const services = [
     href: "/massage-technique-deep-tissue",
     duration: "50mn",
     price: "80€",
+    image: "/images/massages/deep-tissue/massage-deep-tissue-1.jpg",
   },
 ];
 
@@ -192,7 +197,7 @@ export default function HomePage() {
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 30% 60%, rgba(192,114,138,0.4) 0%, transparent 55%), radial-gradient(ellipse at 75% 25%, rgba(107,145,114,0.3) 0%, transparent 50%)",
+              "radial-gradient(ellipse at 30% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%), radial-gradient(ellipse at 75% 25%, rgba(107,145,114,0.3) 0%, transparent 50%)",
           }}
         />
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block" />
@@ -403,14 +408,8 @@ export default function HomePage() {
                 href={s.href}
                 className="group bg-bali-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
-                <div className="w-full aspect-[4/3] rounded-xl bg-bali-deep/5 mb-4 flex items-center justify-center overflow-hidden">
-                  <div
-                    className="w-full h-full"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse at 50% 50%, rgba(107,145,114,0.15) 0%, rgba(192,114,138,0.1) 60%, transparent 100%)",
-                    }}
-                  />
+                <div className="relative w-full aspect-[4/3] rounded-xl bg-bali-deep/5 mb-4 overflow-hidden">
+                  <Image src={s.image} alt={s.title} fill className="object-cover" />
                 </div>
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="font-body text-xs text-bali-gold font-medium">{s.duration}</span>
@@ -591,7 +590,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(ellipse at 30% 50%, rgba(192,114,138,0.5) 0%, transparent 60%)",
+            backgroundImage: "radial-gradient(ellipse at 30% 50%, rgba(186, 127, 127,0.5) 0%, transparent 60%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto">

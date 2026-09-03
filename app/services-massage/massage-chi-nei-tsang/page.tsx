@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -37,10 +38,13 @@ export default function ChiNeiTsangPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="w-full aspect-video rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #4A6B4A 0%, #6B9172 100%)" }}>
-                <div className="w-full h-full flex items-end p-4">
-                  <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/massages/chi-nei-tsang/</p>
-                </div>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/massages/chi-nei-tsang/massage-chi-nei-tsang-1.jpg"
+                  alt="Massage Chi Nei Tsang"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un soin pour l'équilibre intérieur</h2>

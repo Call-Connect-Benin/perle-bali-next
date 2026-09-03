@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ const articles = [
     readTime: "5 min",
     href: "/carnet-de-voyages/jai-entrouvert-une-porte-vers-lasie",
     category: "Voyage",
+    image: "/images/blog/porte-asie.jpg",
   },
   {
     title: "Journée de la Femme 2020",
@@ -25,6 +27,7 @@ const articles = [
     readTime: "4 min",
     href: "/carnet-de-voyages/journee-de-la-femme-2020",
     category: "Bien-être",
+    image: null,
   },
   {
     title: "Le massage à travers le temps",
@@ -34,6 +37,7 @@ const articles = [
     readTime: "7 min",
     href: "/carnet-de-voyages/le-massage-a-travers-le-temps",
     category: "Histoire",
+    image: "/images/blog/carnet-listing.jpg",
   },
   {
     title: "L'Islande, hostile et merveilleuse",
@@ -43,6 +47,7 @@ const articles = [
     readTime: "4 min",
     href: "/carnet-de-voyages/islande",
     category: "Voyage",
+    image: null,
   },
 ];
 
@@ -51,7 +56,7 @@ export default function CarnetDeVoyagesPage() {
     <>
       {/* Hero */}
       <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(192,114,138,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>
@@ -81,13 +86,18 @@ export default function CarnetDeVoyagesPage() {
                 href={article.href}
                 className="group bg-bali-white rounded-2xl overflow-hidden shadow-sm border border-bali-sand/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
-                {/* Image placeholder */}
-                <div className="w-full aspect-video bg-gradient-to-br from-bali-deep/5 to-bali-gold/10 relative">
-                  <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 40% 50%, rgba(107,145,114,0.1) 0%, rgba(192,114,138,0.08) 60%, transparent 100%)" }} />
-                  <span className="absolute top-3 left-3 font-body text-xs font-semibold bg-bali-gold/90 text-white px-2.5 py-1 rounded-full">
+                <div className="w-full aspect-video bg-gradient-to-br from-bali-deep/5 to-bali-gold/10 relative overflow-hidden">
+                  {article.image ? (
+                    <Image src={article.image} alt={article.title} fill className="object-cover" />
+                  ) : (
+                    <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 40% 50%, rgba(107,145,114,0.1) 0%, rgba(186, 127, 127,0.08) 60%, transparent 100%)" }} />
+                  )}
+                  <span className="absolute top-3 left-3 font-body text-xs font-semibold bg-bali-gold/90 text-white px-2.5 py-1 rounded-full z-10">
                     {article.category}
                   </span>
-                  <p className="absolute bottom-2 right-3 font-body text-xs text-bali-dark/30 italic">Photo à venir</p>
+                  {!article.image && (
+                    <p className="absolute bottom-2 right-3 font-body text-xs text-bali-dark/30 italic">Photo à venir</p>
+                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">

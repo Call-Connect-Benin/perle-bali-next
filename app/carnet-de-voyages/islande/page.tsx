@@ -33,7 +33,7 @@ export default function IslandePage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2D1C20 0%, #C0728A 100%)" }}>
+          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2D1C20 0%, #BA7F7F 100%)" }}>
             <div className="w-full h-full flex items-end p-4">
               <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/blog/islande.jpg</p>
             </div>

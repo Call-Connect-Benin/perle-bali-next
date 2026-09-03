@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -71,7 +72,7 @@ export default function AProposPage() {
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 70% 40%, rgba(192,114,138,0.4) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 70% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
@@ -100,19 +101,13 @@ export default function AProposPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
             {/* Photo placeholder */}
             <div className="relative">
-              <div
-                className="w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #F5EAE5 0%, #E8B0BB 50%, #D4909F 100%)",
-                }}
-              >
-                {/* Image will go here: /images/about/francoise.jpg */}
-                <div className="w-full h-full flex items-end justify-start p-6">
-                  <p className="font-body text-xs text-bali-dark/40 italic">
-                    Photo à venir — /images/about/francoise.jpg
-                  </p>
-                </div>
+              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/about/francoise.jpg"
+                  alt="Françoise, masseuse Perle de Bali"
+                  fill
+                  className="object-cover"
+                />
               </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-bali-gold/15 -z-10" />
