@@ -41,7 +41,7 @@ const legalLinks = [
 export default function LiensSuggeresPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-24 pb-16 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-24 pb-16 px-6 relative overflow-hidden dot-field">
         <ShellOrnament className="absolute top-6 right-[4%] w-20 h-14 text-bali-honey/45 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-6 left-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[50%] left-[10%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "0.2s" }} />

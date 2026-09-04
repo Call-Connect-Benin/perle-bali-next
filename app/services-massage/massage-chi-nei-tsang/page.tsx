@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ChiNeiTsangPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <LeafOrnament className="absolute top-10 right-[5%] w-28 h-28 text-bali-sage/35 hidden sm:block animate-float-slow" />
         <SandScatter className="absolute bottom-8 left-[8%] w-24 h-8 text-bali-sand/55 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[20%] left-[28%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden lg:block animate-twinkle" style={{ animationDelay: "1.9s" }} />

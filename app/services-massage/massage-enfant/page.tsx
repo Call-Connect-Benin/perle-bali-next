@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function MassageEnfantPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <FlowerOrnament className="absolute top-8 right-[6%] w-16 h-16 text-bali-gold/45 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-10 left-[5%] w-20 h-14 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[15%] left-[68%] w-1.5 h-1.5 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.5s" }} />

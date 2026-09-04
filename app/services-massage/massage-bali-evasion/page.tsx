@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function MassageBaliEvasionPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <ShellOrnament className="absolute top-8 right-[5%] w-24 h-16 text-bali-honey/45 hidden sm:block animate-float-slow" />
         <SandScatter className="absolute bottom-10 left-[8%] w-28 h-8 text-bali-sand/50 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[65%] right-[42%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.1s" }} />

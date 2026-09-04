@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function MassageCalifornienPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <ShellOrnament className="absolute top-6 left-[6%] w-20 h-14 text-bali-honey/50 hidden sm:block animate-float-slow" />
         <FlowerOrnament className="absolute bottom-12 right-[4%] w-24 h-24 text-bali-gold/40 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[75%] left-[45%] w-1 h-1 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "1.3s" }} />

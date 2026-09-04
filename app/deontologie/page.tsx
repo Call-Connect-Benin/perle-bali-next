@@ -44,7 +44,7 @@ const engagements = [
 export default function DeontologiePage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <FlowerOrnament className="absolute top-6 left-[6%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <SandScatter className="absolute bottom-8 right-[10%] w-36 h-10 text-bali-sand/55 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[18%] left-[55%] w-1.5 h-1.5 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "0.7s" }} />

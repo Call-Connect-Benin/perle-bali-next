@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function DeepTissuePage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <SandScatter className="absolute top-12 right-[8%] w-28 h-8 text-bali-sand/50 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-8 left-[5%] w-24 h-16 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[38%] right-[15%] w-1.5 h-1.5 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.6s" }} />

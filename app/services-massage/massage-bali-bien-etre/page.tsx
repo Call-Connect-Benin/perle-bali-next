@@ -28,7 +28,7 @@ const relatedServices = [
 export default function MassageBaliPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <FlowerOrnament className="absolute top-10 left-[5%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-8 right-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[12%] right-[35%] w-1.5 h-1.5 rounded-full bg-bali-gold-light hidden lg:block animate-twinkle" style={{ animationDelay: "0.9s" }} />

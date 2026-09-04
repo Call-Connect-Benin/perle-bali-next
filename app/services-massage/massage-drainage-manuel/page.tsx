@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function MassageDrainagePage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <SandScatter className="absolute top-8 left-[6%] w-32 h-8 text-bali-sand/50 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-6 right-[6%] w-20 h-20 text-bali-sage/45 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[48%] right-[25%] w-1 h-1 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "0.8s" }} />

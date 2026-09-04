@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-bali-deep pt-24 pb-12 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-24 pb-12 px-6 relative overflow-hidden dot-field">
         <FlowerOrnament className="absolute top-6 right-[5%] w-16 h-16 text-bali-gold/45 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-4 left-[4%] w-20 h-20 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[32%] right-[28%] w-1 h-1 rounded-full bg-bali-gold-light hidden lg:block animate-twinkle" style={{ animationDelay: "0.3s" }} />

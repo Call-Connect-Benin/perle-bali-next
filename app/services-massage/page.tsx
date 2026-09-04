@@ -109,7 +109,7 @@ export default function ServicesMassagePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <FlowerOrnament className="absolute top-8 left-[5%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-10 right-[5%] w-24 h-16 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[35%] left-[15%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.0s" }} />
@@ -183,7 +183,7 @@ export default function ServicesMassagePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-bali-deep text-center relative overflow-hidden">
+      <section className="py-16 px-6 bg-bali-deep text-center relative overflow-hidden dot-field">
         <div
           className="absolute inset-0 opacity-10"
           style={{

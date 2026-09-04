@@ -93,6 +93,18 @@ h1, h2, h3, h4, h5, h6 {
     radial-gradient(40% 45% at 90% 30%, rgba(227, 185, 140, 0.12), transparent 65%);
 }
 
+/* Fine sprinkle of dots across dark surfaces — sand grains / stars, echoed
+   from the "constellation" texture on the reference site, adapted to the
+   Bali beach theme. A single tiling background-image, so it's free to apply
+   anywhere: it just layers behind whatever content already sits there. */
+.dot-field {
+  background-image:
+    radial-gradient(rgba(237, 208, 202, 0.35) 1px, transparent 1.5px),
+    radial-gradient(rgba(186, 127, 127, 0.3) 1px, transparent 1.5px);
+  background-size: 34px 34px, 22px 22px;
+  background-position: 0 0, 11px 17px;
+}
+
 /* Warm-tinted elevation for cards, replaces flat grey shadows */
 .card-elevate {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);

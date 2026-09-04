@@ -195,7 +195,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-bali-deep pt-28 pb-20 lg:pt-24 lg:pb-0 lg:min-h-[85vh] lg:flex lg:items-center">
+      <section className="relative overflow-hidden bg-bali-deep dot-field pt-28 pb-20 lg:pt-24 lg:pb-0 lg:min-h-[85vh] lg:flex lg:items-center">
         <div className="absolute inset-0 ambient-glow animate-breathe" />
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-dashed border-bali-gold/20 hidden lg:block animate-spin-slow" />
         <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-dashed border-bali-gold/15 hidden lg:block animate-spin-slow-reverse" />
@@ -398,7 +398,7 @@ export default function HomePage() {
 
       {/* ── STATS ── */}
       <section className="py-8 px-4 sm:px-6">
-        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-bali-deep shadow-xl shadow-bali-deep/20 py-14 px-6">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-bali-deep dot-field shadow-xl shadow-bali-deep/20 py-14 px-6">
           <div className="absolute inset-0 ambient-glow-soft" />
           <div className="relative max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y-0 md:divide-x md:divide-white/10">
@@ -475,7 +475,7 @@ export default function HomePage() {
 
       {/* ── CTA BANNER ── */}
       <section className="py-8 px-4 sm:px-6">
-        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-gradient-to-r from-bali-gold to-bali-rose-deep shadow-xl shadow-bali-gold/20 py-12 px-6">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-gradient-to-r from-bali-gold to-bali-rose-deep dot-field shadow-xl shadow-bali-gold/20 py-12 px-6">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -630,7 +630,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CONTACT FORM BOTTOM ── */}
-      <section className="py-12 px-6 bg-bali-deep relative overflow-hidden">
+      <section className="py-12 px-6 bg-bali-deep relative overflow-hidden dot-field">
         <div
           className="absolute inset-0 opacity-10"
           style={{

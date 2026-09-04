@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function MassagePureDetentePage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
         <LeafOrnament className="absolute top-6 left-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow" />
         <FlowerOrnament className="absolute bottom-10 right-[5%] w-20 h-20 text-bali-gold/45 hidden sm:block animate-float-slow-delayed" />
         <span className="absolute top-[42%] left-[62%] w-1.5 h-1.5 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "1.6s" }} />
