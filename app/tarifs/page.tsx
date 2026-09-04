@@ -190,7 +190,7 @@ export default function TarifsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-15"
           style={{

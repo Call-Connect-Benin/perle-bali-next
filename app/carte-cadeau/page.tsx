@@ -49,7 +49,7 @@ const giftOptions = [
 export default function CarteKCadeauPage() {
   return (
     <>
-      <section className="bg-bali-deep py-20 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-15"
           style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }}

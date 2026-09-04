@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function CookiePolicyPage() {
   return (
     <>
-      <section className="bg-bali-deep py-16 px-6 relative overflow-hidden">
+      <section className="bg-bali-deep pt-24 pb-16 px-6 relative overflow-hidden">
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-6">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>

@@ -193,7 +193,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-bali-deep py-20 lg:py-0 lg:min-h-[85vh] lg:flex lg:items-center">
+      <section className="relative overflow-hidden bg-bali-deep pt-28 pb-20 lg:pt-24 lg:pb-0 lg:min-h-[85vh] lg:flex lg:items-center">
         {/* Full-bleed uniform background photo, face pushed right so text stays legible */}
         <Image
           src="/images/hero/hero-main.jpg"
