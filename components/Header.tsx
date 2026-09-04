@@ -41,7 +41,7 @@ export default function Header() {
     }`;
 
   return (
-    <header className="sticky top-0 z-50 px-3 sm:px-6 pt-3 sm:pt-4">
+    <header className="sticky top-0 z-50 px-3 sm:px-6 pt-3 sm:pt-4 bg-gradient-to-r from-bali-deep via-[#3a2130] to-bali-deep">
       {/* Floating pill bar */}
       <div className="relative max-w-6xl mx-auto rounded-full bg-gradient-to-r from-bali-deep via-[#3a2130] to-bali-deep shadow-xl shadow-black/25 border border-white/5">
         {/* Subtle scattered ornament dots */}
