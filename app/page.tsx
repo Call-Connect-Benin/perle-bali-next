@@ -398,8 +398,9 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="py-12 md:py-16 px-6 bg-bali-cream-dark">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-12 md:py-16 px-6 bg-bali-cream-dark relative overflow-hidden">
+        <div className="absolute inset-0 ambient-glow-soft opacity-60" />
+        <div className="relative max-w-6xl mx-auto">
           <Reveal className="text-center mb-4">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold">Nos soins</span>
           </Reveal>
@@ -489,11 +490,12 @@ export default function HomePage() {
       </section>
 
       {/* ── PRICING ── */}
-      <section id="tarifs" className="py-12 md:py-16 px-6 bg-bali-cream">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-4">
+      <section id="tarifs" className="py-12 md:py-16 px-6 bg-bali-cream relative overflow-hidden">
+        <div className="absolute inset-0 ambient-glow-soft opacity-50" />
+        <div className="relative max-w-6xl mx-auto">
+          <Reveal className="text-center mb-4">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold">Prestations</span>
-          </div>
+          </Reveal>
           <h2 className="font-display text-3xl md:text-4xl text-center text-bali-deep font-semibold mb-8">
             Tarif des prestations
           </h2>

@@ -59,7 +59,7 @@ export default function MassageTraversLeTempPage() {
 
           <div className="mt-10 pt-8 border-t border-bali-sand/30 flex flex-col sm:flex-row items-center justify-between gap-4">
             <Link href="/carnet-de-voyages" className="font-body text-sm text-bali-dark/60 hover:text-bali-gold transition-colors">← Retour au blog</Link>
-            <Link href="/services-massage" className="inline-flex items-center gap-2 bg-bali-gold text-white font-body font-medium px-6 py-2.5 rounded-full hover:bg-bali-deep transition-colors text-sm">
+            <Link href="/services-massage" className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-6 py-2.5 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300 text-sm">
               Découvrir nos massages
             </Link>
           </div>

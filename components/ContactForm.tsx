@@ -90,7 +90,7 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       <button
         type="submit"
         disabled={pending}
-        className="w-full bg-bali-gold text-white font-body font-semibold py-3.5 rounded-full hover:bg-bali-gold-light transition-colors disabled:opacity-60"
+        className="w-full bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-semibold py-3.5 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60"
       >
         {pending ? "Envoi en cours…" : "Envoyer ma demande"}
       </button>

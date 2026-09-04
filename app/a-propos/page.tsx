@@ -145,7 +145,7 @@ export default function AProposPage() {
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-bali-gold text-white font-body font-medium px-7 py-3 rounded-full hover:bg-bali-deep transition-colors"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-7 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Demandez un devis
                 </Link>
@@ -267,7 +267,7 @@ export default function AProposPage() {
             <p className="font-body text-sm text-bali-dark/60 mb-4">Vous avez d'autres questions ?</p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-bali-gold text-white font-body font-medium px-7 py-3 rounded-full hover:bg-bali-deep transition-colors"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-7 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               Contactez-moi
             </Link>

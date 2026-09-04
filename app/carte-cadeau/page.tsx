@@ -131,7 +131,7 @@ export default function CarteKCadeauPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-bali-gold text-white font-body font-medium px-8 py-3 rounded-full hover:bg-bali-gold-light transition-colors"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-8 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
               >
                 Commander une carte cadeau
               </Link>

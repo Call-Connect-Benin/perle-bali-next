@@ -127,7 +127,7 @@ export default function CarnetDeVoyagesPage() {
         <div className="max-w-xl mx-auto">
           <h2 className="font-display text-3xl text-bali-deep font-light mb-4">Prêt(e) à vivre l'expérience ?</h2>
           <p className="font-body text-bali-dark/70 mb-6">Réservez votre séance et découvrez le bien-être balinais en personne.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-bali-gold text-white font-body font-medium px-8 py-3 rounded-full hover:bg-bali-deep transition-colors">
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-8 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300">
             Réserver une séance
           </Link>
         </div>
