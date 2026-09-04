@@ -105,13 +105,13 @@ export default function CookieConsent() {
                   role="switch"
                   aria-checked={analyticsChoice}
                   onClick={() => setAnalyticsChoice((v) => !v)}
-                  className={`shrink-0 w-11 h-6 rounded-full transition-colors relative ${
+                  className={`shrink-0 w-11 h-6 rounded-full transition-colors relative overflow-hidden border-0 p-0 ${
                     analyticsChoice ? "bg-bali-gold" : "bg-bali-sand/60"
                   }`}
                 >
                   <span
-                    className={`absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${
-                      analyticsChoice ? "translate-x-5" : "translate-x-0.5"
+                    className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow-sm transition-transform duration-200 ${
+                      analyticsChoice ? "translate-x-5" : "translate-x-0"
                     }`}
                   />
                 </button>
