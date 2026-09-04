@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Massage Enfant « Pizza » – 30€ / 30mn",
@@ -40,32 +41,34 @@ export default function MassageEnfantPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Reveal className="relative w-full aspect-video rounded-2xl overflow-hidden group">
                 <Image
                   src="/images/massages/enfant/massage-enfant-pizza-1.jpg"
                   alt="Massage Enfant Pizza"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom"
                 />
-              </div>
-              <div>
+              </Reveal>
+              <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un moment de douceur parent-enfant</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
                   <p>La méthode Massage « Pizza » est spécialement conçue pour les jeunes enfants. Douce, ludique et apaisante, elle favorise le calme et la détente avant le coucher.</p>
                   <p>Cette séance unique est aussi un moment privilégié parent-enfant : vous apprenez à masser votre enfant avec les bons gestes, pour pouvoir continuer ce rituel à la maison.</p>
                   <p>Cette méthode est pratiquée avec une autorisation officielle, garantissant une approche sécurisée et adaptée aux enfants.</p>
                 </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {["Méthode adaptée aux jeunes enfants", "Favorise le calme et le sommeil", "Moment parent-enfant unique", "Apprenez les gestes à la maison", "Méthode autorisée & certifiée", "Ambiance douce et sécurisante"].map((b) => (
-                  <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20">
-                    <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                    <span className="font-body text-sm text-bali-dark/80">{b}</span>
-                  </div>
-                ))}
-              </div>
+              </Reveal>
+              <Reveal delay={120}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {["Méthode adaptée aux jeunes enfants", "Favorise le calme et le sommeil", "Moment parent-enfant unique", "Apprenez les gestes à la maison", "Méthode autorisée & certifiée", "Ambiance douce et sécurisante"].map((b) => (
+                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
+                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
             </div>
-            <div>
+            <Reveal delay={160}>
               <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl sticky top-28">
                 <h3 className="font-display text-2xl font-light mb-1">Massage Enfant « Pizza »</h3>
                 <div className="flex items-baseline gap-2 mb-6">
@@ -83,7 +86,7 @@ export default function MassageEnfantPage() {
                   Réserver ce massage
                 </Link>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

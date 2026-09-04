@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Massage Bali Pure Détente – 120€ / 1h30",
@@ -40,38 +41,40 @@ export default function MassagePureDetentePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Reveal className="relative w-full aspect-video rounded-2xl overflow-hidden group">
                 <Image
                   src="/images/massages/bali-pure-detente/massage-bali-pure-detente-1.jpg"
                   alt="Massage Bali Pure Détente"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom"
                 />
-              </div>
-              <div>
+              </Reveal>
+              <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">L'expérience ultime de bien-être</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
                   <p>Le Massage Bali Pure Détente est notre soin signature, la quintessence de l'expérience Perle de Bali. En 1h30, vous vivez un véritable rituel balinais de la tête aux pieds.</p>
                   <p>Unique parmi nos soins, cette expérience est précédée du <strong>traditionnel bain de pieds balinais</strong>, aux sels d'Epsom et sels de la Mer Morte, pour préparer votre corps à la détente totale.</p>
                   <p>Suivi d'un massage complet incluant le visage et les points d'acupression, ce soin 1h30 est conçu pour une immersion totale dans la sérénité. Une pure détente, un petit bonheur.</p>
                 </div>
-              </div>
+              </Reveal>
               <div className="bg-bali-gold/10 border-l-4 border-bali-gold rounded-r-2xl p-5">
                 <h3 className="font-display text-xl text-bali-deep font-medium mb-3">Le rituel bain de pieds balinais</h3>
                 <p className="font-body text-sm text-bali-dark/80 leading-relaxed">
                   Tradition millénaire balinaise, le bain de pieds aux sels d'Epsom et sels de la Mer Morte détoxifie, ramollit les peaux et prépare le corps à absorber les bienfaits du massage. Un rituel unique qui transforme votre séance en véritable cérémonie.
                 </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {["Bain de pieds balinais inclus", "Sels d'Epsom & Mer Morte", "1h30 de massage complet", "Massage du visage", "Points d'acupression", "Expérience immersive"].map((b) => (
-                  <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20">
-                    <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                    <span className="font-body text-sm text-bali-dark/80">{b}</span>
-                  </div>
-                ))}
-              </div>
+              <Reveal delay={120}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {["Bain de pieds balinais inclus", "Sels d'Epsom & Mer Morte", "1h30 de massage complet", "Massage du visage", "Points d'acupression", "Expérience immersive"].map((b) => (
+                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
+                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
             </div>
-            <div className="space-y-5">
+            <Reveal delay={160} className="space-y-5">
               <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl sticky top-28">
                 <span className="font-body text-xs bg-bali-gold text-white px-2 py-0.5 rounded-full">Premium</span>
                 <h3 className="font-display text-2xl font-light mt-3 mb-1">Massage Bali Pure Détente</h3>
@@ -102,7 +105,7 @@ export default function MassagePureDetentePage() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

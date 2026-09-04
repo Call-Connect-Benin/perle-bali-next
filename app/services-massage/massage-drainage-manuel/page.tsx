@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Massage Drainage Manuel – 70€ / 50mn",
@@ -36,32 +37,34 @@ export default function MassageDrainagePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Reveal className="relative w-full aspect-video rounded-2xl overflow-hidden group">
                 <Image
                   src="/images/massages/drainage-manuel/massage-drainage-1.jpg"
                   alt="Massage Drainage Manuel"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom"
                 />
-              </div>
-              <div>
+              </Reveal>
+              <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Détoxifiez votre corps en profondeur</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
                   <p>Le Drainage Manuel est une technique thérapeutique qui agit sur le système lymphatique pour éliminer les toxines et réduire la rétention d'eau dans l'organisme.</p>
                   <p>Cette technique combine drainage superficiel, circulatoire et profond, pour une action globale sur la circulation sanguine et lymphatique.</p>
                   <p>Idéal pour les personnes souffrant de rétention d'eau, de jambes lourdes, ou souhaitant soutenir leur corps dans sa régénération naturelle.</p>
                 </div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {["Drainage superficiel & profond", "Améliore la circulation", "Réduit la rétention d'eau", "Détox de l'organisme", "Régénération des tissus", "Jambes légères garanties"].map((b) => (
-                  <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20">
-                    <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                    <span className="font-body text-sm text-bali-dark/80">{b}</span>
-                  </div>
-                ))}
-              </div>
+              </Reveal>
+              <Reveal delay={120}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {["Drainage superficiel & profond", "Améliore la circulation", "Réduit la rétention d'eau", "Détox de l'organisme", "Régénération des tissus", "Jambes légères garanties"].map((b) => (
+                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
+                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
             </div>
-            <div>
+            <Reveal delay={160}>
               <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl sticky top-28">
                 <h3 className="font-display text-2xl font-light mb-1">Drainage Manuel</h3>
                 <div className="flex items-baseline gap-2 mb-6">
@@ -79,7 +82,7 @@ export default function MassageDrainagePage() {
                   Réserver ce massage
                 </Link>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

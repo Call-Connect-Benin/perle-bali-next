@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Tarifs – Massages Balinais",
@@ -229,10 +230,10 @@ export default function TarifsPage() {
                 <div className="flex-1 h-px bg-bali-sand/50" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                {group.items.map((item) => (
+                {group.items.map((item, i) => (
+                  <Reveal key={item.title + item.duration} delay={(i % 4) * 80} className="h-full">
                   <div
-                    key={item.title + item.duration}
-                    className="pricing-card bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/30 flex flex-col relative overflow-hidden"
+                    className="pricing-card bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/30 flex flex-col relative overflow-hidden h-full"
                   >
                     {item.tag && (
                       <span className="absolute top-4 right-4 font-body text-xs font-semibold bg-bali-gold text-white px-2.5 py-1 rounded-full">
@@ -259,6 +260,7 @@ export default function TarifsPage() {
                       Je réserve
                     </Link>
                   </div>
+                  </Reveal>
                 ))}
               </div>
             </div>
@@ -274,9 +276,9 @@ export default function TarifsPage() {
             <div className="flex-1 h-px bg-bali-sand/50" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {cures.map((cure) => (
+            {cures.map((cure, i) => (
+              <Reveal key={cure.subtitle} delay={i * 100}>
               <div
-                key={cure.subtitle}
                 className="pricing-card bg-bali-deep text-white rounded-2xl p-7 shadow-xl flex flex-col relative overflow-hidden"
               >
                 <div
@@ -313,6 +315,7 @@ export default function TarifsPage() {
                   </Link>
                 </div>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -328,8 +331,9 @@ export default function TarifsPage() {
             Ce que nos clients disent
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/20">
+            {testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={i * 100} className="h-full">
+              <div className="bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/20 card-elevate h-full">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-9 h-9 rounded-full bg-bali-deep/10 flex items-center justify-center font-display text-sm font-semibold text-bali-deep">
                     {t.name.charAt(0)}
@@ -342,6 +346,7 @@ export default function TarifsPage() {
                 <StarRating />
                 <p className="font-body text-sm text-bali-dark/75 leading-relaxed mt-3">{t.text}</p>
               </div>
+              </Reveal>
             ))}
           </div>
           <div className="text-center">

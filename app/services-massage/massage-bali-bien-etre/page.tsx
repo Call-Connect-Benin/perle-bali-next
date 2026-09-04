@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Massage Bali Bien-être – 70€ / 1h",
@@ -55,16 +56,16 @@ export default function MassageBaliPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Reveal className="relative w-full aspect-video rounded-2xl overflow-hidden group">
                 <Image
                   src="/images/massages/bali-bien-etre/massage-bali-bien-etre-1.jpg"
                   alt="Massage Bali Bien-être"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom"
                 />
-              </div>
+              </Reveal>
 
-              <div>
+              <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Une expérience apaisante</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
                   <p>
@@ -77,13 +78,13 @@ export default function MassageBaliPage() {
                     Ce massage est idéal pour les personnes souhaitant une première expérience balinaise ou celles qui cherchent un moment de détente régulière. Il est adapté à tous les profils et peut être personnalisé selon vos zones de tension prioritaires.
                   </p>
                 </div>
-              </div>
+              </Reveal>
 
-              <div>
+              <Reveal delay={120}>
                 <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Bienfaits du soin</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {benefits.map((b) => (
-                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20">
+                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
                       <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-bali-gold text-xs">✓</span>
                       </span>
@@ -91,7 +92,7 @@ export default function MassageBaliPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </Reveal>
 
               <div className="bg-bali-cream-dark rounded-2xl p-6 border border-bali-sand/30">
                 <h3 className="font-display text-xl text-bali-deep font-medium mb-3">Le déroulement de la séance</h3>
@@ -117,7 +118,7 @@ export default function MassageBaliPage() {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-5">
+            <Reveal delay={160} className="space-y-5">
               <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl sticky top-28">
                 <h3 className="font-display text-2xl font-light mb-1">Massage Bali Bien-être</h3>
                 <div className="flex items-baseline gap-2 mb-6">
@@ -149,7 +150,7 @@ export default function MassageBaliPage() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

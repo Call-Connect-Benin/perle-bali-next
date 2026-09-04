@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "À propos – Françoise, votre masseuse Balinaise",
@@ -101,21 +102,21 @@ export default function AProposPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
             {/* Photo placeholder */}
             <div className="relative">
-              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+              <Reveal className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl group">
                 <Image
                   src="/images/about/francoise.jpg"
                   alt="Françoise, masseuse Perle de Bali"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom"
                 />
-              </div>
+              </Reveal>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-bali-gold/15 -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full border-2 border-bali-gold/20 -z-10" />
             </div>
 
             {/* Text */}
-            <div>
+            <Reveal delay={80}>
               <p className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold mb-4">Perle de Bali – Françoise</p>
               <h2 className="font-display text-4xl text-bali-deep font-light leading-snug mb-6">
                 Chez Perle de Bali, je célèbre l'art du bien-être
@@ -149,7 +150,7 @@ export default function AProposPage() {
                   Demandez un devis
                 </Link>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -163,22 +164,24 @@ export default function AProposPage() {
               Mon approche personnalisée
             </h2>
           </div>
-          <div className="bg-bali-white rounded-2xl p-8 shadow-sm border border-bali-sand/20 space-y-5 font-body text-bali-dark/80 leading-relaxed">
-            <p>
-              Avant chaque séance, je prends le temps d'échanger avec vous sur vos envies et vos attentes. Cet échange me permet de créer une expérience sur-mesure, qui favorise une détente profonde et un bien-être qui rayonne dans tous les aspects de votre vie.
-            </p>
-            <p>
-              Chaque personne est unique, tout comme ses besoins en bien-être. C'est pourquoi mes massages sont entièrement personnalisés, conçus pour répondre à vos attentes spécifiques et à votre état physique du moment.
-            </p>
-            <p>
-              Je combine différentes techniques essentielles du massage, ajustant chaque geste pour offrir une expérience à la fois relaxante et profondément apaisante. Mon protocole évolutif s'adapte à vos besoins, en prenant soin de l'ensemble de votre corps, de la tête aux pieds, pour un soulagement global et durable.
-            </p>
-            <div className="p-4 bg-bali-gold/8 border-l-4 border-bali-gold rounded-r-xl">
-              <p className="text-sm font-medium text-bali-dark">
-                ⚠ ATTENTION : Certains états de santé, comme les grossesses, les blessures récentes ou certaines conditions médicales, nécessitent des précautions particulières. N'hésitez pas à m'informer de votre situation pour adapter la séance en toute sécurité.
+          <Reveal>
+            <div className="bg-bali-white rounded-2xl p-8 shadow-sm border border-bali-sand/20 space-y-5 font-body text-bali-dark/80 leading-relaxed">
+              <p>
+                Avant chaque séance, je prends le temps d'échanger avec vous sur vos envies et vos attentes. Cet échange me permet de créer une expérience sur-mesure, qui favorise une détente profonde et un bien-être qui rayonne dans tous les aspects de votre vie.
               </p>
+              <p>
+                Chaque personne est unique, tout comme ses besoins en bien-être. C'est pourquoi mes massages sont entièrement personnalisés, conçus pour répondre à vos attentes spécifiques et à votre état physique du moment.
+              </p>
+              <p>
+                Je combine différentes techniques essentielles du massage, ajustant chaque geste pour offrir une expérience à la fois relaxante et profondément apaisante. Mon protocole évolutif s'adapte à vos besoins, en prenant soin de l'ensemble de votre corps, de la tête aux pieds, pour un soulagement global et durable.
+              </p>
+              <div className="p-4 bg-bali-gold/8 border-l-4 border-bali-gold rounded-r-xl">
+                <p className="text-sm font-medium text-bali-dark">
+                  ⚠ ATTENTION : Certains états de santé, comme les grossesses, les blessures récentes ou certaines conditions médicales, nécessitent des précautions particulières. N'hésitez pas à m'informer de votre situation pour adapter la séance en toute sécurité.
+                </p>
+              </div>
             </div>
-          </div>
+          </Reveal>
           <div className="text-center mt-8">
             <Link
               href="/services-massage"
@@ -197,32 +200,34 @@ export default function AProposPage() {
           <h2 className="font-display text-3xl text-bali-deep font-light mb-8">
             Quelques étapes officielles de mon parcours
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center">
-              <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
-                <span className="text-bali-gold text-xl">🏅</span>
+          <Reveal>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center card-elevate">
+                <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-bali-gold text-xl">🏅</span>
+                </div>
+                <p className="font-body text-sm text-bali-dark/80 leading-snug">
+                  L'école <strong className="text-bali-deep">Bali BISA</strong> a obtenu les certificats d'excellence TripAdvisor
+                </p>
               </div>
-              <p className="font-body text-sm text-bali-dark/80 leading-snug">
-                L'école <strong className="text-bali-deep">Bali BISA</strong> a obtenu les certificats d'excellence TripAdvisor
-              </p>
-            </div>
-            <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center">
-              <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
-                <span className="text-bali-gold text-xl">🤝</span>
+              <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center card-elevate">
+                <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-bali-gold text-xl">🤝</span>
+                </div>
+                <p className="font-body text-sm text-bali-dark/80 leading-snug">
+                  En <strong className="text-bali-deep">partenariat</strong> avec Perle de Bali depuis 2020
+                </p>
               </div>
-              <p className="font-body text-sm text-bali-dark/80 leading-snug">
-                En <strong className="text-bali-deep">partenariat</strong> avec Perle de Bali depuis 2020
-              </p>
-            </div>
-            <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center">
-              <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
-                <span className="text-bali-gold text-xl">👶</span>
+              <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center card-elevate">
+                <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-bali-gold text-xl">👶</span>
+                </div>
+                <p className="font-body text-sm text-bali-dark/80 leading-snug">
+                  Autorisation d'utiliser la méthode <strong className="text-bali-deep">Massage « Pizza » Enfant</strong>
+                </p>
               </div>
-              <p className="font-body text-sm text-bali-dark/80 leading-snug">
-                Autorisation d'utiliser la méthode <strong className="text-bali-deep">Massage « Pizza » Enfant</strong>
-              </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 

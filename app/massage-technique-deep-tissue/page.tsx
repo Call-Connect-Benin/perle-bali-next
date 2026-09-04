@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Massage Deep Tissue – 80€ / 50mn",
@@ -40,39 +41,41 @@ export default function DeepTissuePage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2 space-y-8">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Reveal className="relative w-full aspect-video rounded-2xl overflow-hidden group">
                 <Image
                   src="/images/massages/deep-tissue/massage-deep-tissue-1.jpg"
                   alt="Massage Deep Tissue"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom"
                 />
-              </div>
+              </Reveal>
 
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
                 <p className="font-body text-sm text-amber-800 font-medium">⚠ Attention : Ce massage est d'intensité soutenue. Il est déconseillé aux personnes très sensibles aux pressions profondes.</p>
               </div>
 
-              <div>
+              <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">La technique du massage profond</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
                   <p>Le Massage Deep Tissue est une technique avancée qui agit sur les couches musculaires profondes pour libérer les tensions chroniques et les nœuds musculaires.</p>
                   <p>Ce soin utilise des pressions soutenues avec les paumes, les poings et les coudes pour atteindre les fibres musculaires en profondeur. Idéal pour la <strong>préparation et la récupération sportive</strong>, ainsi que pour les personnes souffrant de douleurs chroniques.</p>
                   <p>En 50 minutes, les tensions les plus profondes sont traitées, la mobilité améliorée et le corps préparé à la performance ou aidé dans sa récupération.</p>
                 </div>
-              </div>
+              </Reveal>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {["Libère les tensions musculaires profondes", "Améliore la mobilité articulaire", "Prévention des blessures sportives", "Accélère la récupération", "Technique des paumes, poings, coudes", "Soulagement douleurs chroniques"].map((b) => (
-                  <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20">
-                    <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                    <span className="font-body text-sm text-bali-dark/80">{b}</span>
-                  </div>
-                ))}
-              </div>
+              <Reveal delay={120}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {["Libère les tensions musculaires profondes", "Améliore la mobilité articulaire", "Prévention des blessures sportives", "Accélère la récupération", "Technique des paumes, poings, coudes", "Soulagement douleurs chroniques"].map((b) => (
+                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
+                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
             </div>
 
-            <div className="space-y-5">
+            <Reveal delay={160} className="space-y-5">
               <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl sticky top-28">
                 <h3 className="font-display text-2xl font-light mb-1">Massage Deep Tissue</h3>
                 <div className="flex items-baseline gap-2 mb-6">
@@ -101,7 +104,7 @@ export default function DeepTissuePage() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

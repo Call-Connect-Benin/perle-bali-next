@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
+import Counter from "@/components/Counter";
 
 const stats = [
   { value: "06+", label: "d'expériences" },
@@ -378,18 +379,19 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="py-10 bg-bali-deep">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat) => (
-              <div key={stat.value} className="text-center">
-                <p className="font-display text-4xl font-semibold text-bali-gold leading-none mb-2">
-                  {stat.value}
+      <section className="py-14 bg-bali-deep relative overflow-hidden">
+        <div className="absolute inset-0 ambient-glow-soft" />
+        <div className="relative max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y-0 md:divide-x md:divide-white/10">
+            {stats.map((stat, i) => (
+              <Reveal key={stat.value} delay={i * 100} className="text-center md:px-4">
+                <p className="font-display text-4xl md:text-5xl font-semibold text-bali-gold leading-none mb-2 tabular-nums">
+                  <Counter value={stat.value} />
                 </p>
                 <p className="font-body text-sm text-bali-sand/70 leading-snug capitalize">
                   {stat.label}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -459,7 +461,7 @@ export default function HomePage() {
               "radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.5) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.3) 0%, transparent 50%)",
           }}
         />
-        <div className="relative max-w-3xl mx-auto text-center">
+        <Reveal className="relative max-w-3xl mx-auto text-center">
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-3">
             Réservez votre moment de détente
           </h2>
@@ -483,7 +485,7 @@ export default function HomePage() {
               WhatsApp
             </a>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── PRICING ── */}
@@ -496,15 +498,20 @@ export default function HomePage() {
             Tarif des prestations
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-            {pricingItems.map((item) => (
+            {pricingItems.map((item, i) => (
+              <Reveal key={item.title} delay={(i % 4) * 90} className="h-full">
               <div
-                key={item.title}
-                className={`pricing-card rounded-2xl p-5 flex flex-col ${
+                className={`relative pricing-card rounded-2xl p-5 flex flex-col h-full ${
                   item.featured
-                    ? "bg-bali-deep text-white shadow-xl"
+                    ? "bg-bali-deep text-white shadow-xl ring-2 ring-bali-gold/40"
                     : "bg-bali-white border border-bali-sand/30 shadow-sm"
                 }`}
               >
+                {item.featured && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-bali-gold text-white text-[10px] font-semibold tracking-[0.15em] uppercase px-3 py-1 rounded-full shadow-sm">
+                    Le plus choisi
+                  </span>
+                )}
                 <h3 className={`font-display text-lg font-semibold mb-1 ${item.featured ? "text-bali-gold" : "text-bali-deep"}`}>
                   {item.title}
                 </h3>
@@ -535,6 +542,7 @@ export default function HomePage() {
                   Je réserve
                 </Link>
               </div>
+              </Reveal>
             ))}
           </div>
           <div className="mt-6 text-center">

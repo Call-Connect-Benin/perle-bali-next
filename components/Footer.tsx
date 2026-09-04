@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 
 const serviceLinks = [
   { label: "Massage Bali Bien-être", href: "/services-massage/massage-bali-bien-etre" },
@@ -31,9 +32,10 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-bali-deep text-bali-sand">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="relative bg-bali-deep text-bali-sand overflow-hidden">
+      <div className="absolute inset-0 ambient-glow-soft" />
+      <div className="relative max-w-7xl mx-auto px-6 py-16">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Brand column */}
           <div className="lg:col-span-1">
@@ -177,7 +179,7 @@ export default function Footer() {
               Réserver une séance
             </Link>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* Bottom bar */}
