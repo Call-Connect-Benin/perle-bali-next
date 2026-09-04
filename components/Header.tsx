@@ -44,7 +44,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 sm:px-6 pt-3 sm:pt-4">
       {/* Floating pill, overlaid on top of the page — never pushes content down,
           so whatever sits behind it is always the actual hero background */}
-      <div className="relative max-w-6xl mx-auto rounded-full bg-gradient-to-r from-bali-deep via-[#3a2130] to-bali-deep shadow-xl shadow-black/30 border border-white/5">
+      <div className="relative max-w-6xl mx-auto rounded-full bg-gradient-to-r from-bali-deep via-[#3A4A3E] to-bali-deep shadow-xl shadow-black/30 border border-white/5">
         {/* Subtle scattered ornament dots */}
         <span className="pointer-events-none absolute left-[30%] -top-1.5 w-1 h-1 rounded-full bg-bali-gold/50 hidden md:block" />
         <span className="pointer-events-none absolute right-[22%] -bottom-1.5 w-1 h-1 rounded-full bg-bali-sand/40 hidden md:block" />
