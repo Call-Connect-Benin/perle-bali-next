@@ -552,7 +552,8 @@ export default function HomePage() {
       </section>
 
       {/* ── CONTACT FORM ── */}
-      <section className="py-12 md:py-16 px-6 bg-bali-deep relative overflow-hidden">
+      <section className="py-8 px-4 sm:px-6">
+      <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-bali-deep shadow-xl shadow-bali-deep/20 py-12 md:py-16 px-6">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -645,6 +646,7 @@ export default function HomePage() {
             </Reveal>
           </div>
         </div>
+      </div>
       </section>
     </>
   );
