@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import { LeafOrnament, ShellOrnament } from "@/components/Ornaments";
 
 const serviceLinks = [
   { label: "Massage Bali Bien-être", href: "/services-massage/massage-bali-bien-etre" },
@@ -34,6 +35,8 @@ export default function Footer() {
   return (
     <footer className="relative bg-bali-deep text-bali-sand overflow-hidden">
       <div className="absolute inset-0 ambient-glow-soft" />
+      <LeafOrnament className="absolute top-4 right-[4%] w-24 h-24 text-bali-sage/10 hidden lg:block animate-float-slow" />
+      <ShellOrnament className="absolute bottom-4 left-[6%] w-16 h-11 text-bali-gold/10 hidden md:block animate-float-slow-delayed" />
       <div className="relative max-w-7xl mx-auto px-6 py-16">
         <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
