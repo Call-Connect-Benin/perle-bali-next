@@ -38,8 +38,8 @@ export default function Footer() {
       <div className="absolute inset-0 ambient-glow-soft" />
       <LeafOrnament className="absolute top-4 right-[3%] w-28 h-28 text-bali-sage/35 hidden sm:block animate-float-slow" />
       <ShellOrnament className="absolute bottom-4 left-[4%] w-20 h-14 text-bali-gold/35 hidden sm:block animate-float-slow-delayed" />
-      <div className="relative max-w-7xl mx-auto px-6 py-16">
-        <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="relative max-w-7xl mx-auto px-6 py-10">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-8">
 
           {/* Brand column */}
           <div className="lg:col-span-1">
@@ -76,8 +76,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-display text-lg font-medium text-white mb-5">Nos services</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display text-lg font-medium text-white mb-4">Nos services</h3>
+            <ul className="space-y-1.5">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -93,8 +93,8 @@ export default function Footer() {
 
           {/* À propos & blog */}
           <div>
-            <h3 className="font-display text-lg font-medium text-white mb-5">À propos</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display text-lg font-medium text-white mb-4">À propos</h3>
+            <ul className="space-y-1.5">
               {infoLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -108,7 +108,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <h4 className="font-display text-base font-medium text-white mb-3">Légal</h4>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5">
                 {legalLinks.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -125,7 +125,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display text-lg font-medium text-white mb-5">Contactez-moi</h3>
+            <h3 className="font-display text-lg font-medium text-white mb-4">Contactez-moi</h3>
             <ul className="space-y-3 font-body">
               <li>
                 <a
