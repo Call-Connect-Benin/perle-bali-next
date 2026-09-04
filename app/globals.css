@@ -15,8 +15,8 @@
   --color-bali-dark: #2B2620;
   --color-bali-white: #FDFBFB;
 
-    --font-display: var(--font-outfit), 'Outfit', sans-serif;
-  --font-body: var(--font-dm-sans), 'DM Sans', sans-serif;
+    --font-display: var(--font-outfit), 'Calligraffitti', cursive;
+  --font-body: var(--font-dm-sans), 'Imprima', sans-serif;
   --font-script: var(--font-accent), 'Cormorant Garamond', serif;
 }
 

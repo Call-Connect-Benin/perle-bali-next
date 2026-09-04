@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import { Outfit, DM_Sans, Cormorant_Garamond } from "next/font/google";
+import { Calligraffitti, Imprima, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const outfit = Outfit({
+// Mêmes polices que l'ancien site WordPress : Calligraffitti pour les titres
+// (h1-h6 sur perle-bali.fr), Imprima pour le corps de texte.
+const calligraffitti = Calligraffitti({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
   variable: "--font-outfit",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const imprima = Imprima({
   subsets: ["latin"],
+  weight: ["400"],
   variable: "--font-dm-sans",
   display: "swap",
 });
@@ -74,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${outfit.variable} ${dmSans.variable} ${cormorant.variable}`}
+      className={`${calligraffitti.variable} ${imprima.variable} ${cormorant.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-bali-cream text-bali-dark">
         <script
