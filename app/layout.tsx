@@ -3,6 +3,7 @@ import { Calligraffitti, Imprima, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 // Mêmes polices que l'ancien site WordPress : Calligraffitti pour les titres
 // (h1-h6 sur perle-bali.fr), Imprima pour le corps de texte.
@@ -118,6 +119,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

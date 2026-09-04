@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { LeafOrnament, ShellOrnament } from "@/components/Ornaments";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 
 const serviceLinks = [
   { label: "Massage Bali Bien-être", href: "/services-massage/massage-bali-bien-etre" },
@@ -189,6 +190,7 @@ export default function Footer() {
       <div className="border-t border-bali-sand/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-bali-sand/50 font-body">
           <p>© {new Date().getFullYear()} Perle de Bali. Tous droits réservés.</p>
+          <CookieSettingsButton />
           <p>
             Réalisé par{" "}
             <a href="https://lannkin.ca" className="hover:text-bali-gold transition-colors" target="_blank" rel="noopener noreferrer">
