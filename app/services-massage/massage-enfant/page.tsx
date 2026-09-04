@@ -16,7 +16,9 @@ export default function MassageEnfantPage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <FlowerOrnament className="absolute top-8 right-[6%] w-16 h-16 text-bali-gold/45 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-10 left-[5%] w-20 h-14 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
+        <span className="absolute top-[15%] left-[68%] w-1.5 h-1.5 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.5s" }} />
+        <span className="absolute top-[58%] right-[12%] w-1 h-1 rounded-full bg-bali-sand hidden lg:block animate-twinkle" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>

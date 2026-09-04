@@ -11,7 +11,9 @@ export default function MassageTraversLeTempPage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
+        <span className="absolute top-[25%] right-[12%] w-1.5 h-1.5 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "0.4s" }} />
+        <span className="absolute top-[60%] left-[42%] w-1 h-1 rounded-full bg-bali-gold hidden lg:block animate-twinkle" style={{ animationDelay: "1.3s" }} />
         <div className="relative max-w-3xl mx-auto">
           <nav className="flex items-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>

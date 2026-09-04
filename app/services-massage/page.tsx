@@ -112,8 +112,10 @@ export default function ServicesMassagePage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <FlowerOrnament className="absolute top-8 left-[5%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-10 right-[5%] w-24 h-16 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
+        <span className="absolute top-[35%] left-[15%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.0s" }} />
+        <span className="absolute top-[72%] right-[48%] w-1.5 h-1.5 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.6s" }} />
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-15 animate-breathe"
           style={{
             backgroundImage:
               "radial-gradient(ellipse at 40% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%)",

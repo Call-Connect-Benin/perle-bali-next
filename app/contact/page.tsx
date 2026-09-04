@@ -16,8 +16,10 @@ export default function ContactPage() {
       <section className="bg-bali-deep pt-24 pb-12 px-6 relative overflow-hidden">
         <FlowerOrnament className="absolute top-6 right-[5%] w-16 h-16 text-bali-gold/45 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-4 left-[4%] w-20 h-20 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
+        <span className="absolute top-[32%] right-[28%] w-1 h-1 rounded-full bg-bali-gold-light hidden lg:block animate-twinkle" style={{ animationDelay: "0.3s" }} />
+        <span className="absolute top-[78%] left-[15%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.5s" }} />
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-15 animate-breathe"
           style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }}
         />
         <div className="relative max-w-3xl mx-auto text-center">

@@ -195,8 +195,10 @@ export default function TarifsPage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <LeafOrnament className="absolute top-6 right-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow" />
         <SandScatter className="absolute bottom-8 left-[8%] w-36 h-10 text-bali-sand/55 hidden sm:block animate-float-slow-delayed" />
+        <span className="absolute top-[25%] right-[52%] w-1.5 h-1.5 rounded-full bg-bali-sand hidden lg:block animate-twinkle" style={{ animationDelay: "1.8s" }} />
+        <span className="absolute top-[68%] left-[22%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "0.9s" }} />
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-15 animate-breathe"
           style={{
             backgroundImage:
               "radial-gradient(ellipse at 30% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%)",

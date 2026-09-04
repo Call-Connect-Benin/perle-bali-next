@@ -16,7 +16,9 @@ export default function MassageAmincissantPage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <FlowerOrnament className="absolute top-10 right-[6%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-8 left-[4%] w-24 h-16 text-bali-honey/50 hidden sm:block animate-float-slow-delayed" />
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }} />
+        <span className="absolute top-[22%] left-[40%] w-1 h-1 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "0.4s" }} />
+        <span className="absolute top-[82%] right-[10%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.7s" }} />
+        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>

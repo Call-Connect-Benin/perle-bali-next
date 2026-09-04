@@ -72,8 +72,10 @@ export default function AProposPage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <ShellOrnament className="absolute top-10 left-[4%] w-20 h-14 text-bali-honey/40 hidden sm:block animate-float-slow" />
         <FlowerOrnament className="absolute bottom-8 right-[6%] w-24 h-24 text-bali-gold/40 hidden sm:block animate-float-slow-delayed" />
+        <span className="absolute top-[22%] left-[12%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "0.3s" }} />
+        <span className="absolute top-[58%] right-[15%] w-1 h-1 rounded-full bg-bali-sand hidden lg:block animate-twinkle" style={{ animationDelay: "1.1s" }} />
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-15 animate-breathe"
           style={{
             backgroundImage:
               "radial-gradient(ellipse at 70% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)",
