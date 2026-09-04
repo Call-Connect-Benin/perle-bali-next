@@ -33,7 +33,7 @@ export default function MassageTraversLeTempPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2B2620 0%, #D0919C 100%)" }}>
+          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2B2620 0%, #6B9172 100%)" }}>
             <div className="w-full h-full flex items-end p-4">
               <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/blog/histoire-massage.jpg</p>
             </div>

@@ -18,7 +18,7 @@ export default function ContactPage() {
         <LeafOrnament className="absolute bottom-4 left-[4%] w-20 h-20 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <div
           className="absolute inset-0 opacity-15"
-          style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(208, 145, 156,0.4) 0%, transparent 55%)" }}
+          style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(107, 145, 114,0.4) 0%, transparent 55%)" }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-6">

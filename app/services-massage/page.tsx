@@ -116,7 +116,7 @@ export default function ServicesMassagePage() {
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 40% 60%, rgba(208, 145, 156,0.4) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 40% 60%, rgba(107, 145, 114,0.4) 0%, transparent 55%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
@@ -186,7 +186,7 @@ export default function ServicesMassagePage() {
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 50% 50%, rgba(208, 145, 156,0.5) 0%, transparent 65%)",
+              "radial-gradient(ellipse at 50% 50%, rgba(107, 145, 114,0.5) 0%, transparent 65%)",
           }}
         />
         <div className="relative max-w-2xl mx-auto">
