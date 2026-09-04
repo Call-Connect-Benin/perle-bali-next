@@ -13,12 +13,10 @@ export const metadata: Metadata = {
 export default function ChiNeiTsangPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <LeafOrnament className="absolute top-10 right-[5%] w-28 h-28 text-bali-sage/35 hidden sm:block animate-float-slow" />
         <SandScatter className="absolute bottom-8 left-[8%] w-24 h-8 text-bali-sand/55 hidden sm:block animate-float-slow-delayed" />
-        <span className="absolute top-[20%] left-[28%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden lg:block animate-twinkle" style={{ animationDelay: "1.9s" }} />
-        <span className="absolute top-[62%] right-[35%] w-1 h-1 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.4s" }} />
-        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.5) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.5) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>

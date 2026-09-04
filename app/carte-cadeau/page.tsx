@@ -50,13 +50,11 @@ const giftOptions = [
 export default function CarteKCadeauPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <SandScatter className="absolute top-10 left-[10%] w-32 h-8 text-bali-sand/55 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-6 right-[4%] w-24 h-16 text-bali-honey/50 hidden sm:block animate-float-slow-delayed" />
-        <span className="absolute top-[45%] left-[25%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "0.8s" }} />
-        <span className="absolute top-[20%] right-[45%] w-1 h-1 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "1.2s" }} />
         <div
-          className="absolute inset-0 opacity-15 animate-breathe"
+          className="absolute inset-0 opacity-15"
           style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }}
         />
         <div className="relative max-w-3xl mx-auto text-center">

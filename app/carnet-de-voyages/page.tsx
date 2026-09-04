@@ -56,12 +56,10 @@ export default function CarnetDeVoyagesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <LeafOrnament className="absolute top-8 right-[6%] w-28 h-28 text-bali-sage/40 hidden sm:block animate-float-slow" />
         <FlowerOrnament className="absolute bottom-10 left-[5%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow-delayed" />
-        <span className="absolute top-[12%] left-[35%] w-1 h-1 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.5s" }} />
-        <span className="absolute top-[75%] right-[8%] w-1.5 h-1.5 rounded-full bg-bali-sand hidden lg:block animate-twinkle" style={{ animationDelay: "1.6s" }} />
-        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>

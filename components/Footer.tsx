@@ -34,7 +34,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-bali-deep text-bali-sand overflow-hidden dot-field">
+    <footer className="relative bg-bali-deep text-bali-sand overflow-hidden">
       <div className="absolute inset-0 ambient-glow-soft" />
       <LeafOrnament className="absolute top-4 right-[3%] w-28 h-28 text-bali-sage/35 hidden sm:block animate-float-slow" />
       <ShellOrnament className="absolute bottom-4 left-[4%] w-20 h-14 text-bali-gold/35 hidden sm:block animate-float-slow-delayed" />

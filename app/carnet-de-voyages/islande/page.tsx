@@ -10,10 +10,8 @@ export const metadata: Metadata = {
 export default function IslandePage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
-        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
-        <span className="absolute top-[28%] left-[62%] w-1 h-1 rounded-full bg-bali-gold-light hidden sm:block animate-twinkle" style={{ animationDelay: "0.6s" }} />
-        <span className="absolute top-[72%] left-[18%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.4s" }} />
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto">
           <nav className="flex items-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>

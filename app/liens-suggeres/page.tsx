@@ -41,12 +41,10 @@ const legalLinks = [
 export default function LiensSuggeresPage() {
   return (
     <>
-      <section className="bg-bali-deep pt-24 pb-16 px-6 relative overflow-hidden dot-field">
+      <section className="bg-bali-deep pt-24 pb-16 px-6 relative overflow-hidden">
         <ShellOrnament className="absolute top-6 right-[4%] w-20 h-14 text-bali-honey/45 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-6 left-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
-        <span className="absolute top-[50%] left-[10%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "0.2s" }} />
-        <span className="absolute top-[15%] right-[50%] w-1.5 h-1.5 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "1.0s" }} />
-        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-6">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>

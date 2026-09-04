@@ -195,20 +195,16 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-bali-deep dot-field pt-28 pb-20 lg:pt-24 lg:pb-0 lg:min-h-[85vh] lg:flex lg:items-center">
-        <div className="absolute inset-0 ambient-glow animate-breathe" />
-        <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-dashed border-bali-gold/20 hidden lg:block animate-spin-slow" />
-        <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-dashed border-bali-gold/15 hidden lg:block animate-spin-slow-reverse" />
+      <section className="relative overflow-hidden bg-bali-deep pt-28 pb-20 lg:pt-24 lg:pb-0 lg:min-h-[85vh] lg:flex lg:items-center">
+        <div className="absolute inset-0 ambient-glow" />
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block animate-float-slow" />
+        <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-bali-gold/8 hidden lg:block animate-float-slow-delayed" />
         <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-bali-sage/15 hidden lg:block animate-float-slow" />
         <FlowerOrnament className="absolute top-10 left-[6%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-24 right-[4%] w-28 h-28 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <SandScatter className="absolute bottom-10 left-[12%] w-40 h-10 text-bali-sand/60 hidden sm:block" />
         <ShellOrnament className="absolute top-1/2 left-[2%] w-16 h-11 text-bali-honey/40 hidden md:block animate-float-slow" />
         {/* Twinkling sparkles */}
-        <span className="absolute top-[18%] left-[45%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" />
-        <span className="absolute top-[65%] left-[35%] w-1 h-1 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "0.8s" }} />
-        <span className="absolute top-[35%] right-[38%] w-1.5 h-1.5 rounded-full bg-bali-gold-light hidden lg:block animate-twinkle" style={{ animationDelay: "1.6s" }} />
-        <span className="absolute top-[80%] left-[20%] w-1 h-1 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "0.4s" }} />
 
         <div className="relative z-10 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           <div className="text-center lg:text-left">
@@ -398,7 +394,7 @@ export default function HomePage() {
 
       {/* ── STATS ── */}
       <section className="py-8 px-4 sm:px-6">
-        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-bali-deep dot-field shadow-xl shadow-bali-deep/20 py-14 px-6">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-bali-deep shadow-xl shadow-bali-deep/20 py-14 px-6">
           <div className="absolute inset-0 ambient-glow-soft" />
           <div className="relative max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y-0 md:divide-x md:divide-white/10">
@@ -475,7 +471,7 @@ export default function HomePage() {
 
       {/* ── CTA BANNER ── */}
       <section className="py-8 px-4 sm:px-6">
-        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-gradient-to-r from-bali-gold to-bali-rose-deep dot-field shadow-xl shadow-bali-gold/20 py-12 px-6">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-gradient-to-r from-bali-gold to-bali-rose-deep shadow-xl shadow-bali-gold/20 py-12 px-6">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -630,7 +626,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CONTACT FORM BOTTOM ── */}
-      <section className="py-12 px-6 bg-bali-deep relative overflow-hidden dot-field">
+      <section className="py-12 px-6 bg-bali-deep relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{

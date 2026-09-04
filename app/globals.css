@@ -93,18 +93,6 @@ h1, h2, h3, h4, h5, h6 {
     radial-gradient(40% 45% at 90% 30%, rgba(227, 185, 140, 0.12), transparent 65%);
 }
 
-/* Fine sprinkle of dots across dark surfaces — sand grains / stars, echoed
-   from the "constellation" texture on the reference site, adapted to the
-   Bali beach theme. A single tiling background-image, so it's free to apply
-   anywhere: it just layers behind whatever content already sits there. */
-.dot-field {
-  background-image:
-    radial-gradient(rgba(237, 208, 202, 0.75) 1.6px, transparent 2px),
-    radial-gradient(rgba(186, 127, 127, 0.65) 1.6px, transparent 2px);
-  background-size: 30px 30px, 20px 20px;
-  background-position: 0 0, 10px 15px;
-}
-
 /* Warm-tinted elevation for cards, replaces flat grey shadows */
 .card-elevate {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -155,36 +143,6 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 1.5s;
 }
 
-/* Very slow continuous rotation for decorative rings */
-@keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-  animation: spinSlow 40s linear infinite;
-}
-.animate-spin-slow-reverse {
-  animation: spinSlow 55s linear infinite reverse;
-}
-
-/* Twinkling sparkle dots */
-@keyframes twinkle {
-  0%, 100% { opacity: 0.15; transform: scale(0.8); }
-  50% { opacity: 0.9; transform: scale(1.15); }
-}
-.animate-twinkle {
-  animation: twinkle 2.6s ease-in-out infinite;
-}
-
-/* Ambient background that breathes — position/opacity drift over time */
-@keyframes breathe {
-  0%, 100% { opacity: 0.7; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
-}
-.animate-breathe {
-  animation: breathe 6s ease-in-out infinite;
-}
-
 /* Gentle icon wiggle on hover, for CTA icons */
 @keyframes wiggle {
   0%, 100% { transform: rotate(0deg) scale(1); }
@@ -196,10 +154,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-spin-slow,
-  .animate-spin-slow-reverse,
-  .animate-twinkle,
-  .animate-breathe,
   .group:hover .icon-wiggle {
     animation: none;
   }

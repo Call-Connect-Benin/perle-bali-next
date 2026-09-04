@@ -13,12 +13,10 @@ export const metadata: Metadata = {
 export default function MassageDrainagePage() {
   return (
     <>
-      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden dot-field">
+      <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <SandScatter className="absolute top-8 left-[6%] w-32 h-8 text-bali-sand/50 hidden sm:block animate-float-slow" />
         <LeafOrnament className="absolute bottom-6 right-[6%] w-20 h-20 text-bali-sage/45 hidden sm:block animate-float-slow-delayed" />
-        <span className="absolute top-[48%] right-[25%] w-1 h-1 rounded-full bg-bali-sand hidden sm:block animate-twinkle" style={{ animationDelay: "0.8s" }} />
-        <span className="absolute top-[80%] left-[38%] w-1.5 h-1.5 rounded-full bg-bali-gold hidden sm:block animate-twinkle" style={{ animationDelay: "1.2s" }} />
-        <div className="absolute inset-0 opacity-15 animate-breathe" style={{ backgroundImage: "radial-gradient(ellipse at 40% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 40% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>
