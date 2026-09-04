@@ -557,7 +557,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(ellipse at 30% 50%, rgba(186, 127, 127,0.5) 0%, transparent 60%)",
+            backgroundImage: "radial-gradient(ellipse at 30% 50%, rgba(208, 145, 156,0.5) 0%, transparent 60%)",
           }}
         />
         <ShellOrnament className="absolute top-8 right-[4%] w-24 h-16 text-bali-honey/30 hidden lg:block animate-float-slow" />

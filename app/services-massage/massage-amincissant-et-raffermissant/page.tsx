@@ -16,7 +16,7 @@ export default function MassageAmincissantPage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <FlowerOrnament className="absolute top-10 right-[6%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
         <ShellOrnament className="absolute bottom-8 left-[4%] w-24 h-16 text-bali-honey/50 hidden sm:block animate-float-slow-delayed" />
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 50%, rgba(208, 145, 156,0.5) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>
@@ -74,7 +74,7 @@ export default function MassageAmincissantPage() {
                     </ul>
                   </div>
                   <div className="bg-bali-deep text-white rounded-2xl p-6 shadow-xl relative overflow-hidden card-elevate">
-                    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(186, 127, 127,0.6) 0%, transparent 60%)" }} />
+                    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(208, 145, 156,0.6) 0%, transparent 60%)" }} />
                     <div className="relative">
                       <p className="font-body text-xs text-bali-gold font-semibold uppercase tracking-wider mb-2">Cure 10 séances</p>
                       <div className="flex items-baseline gap-1 mb-4">

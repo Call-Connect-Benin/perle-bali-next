@@ -7,9 +7,9 @@
   --color-bali-deep: #28352C;
   --color-bali-green: #4A6B4A;
   --color-bali-sage: #6B9172;
-  --color-bali-gold: #BA7F7F;
-  --color-bali-gold-light: #D6B2B2;
-  --color-bali-rose-deep: #8C5757;
+  --color-bali-gold: #D0919C;
+  --color-bali-gold-light: #EAC0C7;
+  --color-bali-rose-deep: #A9707C;
   --color-bali-sand: #EDD0CA;
   --color-bali-honey: #E3B98C;
   --color-bali-dark: #2B2620;
@@ -65,17 +65,17 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   max-width: 80px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #BA7F7F);
+  background: linear-gradient(90deg, transparent, #D0919C);
   opacity: 0.6;
 }
 .bali-divider::after {
-  background: linear-gradient(90deg, #BA7F7F, transparent);
+  background: linear-gradient(90deg, #D0919C, transparent);
 }
 .bali-divider-mark {
   width: 6px;
   height: 6px;
   border-radius: 999px;
-  background: #BA7F7F;
+  background: #D0919C;
   transform: rotate(45deg);
   flex-shrink: 0;
 }
@@ -83,24 +83,24 @@ h1, h2, h3, h4, h5, h6 {
 /* Layered ambient glow, used behind hero / dark sections for a softer, less flat backdrop */
 .ambient-glow {
   background-image:
-    radial-gradient(50% 60% at 20% 15%, rgba(186, 127, 127, 0.35), transparent 60%),
+    radial-gradient(50% 60% at 20% 15%, rgba(208, 145, 156, 0.35), transparent 60%),
     radial-gradient(45% 50% at 85% 25%, rgba(227, 185, 140, 0.22), transparent 65%),
     radial-gradient(55% 45% at 50% 100%, rgba(107, 145, 114, 0.14), transparent 70%);
 }
 .ambient-glow-soft {
   background-image:
-    radial-gradient(45% 55% at 15% 10%, rgba(186, 127, 127, 0.14), transparent 60%),
+    radial-gradient(45% 55% at 15% 10%, rgba(208, 145, 156, 0.14), transparent 60%),
     radial-gradient(40% 45% at 90% 30%, rgba(227, 185, 140, 0.12), transparent 65%);
 }
 
 /* Warm-tinted elevation for cards, replaces flat grey shadows */
 .card-elevate {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 1px 2px rgba(140, 87, 87, 0.06), 0 1px 3px rgba(140, 87, 87, 0.04);
+  box-shadow: 0 1px 2px rgba(169, 112, 124, 0.06), 0 1px 3px rgba(169, 112, 124, 0.04);
 }
 .card-elevate:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 48px -12px rgba(140, 87, 87, 0.22), 0 8px 16px -8px rgba(140, 87, 87, 0.12);
+  box-shadow: 0 24px 48px -12px rgba(169, 112, 124, 0.22), 0 8px 16px -8px rgba(169, 112, 124, 0.12);
 }
 
 /* Elegant center-out underline for desktop nav links */
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   height: 1px;
   width: 0;
-  background: #BA7F7F;
+  background: #D0919C;
   transition: width 0.3s ease, left 0.3s ease;
 }
 .nav-link-underline:hover::after {
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .pricing-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(140, 87, 87, 0.16);
+  box-shadow: 0 20px 40px rgba(169, 112, 124, 0.16);
 }
 
 /* Custom scrollbar */
@@ -204,6 +204,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #FDF8F6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #BA7F7F;
+  background: #D0919C;
   border-radius: 3px;
 }

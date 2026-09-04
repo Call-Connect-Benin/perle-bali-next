@@ -55,7 +55,7 @@ export default function CarteKCadeauPage() {
         <ShellOrnament className="absolute bottom-6 right-[4%] w-24 h-16 text-bali-honey/50 hidden sm:block animate-float-slow-delayed" />
         <div
           className="absolute inset-0 opacity-15"
-          style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }}
+          style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(208, 145, 156,0.5) 0%, transparent 55%)" }}
         />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8">
@@ -95,7 +95,7 @@ export default function CarteKCadeauPage() {
                 className="pricing-card bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/30 flex flex-col"
               >
                 <div className="w-full aspect-[3/2] rounded-xl mb-4 flex items-center justify-center relative overflow-hidden"
-                  style={{ background: "linear-gradient(135deg, #28352C 0%, #BA7F7F 100%)" }}>
+                  style={{ background: "linear-gradient(135deg, #28352C 0%, #D0919C 100%)" }}>
                   <div className="text-center text-white">
                     <p className="font-display text-3xl font-semibold text-bali-gold">{opt.price}</p>
                     <p className="font-body text-xs text-white/70 mt-1">{opt.duration}</p>
@@ -113,7 +113,7 @@ export default function CarteKCadeauPage() {
           </div>
 
           <div className="bg-bali-deep text-white rounded-2xl p-8 text-center relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.5) 0%, transparent 65%)" }} />
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(208, 145, 156,0.5) 0%, transparent 65%)" }} />
             <div className="relative">
               <p className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold mb-3">Comment ça marche ?</p>
               <h3 className="font-display text-3xl text-white font-light mb-6">En 3 étapes simples</h3>
