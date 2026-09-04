@@ -195,23 +195,13 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="relative overflow-hidden bg-bali-deep pt-28 pb-20 lg:pt-24 lg:pb-0 lg:min-h-[85vh] lg:flex lg:items-center">
-        {/* Full-bleed uniform background photo, face pushed right so text stays legible */}
-        <Image
-          src="/images/hero/hero-main.jpg"
-          alt=""
-          fill
-          priority
-          className="object-cover object-[80%_center]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-bali-deep via-bali-deep/90 to-bali-deep/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-bali-deep via-transparent to-bali-deep/40" />
-        <div className="absolute inset-0 ambient-glow-soft" />
+        <div className="absolute inset-0 ambient-glow" />
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block animate-float-slow" />
         <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-bali-gold/8 hidden lg:block animate-float-slow-delayed" />
         <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-bali-sage/15 hidden lg:block animate-float-slow" />
 
-        <div className="relative z-10 px-6 max-w-7xl mx-auto">
-          <div className="text-center lg:text-left max-w-2xl">
+        <div className="relative z-10 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+          <div className="text-center lg:text-left">
             <p className="font-script text-bali-gold-light text-2xl mb-2 animate-fade-in-up opacity-0" style={{ animationDelay: "0ms" }}>
               Votre évasion bien-être
             </p>
@@ -250,6 +240,22 @@ export default function HomePage() {
                 Découvrir les soins
               </Link>
             </div>
+          </div>
+
+          {/* Photo showcase, framed rather than as a full-bleed background */}
+          <div className="relative hidden lg:block animate-fade-in-up opacity-0" style={{ animationDelay: "180ms" }}>
+            <div className="relative aspect-[4/5] max-w-sm mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/40 border border-white/10">
+              <Image
+                src="/images/hero/hero-main.jpg"
+                alt="Massage du visage relaxant chez Perle de Bali"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bali-deep/30 via-transparent to-transparent" />
+            </div>
+            <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-bali-gold/15 -z-10" />
+            <div className="absolute -top-6 -right-4 w-20 h-20 rounded-full border-2 border-bali-gold/25 -z-10" />
           </div>
         </div>
 
