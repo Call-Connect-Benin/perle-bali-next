@@ -84,7 +84,7 @@ export default function CarnetDeVoyagesPage() {
               <Link
                 key={article.href}
                 href={article.href}
-                className="group bg-bali-white rounded-2xl overflow-hidden shadow-sm border border-bali-sand/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                className="group bg-bali-white rounded-2xl overflow-hidden shadow-sm border border-bali-sand/20 card-elevate flex flex-col"
               >
                 <div className="w-full aspect-video bg-gradient-to-br from-bali-deep/5 to-bali-gold/10 relative overflow-hidden">
                   {article.image ? (

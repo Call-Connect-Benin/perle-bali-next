@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50">
       {/* Top info bar */}
-      <div className="bg-bali-deep text-bali-sand text-xs font-body">
+      <div className="bg-gradient-to-r from-bali-deep via-[#3a2130] to-bali-deep text-bali-sand text-xs font-body">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-2 py-2">
           <div className="flex flex-wrap items-center gap-4">
             <a
@@ -105,23 +105,25 @@ export default function Header() {
               className="w-10 h-10 md:w-12 md:h-12 shrink-0"
               priority
             />
-            Perle de Bali
+            <span>
+              Perle <span className="font-script text-bali-gold font-medium">de</span> Bali
+            </span>
           </Link>
 
           {/* Desktop nav */}
           <ul className="hidden lg:flex items-center gap-6 font-body text-sm text-bali-dark">
             <li>
-              <Link href="/" className="hover:text-bali-gold transition-colors py-2">
+              <Link href="/" className="nav-link-underline hover:text-bali-gold transition-colors py-2">
                 Accueil
               </Link>
             </li>
             <li>
-              <Link href="/tarifs" className="hover:text-bali-gold transition-colors py-2">
+              <Link href="/tarifs" className="nav-link-underline hover:text-bali-gold transition-colors py-2">
                 Tarifs
               </Link>
             </li>
             <li>
-              <Link href="/a-propos" className="hover:text-bali-gold transition-colors py-2">
+              <Link href="/a-propos" className="nav-link-underline hover:text-bali-gold transition-colors py-2">
                 À propos
               </Link>
             </li>
@@ -132,7 +134,7 @@ export default function Header() {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button className="flex items-center gap-1 hover:text-bali-gold transition-colors py-2">
+              <button className="flex items-center gap-1 nav-link-underline hover:text-bali-gold transition-colors py-2">
                 <Link href="/services-massage">Soins & Massages</Link>
                 <svg
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
@@ -170,12 +172,12 @@ export default function Header() {
             </li>
 
             <li>
-              <Link href="/carnet-de-voyages" className="hover:text-bali-gold transition-colors py-2">
+              <Link href="/carnet-de-voyages" className="nav-link-underline hover:text-bali-gold transition-colors py-2">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-bali-gold transition-colors py-2">
+              <Link href="/contact" className="nav-link-underline hover:text-bali-gold transition-colors py-2">
                 Contact
               </Link>
             </li>
@@ -185,7 +187,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center gap-2 bg-bali-gold text-white text-sm font-body font-medium px-5 py-2.5 rounded-full hover:bg-bali-deep transition-colors duration-300"
+              className="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white text-sm font-body font-medium px-5 py-2.5 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               Obtenez un devis
             </Link>

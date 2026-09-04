@@ -193,20 +193,22 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-bali-deep">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse at 30% 60%, rgba(186, 127, 127,0.4) 0%, transparent 55%), radial-gradient(ellipse at 75% 25%, rgba(107,145,114,0.3) 0%, transparent 50%)",
-          }}
+        <Image
+          src="/images/hero/hero-main.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-45"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-bali-deep via-bali-deep/80 to-bali-deep/50" />
+        <div className="absolute inset-0 ambient-glow opacity-70" />
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block" />
         <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-bali-gold/8 hidden lg:block" />
         <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-bali-sage/15 hidden lg:block" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="font-body text-bali-gold text-sm tracking-[0.25em] uppercase mb-4">
-            Votre Évasion Bien-Être
+          <p className="font-script text-bali-gold-light text-2xl mb-2">
+            Votre évasion bien-être
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-semibold text-white leading-tight mb-6">
             Évadez-vous avec{" "}
@@ -218,7 +220,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="tel:+33756139596"
-              className="inline-flex items-center justify-center gap-2 bg-bali-gold text-white font-body font-medium px-7 py-3.5 rounded-full hover:bg-bali-gold-light transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-7 py-3.5 rounded-full shadow-lg shadow-bali-rose-deep/20 hover:shadow-xl hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -261,7 +263,7 @@ export default function HomePage() {
           <h2 className="font-display text-3xl md:text-4xl text-center text-bali-deep font-semibold leading-tight mb-6">
             Votre sanctuaire de bien-être
             <br />
-            <em className="font-normal">et de relaxation</em>
+            <span className="font-script text-bali-gold font-normal">et de relaxation</span>
           </h2>
           <div className="flex items-center justify-center gap-3 mb-8">
             <span className="w-16 h-px bg-bali-gold/40" />
@@ -282,7 +284,7 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-3 mt-8">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-bali-gold text-white font-body font-medium px-7 py-3 rounded-full hover:bg-bali-gold-light transition-colors"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-7 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/25 hover:-translate-y-0.5 transition-all duration-300"
             >
               Prendre rendez-vous
             </Link>
@@ -406,7 +408,7 @@ export default function HomePage() {
               <Link
                 key={s.href}
                 href={s.href}
-                className="group bg-bali-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
+                className="group bg-bali-white rounded-2xl p-5 shadow-sm card-elevate flex flex-col"
               >
                 <div className="relative w-full aspect-[4/3] rounded-xl bg-bali-deep/5 mb-4 overflow-hidden">
                   <Image src={s.image} alt={s.title} fill className="object-cover" />

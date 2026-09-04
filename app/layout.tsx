@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, DM_Sans } from "next/font/google";
+import { Outfit, DM_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,6 +14,14 @@ const outfit = Outfit({
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["italic"],
+  variable: "--font-accent",
   display: "swap",
 });
 
@@ -48,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${outfit.variable} ${dmSans.variable}`}
+      className={`${outfit.variable} ${dmSans.variable} ${cormorant.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-bali-cream text-bali-dark">
         <Header />
