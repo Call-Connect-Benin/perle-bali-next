@@ -143,7 +143,54 @@ h1, h2, h3, h4, h5, h6 {
   animation-delay: 1.5s;
 }
 
+/* Very slow continuous rotation for decorative rings */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spinSlow 55s linear infinite reverse;
+}
+
+/* Twinkling sparkle dots */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+.animate-twinkle {
+  animation: twinkle 2.6s ease-in-out infinite;
+}
+
+/* Ambient background that breathes — position/opacity drift over time */
+@keyframes breathe {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+.animate-breathe {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+/* Gentle icon wiggle on hover, for CTA icons */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  75% { transform: rotate(10deg) scale(1.1); }
+}
+.group:hover .icon-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-spin-slow-reverse,
+  .animate-twinkle,
+  .animate-breathe,
+  .group:hover .icon-wiggle {
+    animation: none;
+  }
   .card-elevate,
   .card-elevate:hover,
   .animate-fade-in-up,
