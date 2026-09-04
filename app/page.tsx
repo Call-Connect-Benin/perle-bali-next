@@ -397,20 +397,22 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="py-14 bg-bali-deep relative overflow-hidden">
-        <div className="absolute inset-0 ambient-glow-soft" />
-        <div className="relative max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y-0 md:divide-x md:divide-white/10">
-            {stats.map((stat, i) => (
-              <Reveal key={stat.value} delay={i * 100} className="text-center md:px-4">
-                <p className="font-display text-4xl md:text-5xl font-semibold text-bali-gold leading-none mb-2 tabular-nums">
-                  <Counter value={stat.value} />
-                </p>
-                <p className="font-body text-sm text-bali-sand/70 leading-snug capitalize">
-                  {stat.label}
-                </p>
-              </Reveal>
-            ))}
+      <section className="py-8 px-4 sm:px-6">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-bali-deep shadow-xl shadow-bali-deep/20 py-14 px-6">
+          <div className="absolute inset-0 ambient-glow-soft" />
+          <div className="relative max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-y-0 md:divide-x md:divide-white/10">
+              {stats.map((stat, i) => (
+                <Reveal key={stat.value} delay={i * 100} className="text-center md:px-4">
+                  <p className="font-display text-4xl md:text-5xl font-semibold text-bali-gold leading-none mb-2 tabular-nums">
+                    <Counter value={stat.value} />
+                  </p>
+                  <p className="font-body text-sm text-bali-sand/70 leading-snug capitalize">
+                    {stat.label}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -472,7 +474,8 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="py-12 px-6 bg-bali-gold relative overflow-hidden">
+      <section className="py-8 px-4 sm:px-6">
+        <div className="relative max-w-6xl mx-auto rounded-[2.5rem] overflow-hidden bg-gradient-to-r from-bali-gold to-bali-rose-deep shadow-xl shadow-bali-gold/20 py-12 px-6">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -505,6 +508,7 @@ export default function HomePage() {
             </a>
           </div>
         </Reveal>
+        </div>
       </section>
 
       {/* ── PRICING ── */}
