@@ -88,7 +88,7 @@ export default function CarnetDeVoyagesPage() {
               >
                 <div className="w-full aspect-video bg-gradient-to-br from-bali-deep/5 to-bali-gold/10 relative overflow-hidden">
                   {article.image ? (
-                    <Image src={article.image} alt={article.title} fill className="object-cover" />
+                    <Image src={article.image} alt={article.title} fill className="object-cover img-zoom" />
                   ) : (
                     <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 40% 50%, rgba(107,145,114,0.1) 0%, rgba(186, 127, 127,0.08) 60%, transparent 100%)" }} />
                   )}

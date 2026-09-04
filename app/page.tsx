@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import Reveal from "@/components/Reveal";
 
 const stats = [
   { value: "06+", label: "d'expériences" },
@@ -202,22 +203,22 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-bali-deep via-bali-deep/80 to-bali-deep/50" />
         <div className="absolute inset-0 ambient-glow opacity-70" />
-        <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block" />
-        <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-bali-gold/8 hidden lg:block" />
-        <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-bali-sage/15 hidden lg:block" />
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block animate-float-slow" />
+        <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-bali-gold/8 hidden lg:block animate-float-slow-delayed" />
+        <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-bali-sage/15 hidden lg:block animate-float-slow" />
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="font-script text-bali-gold-light text-2xl mb-2">
+          <p className="font-script text-bali-gold-light text-2xl mb-2 animate-fade-in-up opacity-0" style={{ animationDelay: "0ms" }}>
             Votre évasion bien-être
           </p>
-          <h1 className="font-display text-5xl md:text-7xl font-semibold text-white leading-tight mb-6">
+          <h1 className="font-display text-5xl md:text-7xl font-semibold text-white leading-tight mb-6 animate-fade-in-up opacity-0" style={{ animationDelay: "120ms" }}>
             Évadez-vous avec{" "}
             <span className="text-bali-gold">Perle de Bali</span>
           </h1>
-          <p className="font-body text-bali-sand/80 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="font-body text-bali-sand/80 text-lg max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "240ms" }}>
             Laissez le stress derrière vous et offrez-vous une relaxation totale avec mes massages, issus de traditions balinaises.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up opacity-0" style={{ animationDelay: "360ms" }}>
             <a
               href="tel:+33756139596"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-7 py-3.5 rounded-full shadow-lg shadow-bali-rose-deep/20 hover:shadow-xl hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
@@ -256,7 +257,7 @@ export default function HomePage() {
 
       {/* ── ABOUT ── */}
       <section className="py-12 md:py-16 px-6">
-        <div className="max-w-5xl mx-auto">
+        <Reveal className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold">Sanctuaire</span>
           </div>
@@ -295,7 +296,7 @@ export default function HomePage() {
               En savoir plus
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── CONTACT FORM TOP ── */}
@@ -393,9 +394,9 @@ export default function HomePage() {
       {/* ── SERVICES ── */}
       <section className="py-12 md:py-16 px-6 bg-bali-cream-dark">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-4">
+          <Reveal className="text-center mb-4">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold">Nos soins</span>
-          </div>
+          </Reveal>
           <h2 className="font-display text-3xl md:text-4xl text-center text-bali-deep font-semibold mb-3">
             Mes services de bien-être
           </h2>
@@ -404,27 +405,28 @@ export default function HomePage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {services.map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="group bg-bali-white rounded-2xl p-5 shadow-sm card-elevate flex flex-col"
-              >
-                <div className="relative w-full aspect-[4/3] rounded-xl bg-bali-deep/5 mb-4 overflow-hidden">
-                  <Image src={s.image} alt={s.title} fill className="object-cover" />
-                </div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="font-body text-xs text-bali-gold font-medium">{s.duration}</span>
-                  <span className="font-display text-lg font-semibold text-bali-deep">{s.price}</span>
-                </div>
-                <h3 className="font-display text-lg text-bali-deep font-semibold mb-2 group-hover:text-bali-gold transition-colors">
-                  {s.title}
-                </h3>
-                <p className="font-body text-sm text-bali-dark/70 leading-relaxed flex-1">{s.description}</p>
-                <span className="mt-3 text-xs font-medium text-bali-gold group-hover:underline">
-                  En savoir plus →
-                </span>
-              </Link>
+            {services.map((s, i) => (
+              <Reveal key={s.href} delay={i * 90}>
+                <Link
+                  href={s.href}
+                  className="group bg-bali-white rounded-2xl p-5 shadow-sm card-elevate flex flex-col"
+                >
+                  <div className="relative w-full aspect-[4/3] rounded-xl bg-bali-deep/5 mb-4 overflow-hidden">
+                    <Image src={s.image} alt={s.title} fill className="object-cover img-zoom" />
+                  </div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-body text-xs text-bali-gold font-medium">{s.duration}</span>
+                    <span className="font-display text-lg font-semibold text-bali-deep">{s.price}</span>
+                  </div>
+                  <h3 className="font-display text-lg text-bali-deep font-semibold mb-2 group-hover:text-bali-gold transition-colors">
+                    {s.title}
+                  </h3>
+                  <p className="font-body text-sm text-bali-dark/70 leading-relaxed flex-1">{s.description}</p>
+                  <span className="mt-3 text-xs font-medium text-bali-gold group-hover:underline">
+                    En savoir plus →
+                  </span>
+                </Link>
+              </Reveal>
             ))}
           </div>
           <div className="text-center mt-8">
@@ -566,22 +568,24 @@ export default function HomePage() {
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-bali-white rounded-2xl p-5 shadow-sm border border-bali-sand/20">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-bali-deep/10 flex items-center justify-center font-display text-sm font-semibold text-bali-deep">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-body text-sm font-medium text-bali-dark">{t.name}</p>
-                      <p className="font-body text-xs text-bali-dark/50">{t.date}</p>
+            {testimonials.map((t, i) => (
+              <Reveal key={t.name} delay={(i % 3) * 90}>
+                <div className="bg-bali-white rounded-2xl p-5 shadow-sm border border-bali-sand/20 card-elevate h-full">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-full bg-bali-deep/10 flex items-center justify-center font-display text-sm font-semibold text-bali-deep">
+                        {t.name.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="font-body text-sm font-medium text-bali-dark">{t.name}</p>
+                        <p className="font-body text-xs text-bali-dark/50">{t.date}</p>
+                      </div>
                     </div>
                   </div>
+                  <StarRating />
+                  <p className="font-body text-sm text-bali-dark/75 leading-relaxed mt-3">{t.text}</p>
                 </div>
-                <StarRating />
-                <p className="font-body text-sm text-bali-dark/75 leading-relaxed mt-3">{t.text}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

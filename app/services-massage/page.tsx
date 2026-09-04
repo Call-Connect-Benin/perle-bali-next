@@ -148,7 +148,7 @@ export default function ServicesMassagePage() {
                 className="group bg-bali-white rounded-2xl overflow-hidden shadow-sm border border-bali-sand/20 card-elevate flex flex-col"
               >
                 <div className="w-full aspect-video bg-gradient-to-br from-bali-deep/5 to-bali-gold/10 relative overflow-hidden">
-                  <Image src={s.image} alt={s.title} fill className="object-cover" />
+                  <Image src={s.image} alt={s.title} fill className="object-cover img-zoom" />
                   {s.tag && (
                     <span className="absolute top-3 right-3 font-body text-xs font-semibold bg-bali-gold text-white px-2.5 py-1 rounded-full z-10">
                       {s.tag}
