@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import { FlowerOrnament, LeafOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Contact – Réservez votre séance",
@@ -13,6 +14,8 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="bg-bali-deep pt-24 pb-12 px-6 relative overflow-hidden">
+        <FlowerOrnament className="absolute top-6 right-[5%] w-16 h-16 text-bali-gold/45 hidden sm:block animate-float-slow" />
+        <LeafOrnament className="absolute bottom-4 left-[4%] w-20 h-20 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <div
           className="absolute inset-0 opacity-15"
           style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }}

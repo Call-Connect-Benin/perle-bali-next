@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SandScatter, ShellOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Carte Cadeau – Offrez un moment de bien-être",
@@ -50,6 +51,8 @@ export default function CarteKCadeauPage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <SandScatter className="absolute top-10 left-[10%] w-32 h-8 text-bali-sand/55 hidden sm:block animate-float-slow" />
+        <ShellOrnament className="absolute bottom-6 right-[4%] w-24 h-16 text-bali-honey/50 hidden sm:block animate-float-slow-delayed" />
         <div
           className="absolute inset-0 opacity-15"
           style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.5) 0%, transparent 55%)" }}

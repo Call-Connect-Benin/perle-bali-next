@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ShellOrnament, LeafOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Liens suggérés – Ressources bien-être",
@@ -41,6 +42,8 @@ export default function LiensSuggeresPage() {
   return (
     <>
       <section className="bg-bali-deep pt-24 pb-16 px-6 relative overflow-hidden">
+        <ShellOrnament className="absolute top-6 right-[4%] w-20 h-14 text-bali-honey/45 hidden sm:block animate-float-slow" />
+        <LeafOrnament className="absolute bottom-6 left-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
         <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-6">

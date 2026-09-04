@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { ShellOrnament, FlowerOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "À propos – Françoise, votre masseuse Balinaise",
@@ -69,6 +70,8 @@ export default function AProposPage() {
     <>
       {/* Hero */}
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <ShellOrnament className="absolute top-10 left-[4%] w-20 h-14 text-bali-honey/40 hidden sm:block animate-float-slow" />
+        <FlowerOrnament className="absolute bottom-8 right-[6%] w-24 h-24 text-bali-gold/40 hidden sm:block animate-float-slow-delayed" />
         <div
           className="absolute inset-0 opacity-15"
           style={{

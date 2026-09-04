@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { LeafOrnament, SandScatter } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Tarifs – Massages Balinais",
@@ -192,6 +193,8 @@ export default function TarifsPage() {
     <>
       {/* Hero */}
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <LeafOrnament className="absolute top-6 right-[6%] w-24 h-24 text-bali-sage/40 hidden sm:block animate-float-slow" />
+        <SandScatter className="absolute bottom-8 left-[8%] w-36 h-10 text-bali-sand/55 hidden sm:block animate-float-slow-delayed" />
         <div
           className="absolute inset-0 opacity-15"
           style={{
