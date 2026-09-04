@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { FlowerOrnament, ShellOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Massage Enfant « Pizza » – 30€ / 30mn",
@@ -13,6 +14,8 @@ export default function MassageEnfantPage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <FlowerOrnament className="absolute top-8 right-[6%] w-16 h-16 text-bali-gold/45 hidden sm:block animate-float-slow" />
+        <ShellOrnament className="absolute bottom-10 left-[5%] w-20 h-14 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
         <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 60% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">

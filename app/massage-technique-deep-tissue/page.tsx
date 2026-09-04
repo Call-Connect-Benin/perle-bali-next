@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { SandScatter, ShellOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Massage Deep Tissue – 80€ / 50mn",
@@ -13,6 +14,8 @@ export default function DeepTissuePage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <SandScatter className="absolute top-12 right-[8%] w-28 h-8 text-bali-sand/50 hidden sm:block animate-float-slow" />
+        <ShellOrnament className="absolute bottom-8 left-[5%] w-24 h-16 text-bali-honey/45 hidden sm:block animate-float-slow-delayed" />
         <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 40% 40%, rgba(107,145,114,0.5) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">

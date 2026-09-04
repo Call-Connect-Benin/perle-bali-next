@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { ShellOrnament, SandScatter } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "Massage Bali Évasion – 90€ / 1h30",
@@ -13,6 +14,8 @@ export default function MassageBaliEvasionPage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
+        <ShellOrnament className="absolute top-8 right-[5%] w-24 h-16 text-bali-honey/45 hidden sm:block animate-float-slow" />
+        <SandScatter className="absolute bottom-10 left-[8%] w-28 h-8 text-bali-sand/50 hidden sm:block animate-float-slow-delayed" />
         <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 70% 40%, rgba(186, 127, 127,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
