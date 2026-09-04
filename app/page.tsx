@@ -200,9 +200,9 @@ export default function HomePage() {
         <div className="absolute top-20 right-20 w-72 h-72 rounded-full border border-bali-gold/10 hidden lg:block animate-float-slow" />
         <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-bali-gold/8 hidden lg:block animate-float-slow-delayed" />
         <div className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-bali-sage/15 hidden lg:block animate-float-slow" />
-        <FlowerOrnament className="absolute top-10 left-[8%] w-16 h-16 text-bali-gold/15 hidden md:block animate-float-slow" />
-        <LeafOrnament className="absolute bottom-24 right-[6%] w-24 h-24 text-bali-sage/15 hidden lg:block animate-float-slow-delayed" />
-        <SandScatter className="absolute bottom-10 left-[15%] w-32 h-8 text-bali-sand/25 hidden md:block" />
+        <FlowerOrnament className="absolute top-10 left-[6%] w-20 h-20 text-bali-gold/40 hidden sm:block animate-float-slow" />
+        <LeafOrnament className="absolute bottom-24 right-[4%] w-28 h-28 text-bali-sage/40 hidden sm:block animate-float-slow-delayed" />
+        <SandScatter className="absolute bottom-10 left-[12%] w-40 h-10 text-bali-sand/60 hidden sm:block" />
 
         <div className="relative z-10 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           <div className="text-center lg:text-left">
@@ -272,8 +272,8 @@ export default function HomePage() {
 
       {/* ── ABOUT ── */}
       <section className="py-12 md:py-16 px-6 relative overflow-hidden">
-        <FlowerOrnament className="absolute top-6 right-[4%] w-20 h-20 text-bali-gold/10 hidden md:block animate-float-slow" />
-        <ShellOrnament className="absolute bottom-6 left-[3%] w-20 h-14 text-bali-sand/40 hidden lg:block animate-float-slow-delayed" />
+        <FlowerOrnament className="absolute top-6 right-[3%] w-24 h-24 text-bali-gold/35 hidden sm:block animate-float-slow" />
+        <ShellOrnament className="absolute bottom-6 left-[2%] w-24 h-16 text-bali-honey/55 hidden sm:block animate-float-slow-delayed" />
         <Reveal className="relative max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold">Sanctuaire</span>
@@ -572,8 +572,8 @@ export default function HomePage() {
 
       {/* ── TESTIMONIALS ── */}
       <section className="py-12 md:py-16 px-6 bg-bali-cream-dark relative overflow-hidden">
-        <FlowerOrnament className="absolute top-8 left-[5%] w-14 h-14 text-bali-gold/10 hidden md:block animate-float-slow-delayed" />
-        <SandScatter className="absolute bottom-4 right-[10%] w-40 h-8 text-bali-sand/50 hidden md:block" />
+        <FlowerOrnament className="absolute top-8 left-[4%] w-20 h-20 text-bali-gold/35 hidden sm:block animate-float-slow-delayed" />
+        <SandScatter className="absolute bottom-4 right-[8%] w-48 h-10 text-bali-sand/60 hidden sm:block" />
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-3">
             <span className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold">Avis</span>
