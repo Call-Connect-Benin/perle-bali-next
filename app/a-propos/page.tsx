@@ -76,7 +76,7 @@ export default function AProposPage() {
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 70% 40%, rgba(107, 145, 114,0.4) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 70% 40%, rgba(127, 165, 136,0.4) 0%, transparent 55%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto text-center">

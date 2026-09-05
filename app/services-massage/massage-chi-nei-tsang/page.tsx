@@ -16,7 +16,7 @@ export default function ChiNeiTsangPage() {
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
         <LeafOrnament className="absolute top-10 right-[5%] w-28 h-28 text-bali-sage/35 hidden sm:block animate-float-slow" />
         <SandScatter className="absolute bottom-8 left-[8%] w-24 h-8 text-bali-sand/55 hidden sm:block animate-float-slow-delayed" />
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.5) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(127, 165, 136,0.5) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto text-center">
           <nav className="flex items-center justify-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link>

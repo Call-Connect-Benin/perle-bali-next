@@ -11,7 +11,7 @@ export default function MassageTraversLeTempPage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(107,145,114,0.4) 0%, transparent 55%)" }} />
+        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: "radial-gradient(ellipse at 50% 60%, rgba(127, 165, 136,0.4) 0%, transparent 55%)" }} />
         <div className="relative max-w-3xl mx-auto">
           <nav className="flex items-center gap-2 font-body text-xs text-bali-sand/50 mb-8 flex-wrap">
             <Link href="/" className="hover:text-bali-gold">Accueil</Link><span>›</span>
@@ -33,7 +33,7 @@ export default function MassageTraversLeTempPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2B2620 0%, #6B9172 100%)" }}>
+          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2B2620 0%, #7FA588 100%)" }}>
             <div className="w-full h-full flex items-end p-4">
               <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/blog/histoire-massage.jpg</p>
             </div>
