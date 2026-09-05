@@ -95,7 +95,7 @@ export default function CarteKCadeauPage() {
                 className="pricing-card bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/30 flex flex-col"
               >
                 <div className="w-full aspect-[3/2] rounded-xl mb-4 flex items-center justify-center relative overflow-hidden"
-                  style={{ background: "linear-gradient(135deg, #4A3038 0%, #7FA588 100%)" }}>
+                  style={{ background: "linear-gradient(135deg, #5C2A42 0%, #7FA588 100%)" }}>
                   <div className="text-center text-white">
                     <p className="font-display text-3xl font-semibold text-bali-gold">{opt.price}</p>
                     <p className="font-body text-xs text-white/70 mt-1">{opt.duration}</p>
