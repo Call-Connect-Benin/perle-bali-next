@@ -1,7 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
-import { sendContactEmail } from "@/app/actions/contact";
+import { FormEvent, useState } from "react";
 
 const services = [
   "Massage Bali Bien-être (1h – 70€)",
@@ -17,10 +16,17 @@ const services = [
   "Autre / question générale",
 ];
 
-const initial = { success: false, message: "" };
+const CONTACT_EMAIL = "perledebali@gmail.com";
 
+/**
+ * Envoie le message via /api/contact (Brevo). Si l'envoi serveur échoue
+ * (clé Brevo absente, erreur réseau...), on retombe sur mailto: pré-rempli,
+ * pour ne jamais bloquer le visiteur.
+ */
 export default function ContactForm({ dark = false }: { dark?: boolean }) {
-  const [state, action, pending] = useActionState(sendContactEmail, initial);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "fallback" | "error">(
+    "idle"
+  );
 
   const inputClass = `w-full rounded-xl border px-4 py-3 font-body text-sm outline-none focus:ring-2 transition-colors ${
     dark
@@ -28,17 +34,57 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
       : "bg-bali-white border-bali-sand/40 text-bali-dark placeholder-bali-dark/40 focus:ring-bali-gold"
   }`;
 
-  if (state.success) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "");
+    const email = String(data.get("email") || "");
+    const phone = String(data.get("phone") || "");
+    const service = String(data.get("service") || "");
+    const message = String(data.get("message") || "");
+
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, service, message }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setStatus("sent");
+      form.reset();
+      return;
+    } catch {
+      const subject = `[Perle de Bali] Message de ${name}`;
+      const body =
+        `Nom : ${name}\n` +
+        `E-mail : ${email}\n` +
+        (phone ? `Téléphone : ${phone}\n` : "") +
+        (service ? `Soin souhaité : ${service}\n` : "") +
+        `\nMessage :\n${message}\n`;
+      const href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.location.href = href;
+      setStatus("fallback");
+    }
+  }
+
+  if (status === "sent") {
     return (
       <div className={`rounded-2xl p-8 text-center ${dark ? "bg-white/10" : "bg-bali-gold/10 border border-bali-gold/30"}`}>
         <p className="text-2xl mb-2">✓</p>
-        <p className={`font-body font-medium ${dark ? "text-white" : "text-bali-deep"}`}>{state.message}</p>
+        <p className={`font-body font-medium ${dark ? "text-white" : "text-bali-deep"}`}>
+          Votre message a bien été envoyé. Je vous répondrai sous 24h.
+        </p>
       </div>
     );
   }
 
   return (
-    <form action={action} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className={`block font-body text-xs font-medium mb-1 ${dark ? "text-white/70" : "text-bali-dark/60"}`}>
@@ -84,15 +130,18 @@ export default function ContactForm({ dark = false }: { dark?: boolean }) {
           className={`${inputClass} resize-none`}
         />
       </div>
-      {state.message && !state.success && (
-        <p className="font-body text-sm text-red-400">{state.message}</p>
+      {status === "fallback" && (
+        <p className={`font-body text-sm ${dark ? "text-white/80" : "text-bali-deep"}`}>
+          Votre logiciel de messagerie s&rsquo;est ouvert avec le message pré-rempli. S&rsquo;il ne s&rsquo;ouvre pas, écrivez-moi directement à{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} className="text-bali-gold underline">{CONTACT_EMAIL}</a>.
+        </p>
       )}
       <button
         type="submit"
-        disabled={pending}
+        disabled={status === "sending"}
         className="w-full bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-semibold py-3.5 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60"
       >
-        {pending ? "Envoi en cours…" : "Envoyer ma demande"}
+        {status === "sending" ? "Envoi en cours…" : "Envoyer ma demande"}
       </button>
     </form>
   );
