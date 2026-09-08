@@ -26,6 +26,13 @@ export async function sendContactEmail(
     return { success: false, message: "Adresse e-mail invalide." };
   }
 
+  const escapeHtml = (value: string) =>
+    value
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST ?? "smtp.gmail.com",
     port: Number(process.env.SMTP_PORT ?? 587),
@@ -39,11 +46,11 @@ export async function sendContactEmail(
   const html = `
     <h2>Nouvelle demande de contact — Perle de Bali</h2>
     <table cellpadding="8" style="border-collapse:collapse;width:100%;max-width:520px">
-      <tr><td><strong>Nom</strong></td><td>${name}</td></tr>
-      <tr><td><strong>Email</strong></td><td>${email}</td></tr>
-      ${phone ? `<tr><td><strong>Téléphone</strong></td><td>${phone}</td></tr>` : ""}
-      ${service ? `<tr><td><strong>Soin souhaité</strong></td><td>${service}</td></tr>` : ""}
-      <tr><td><strong>Message</strong></td><td>${message.replace(/\n/g, "<br>")}</td></tr>
+      <tr><td><strong>Nom</strong></td><td>${escapeHtml(name)}</td></tr>
+      <tr><td><strong>Email</strong></td><td>${escapeHtml(email)}</td></tr>
+      ${phone ? `<tr><td><strong>Téléphone</strong></td><td>${escapeHtml(phone)}</td></tr>` : ""}
+      ${service ? `<tr><td><strong>Soin souhaité</strong></td><td>${escapeHtml(service)}</td></tr>` : ""}
+      <tr><td><strong>Message</strong></td><td>${escapeHtml(message).replace(/\n/g, "<br>")}</td></tr>
     </table>
   `;
 
