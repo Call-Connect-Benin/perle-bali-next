@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Le massage à travers le temps",
   description:
-    "De l'Antiquité à nos jours, retracez l'histoire fascinante du massage et ses évolutions à travers les cultures et civilisations du monde.",
+    "Des origines du mot « massage » aux techniques d'aujourd'hui : un voyage à travers l'histoire du massage, de la Chine antique au massage suédois.",
 };
 
 export default function MassageTraversLeTempPage() {
@@ -21,7 +22,7 @@ export default function MassageTraversLeTempPage() {
           <span className="inline-block font-body text-xs tracking-widest uppercase bg-bali-sage text-white px-3 py-1 rounded-full mb-4">Histoire</span>
           <h1 className="font-display text-4xl md:text-5xl text-white font-light mb-4 leading-tight">Le massage à travers le temps</h1>
           <div className="flex items-center gap-3 font-body text-xs text-bali-sand/60">
-            <span>À venir</span><span>·</span><span>7 min de lecture</span>
+            <span>7 min de lecture</span>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -33,28 +34,33 @@ export default function MassageTraversLeTempPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #2B2620 0%, #7FA588 100%)" }}>
-            <div className="w-full h-full flex items-end p-4">
-              <p className="font-body text-xs text-white/30 italic">Photo à venir — /images/blog/histoire-massage.jpg</p>
-            </div>
+          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10 relative">
+            <Image src="/images/blog/histoire-massage.webp" alt="Le massage à travers le temps" fill className="object-cover" />
           </div>
 
           <div className="space-y-6 font-body text-bali-dark/80 leading-relaxed">
             <p className="text-xl font-medium text-bali-deep leading-relaxed">
-              Le massage est l'une des pratiques thérapeutiques les plus anciennes de l'humanité. Depuis des millénaires, toutes les civilisations ont reconnu ses vertus.
+              Il nous arrive d&apos;avoir des douleurs fortes ou juste désagréables, notre réaction instinctive est de frotter, masser, pour soulager.
             </p>
+            <p>Nos ancêtres lointains ont appris très tôt que certaines plantes, conjuguées à une bonne friction, pouvaient soulager et améliorer la guérison. Ces techniques basiques ont traversé les temps, elles ont été améliorées au fil des millénaires pour arriver aux techniques de massages d&apos;aujourd&apos;hui.</p>
 
-            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Les origines antiques</h2>
-            <p>Les premières traces de massage remontent à 3000 ans avant J.-C. en Chine, dans le Nei Jing (Canon de Médecine Interne). En Égypte antique, des fresques représentent des séances de réflexologie plantaire dans des tombes datant de 2330 av. J.-C.</p>
-            <p>En Inde, l'Ayurveda intégrait le massage comme élément fondamental de la santé depuis plus de 4000 ans. Les Grecs et Romains, notamment Hippocrate et Galien, ont codifié les techniques de massage pour leurs athlètes et guerriers.</p>
+            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Les origines</h2>
+            <p>Le mot « massage » est un dérivé de l&apos;arabe « Mass&apos;h » (presser doucement). Les premières descriptions détaillées du massage ont été découvertes en Chine et datent d&apos;environ 3000 ans.</p>
+            <p>Vers 1000 avant JC, les japonais découvrent les méthodes de massage chinoises et introduisent de nouvelles combinaisons. Ils finissent par développer une méthode unique et spécifique : le Shiatsu. « Shi » (doigt) et « Atsu » (pression). La technique est similaire à l&apos;acupuncture sans l&apos;utilisation d&apos;aiguilles, on se sert de la pression des doigts sur des points précis du corps.</p>
+            <p>En Inde, vers 1700 avant JC, le livre de médecine « AYURVEDA » (art de vivre) décrit quelques massages simples combinés à des herbes médicinales pour améliorer divers traitements.</p>
 
-            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Bali et les traditions asiatiques</h2>
-            <p>À Bali, le massage est intimement lié à la spiritualité hindoue-balinaise. Les thérapeutes balinais traditionnels (Balians) combinent techniques de massage, médecine des plantes et rituels spirituels pour restaurer l'harmonie du corps et de l'âme.</p>
-            <p>Le massage balinais tel que nous le connaissons aujourd'hui est un mélange raffiné de techniques chinoises, indiennes et javanaises, adapté et enrichi par des siècles de tradition insulaire balinaise.</p>
+            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Grèce et Rome antiques</h2>
+            <p>Les grecs anciens avaient recours au massage dans leur vie de tous les jours. Ils ont développé des techniques pour entretenir la forme de leurs athlètes et les préparer aux compétitions. Hippocrate affirmait que « quiconque veut apprendre la médecine doit maîtriser l&apos;art du massage, pour assouplir une articulation douloureuse ou corriger une hyperlaxité ».</p>
+            <p>Les romains ont appris des grecs anciens. Jules César lui-même, souffrant d&apos;épilepsie, était soigné par des massages quotidiens (technique de pincements) pour soulager ses névralgies et migraines. Les bains publics de l&apos;époque, accessibles à tous, offraient ce type de soin à la population.</p>
 
-            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Le massage aujourd'hui</h2>
-            <p>Aujourd'hui, le massage est reconnu mondialement pour ses bienfaits scientifiquement prouvés : réduction du stress, amélioration de la circulation, soulagement des douleurs, renforcement du système immunitaire.</p>
-            <p>Chez Perle de Bali, nous perpétuons cette tradition millénaire en vous proposant des soins authentiques, issus directement de la source balinaise.</p>
+            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Du Moyen Âge au XIX<sup>e</sup> siècle</h2>
+            <p>Pendant le Moyen-Âge, très peu de traces écrites : l&apos;Église, dans sa période très conservatrice, a rendu le massage impopulaire. Le toucher ne fait plus partie des méthodes de guérison et devient impur, car il est associé aux plaisirs corporels.</p>
+            <p>Il faut attendre la Renaissance, au 16<sup>ème</sup> siècle, pour que le massage retrouve ses lettres de noblesse. Ambroise Paré, père de la médecine moderne, décrit dans l&apos;un de ses livres les effets positifs des massages.</p>
+            <p>Ensuite, très peu d&apos;avancées en matière de massage jusqu&apos;au 19<sup>e</sup> siècle. En Suède, Pehr Henrik Ling devient le père du massage moderne, en créant sa propre méthode, basée sur la technique de pressions, que nous connaissons aujourd&apos;hui sous le nom de massage suédois.</p>
+
+            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Aujourd&apos;hui</h2>
+            <p>Depuis les années 60, nous redécouvrons, en masse, les bienfaits du massage, même s&apos;il ne s&apos;apparente pas à la médecine moderne et ne remplace en rien un traitement médical.</p>
+            <p>Les massages sont reconnus pour soulager le stress du monde moderne. Souvent négligé dans nos vies, le « toucher » permet un retour au calme de nos énergies.</p>
           </div>
 
           <div className="mt-10 pt-8 border-t border-bali-sand/30 flex flex-col sm:flex-row items-center justify-between gap-4">

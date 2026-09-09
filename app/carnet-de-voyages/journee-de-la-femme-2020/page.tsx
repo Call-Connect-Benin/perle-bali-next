@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Journée de la Femme 2020 – Perle de Bali",
   description:
-    "À l'occasion de la Journée Internationale des Droits des Femmes, Perle de Bali célèbre le bien-être féminin et l'importance de prendre soin de soi.",
+    "Retour sur un partenariat avec le Fitness Park Orly à l'occasion de la Journée de la Femme : neuf femmes massées dans une salle privatisée.",
 };
 
 export default function JourneeDesFemmesPage() {
@@ -21,7 +22,7 @@ export default function JourneeDesFemmesPage() {
           <span className="inline-block font-body text-xs tracking-widest uppercase bg-bali-sage text-white px-3 py-1 rounded-full mb-4">Bien-être</span>
           <h1 className="font-display text-4xl md:text-5xl text-white font-light mb-4 leading-tight">Journée de la Femme 2020</h1>
           <div className="flex items-center gap-3 font-body text-xs text-bali-sand/60">
-            <span>15 avril 2025</span><span>·</span><span>4 min de lecture</span>
+            <span>13 janvier 2025</span><span>·</span><span>2 min de lecture</span>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -33,37 +34,18 @@ export default function JourneeDesFemmesPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10" style={{ background: "linear-gradient(135deg, #C0728A 0%, #FDF8F6 100%)" }}>
-            <div className="w-full h-full flex items-end p-4">
-              <p className="font-body text-xs text-bali-dark/30 italic">Photo à venir — /images/blog/journee-femme.jpg</p>
-            </div>
+          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10 relative">
+            <Image src="/images/blog/journee-femme.webp" alt="Journée de la Femme 2020" fill className="object-cover" />
           </div>
 
           <div className="space-y-6 font-body text-bali-dark/80 leading-relaxed">
             <p className="text-xl font-medium text-bali-deep leading-relaxed">
-              Le 8 mars, Journée Internationale des Droits des Femmes, est une occasion parfaite pour rappeler l'importance de prendre soin de soi.
+              Mettre à l&apos;honneur des femmes, en proposant de soulager leurs douleurs, tension et stress, c&apos;est le choix qu&apos;a fait le Club de sport Fitness Park Orly, en choisissant Perle de Bali comme partenaire à l&apos;occasion de la Journée de la Femme.
             </p>
-            <p>
-              Chez Perle de Bali, je crois profondément que le bien-être féminin est une priorité, non un luxe. Dans nos vies agitées, entre responsabilités professionnelles et familiales, il est essentiel de s'accorder du temps pour se ressourcer.
-            </p>
-            <p>
-              Le massage est l'un des moyens les plus puissants pour reconnecter le corps et l'esprit, libérer les tensions accumulées et retrouver l'énergie nécessaire pour avancer.
-            </p>
-            <h2 className="font-display text-3xl text-bali-deep font-light mt-10 mb-4">Offrez-vous ou offrez ce cadeau</h2>
-            <p>
-              La Journée de la Femme est aussi une belle occasion d'offrir à une personne chère une expérience de bien-être. Une carte cadeau Perle de Bali, c'est le geste parfait pour dire à quelqu'un combien vous tenez à son bien-être.
-            </p>
-            <p>
-              Parce que chaque femme mérite de se sentir chouchoutée, reposée et reconnectée à elle-même.
-            </p>
-          </div>
-
-          <div className="mt-8 p-6 bg-bali-cream-dark rounded-2xl border border-bali-sand/30">
-            <h3 className="font-display text-2xl text-bali-deep font-light mb-3">Carte cadeau Perle de Bali</h3>
-            <p className="font-body text-sm text-bali-dark/70 mb-4">Offrez une expérience de bien-être à une personne que vous aimez.</p>
-            <Link href="/carte-cadeau" className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-6 py-2.5 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300 text-sm">
-              Découvrir les cartes cadeaux
-            </Link>
+            <p>Neuf femmes privilégiées ont eu la chance d&apos;être massées dans une salle exclusivement privatisée à cet effet.</p>
+            <p>Nos différents échanges restent un très bon souvenir. Après un massage, il n&apos;est pas rare de voir nos émotions remonter à la surface, c&apos;est ce qui s&apos;est passé avec une femme particulièrement touchante qui m&apos;a avoué que c&apos;était la toute première fois que quelqu&apos;un prenait soin d&apos;elle et de son corps.</p>
+            <p>Tout massage est un moment d&apos;échange et de bienveillance à préserver, entre masseur et massé.</p>
+            <p>Je vous souhaite, vous aussi, de pouvoir vivre ou renouveler cette expérience prochainement.</p>
           </div>
 
           <div className="mt-10 pt-8 border-t border-bali-sand/30 flex flex-col sm:flex-row items-center justify-between gap-4">

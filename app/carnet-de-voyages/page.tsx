@@ -13,9 +13,9 @@ const articles = [
   {
     title: "J'ai entrouvert une porte vers l'Asie",
     excerpt:
-      "Mon voyage initiatique à Bali et la découverte des traditions de massage qui ont changé ma vision du bien-être. Une rencontre avec l'art de vivre balinais.",
-    date: "14 janvier 2025",
-    readTime: "5 min",
+      "Un après-midi dans un lodge au cœur de la jungle thaïlandaise, où le vacarme de la nature a fini par imposer le calme.",
+    date: "13 janvier 2025",
+    readTime: "3 min",
     href: "/carnet-de-voyages/jai-entrouvert-une-porte-vers-lasie",
     category: "Voyage",
     image: "/images/blog/porte-asie.jpg",
@@ -23,32 +23,22 @@ const articles = [
   {
     title: "Journée de la Femme 2020",
     excerpt:
-      "À l'occasion de la Journée Internationale des Droits des Femmes, Perle de Bali célèbre le bien-être féminin et l'importance de prendre soin de soi.",
-    date: "15 avril 2025",
-    readTime: "4 min",
+      "Retour sur un partenariat avec le Fitness Park Orly : neuf femmes massées dans une salle privatisée, et des échanges qui restent un très bon souvenir.",
+    date: "13 janvier 2025",
+    readTime: "2 min",
     href: "/carnet-de-voyages/journee-de-la-femme-2020",
     category: "Bien-être",
-    image: null,
+    image: "/images/blog/journee-femme.webp",
   },
   {
     title: "Le massage à travers le temps",
     excerpt:
-      "De l'Antiquité à nos jours, retracez l'histoire fascinante du massage et ses évolutions à travers les cultures et les civilisations du monde entier.",
-    date: "À venir",
+      "Des origines du mot « massage » aux techniques d'aujourd'hui : un voyage à travers l'histoire du massage, de la Chine antique au massage suédois.",
+    date: "13 janvier 2025",
     readTime: "7 min",
     href: "/carnet-de-voyages/le-massage-a-travers-le-temps",
     category: "Histoire",
-    image: "/images/blog/carnet-listing.jpg",
-  },
-  {
-    title: "L'Islande, hostile et merveilleuse",
-    excerpt:
-      "Geysers, plongée dans la faille de Silfra entre deux continents, sources chaudes et Diamond Beach : récit d'un voyage au pays du feu et de la glace.",
-    date: "À venir",
-    readTime: "4 min",
-    href: "/carnet-de-voyages/islande",
-    category: "Voyage",
-    image: null,
+    image: "/images/blog/histoire-massage.webp",
   },
 ];
 
