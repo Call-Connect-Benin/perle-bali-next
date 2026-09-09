@@ -73,7 +73,7 @@ export default function MassagePureDetentePage() {
               </Reveal>
 
               <Reveal delay={40} className="grid grid-cols-4 gap-3">
-                {["gallery-1.webp", "gallery-2.webp", "gallery-3.jpg", "gallery-4.webp"].map((src) => (
+                {["gallery-1.jpg", "gallery-2.webp", "gallery-3.jpg", "gallery-4.webp"].map((src) => (
                   <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
                     <Image src={`/images/massages/bali-pure-detente/${src}`} alt="Massage Bali Pure Détente" fill className="object-cover" />
                   </div>
