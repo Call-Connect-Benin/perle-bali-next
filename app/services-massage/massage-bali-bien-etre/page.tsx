@@ -74,6 +74,14 @@ export default function MassageBaliPage() {
                 />
               </Reveal>
 
+              <Reveal delay={40} className="grid grid-cols-4 gap-3">
+                {["gallery-1.webp", "gallery-2.webp", "gallery-3.webp", "gallery-4.webp"].map((src) => (
+                  <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image src={`/images/massages/bali-bien-etre/${src}`} alt="Massage Bali Bien-être" fill className="object-cover" />
+                  </div>
+                ))}
+              </Reveal>
+
               <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">L&apos;équilibre parfait entre le corps et l&apos;esprit</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">

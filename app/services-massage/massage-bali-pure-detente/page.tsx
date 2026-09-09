@@ -71,6 +71,15 @@ export default function MassagePureDetentePage() {
                   className="object-cover img-zoom"
                 />
               </Reveal>
+
+              <Reveal delay={40} className="grid grid-cols-4 gap-3">
+                {["gallery-1.webp", "gallery-2.webp", "gallery-3.jpg", "gallery-4.webp"].map((src) => (
+                  <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image src={`/images/massages/bali-pure-detente/${src}`} alt="Massage Bali Pure Détente" fill className="object-cover" />
+                  </div>
+                ))}
+              </Reveal>
+
               <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un instant de sérénité absolue</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">

@@ -220,36 +220,57 @@ export default function AProposPage() {
 
       {/* Certifications */}
       <section className="py-16 px-6 bg-bali-cream">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <p className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold mb-3">Parcours & certifications</p>
           <h2 className="font-display text-3xl text-bali-deep font-light mb-8">
-            Quelques étapes officielles de mon parcours
+            Quelques photos officielles de mon parcours
           </h2>
+
           <Reveal>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center card-elevate">
-                <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-bali-gold text-xl">🏅</span>
-                </div>
-                <p className="font-body text-sm text-bali-dark/80 leading-snug">
-                  L'école <strong className="text-bali-deep">Bali BISA</strong> a obtenu les certificats d'excellence TripAdvisor
-                </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
+                <Image src="/images/about/photo-bisa-priere.jpg" alt="Formation massage balinais à Bali BISA" fill className="object-cover" />
               </div>
-              <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center card-elevate">
-                <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-bali-gold text-xl">🤝</span>
-                </div>
-                <p className="font-body text-sm text-bali-dark/80 leading-snug">
-                  En <strong className="text-bali-deep">partenariat</strong> avec Perle de Bali depuis 2020
-                </p>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
+                <Image src="/images/about/photo-bisa-diplome.jpg" alt="Remise des diplômes de formation à Bali BISA" fill className="object-cover" />
               </div>
-              <div className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20 text-center card-elevate">
-                <div className="w-12 h-12 rounded-full bg-bali-gold/15 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-bali-gold text-xl">👶</span>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
+                <Image src="/images/about/photo-bisa-equipe.jpg" alt="Équipe de formation Bali BISA" fill className="object-cover" />
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 items-start">
+              <div>
+                <div className="h-16 flex items-center justify-center mb-3">
+                  <Image src="/images/about/logo-bisa.png" alt="Bali BISA" width={90} height={66} className="object-contain max-h-16 w-auto" />
                 </div>
-                <p className="font-body text-sm text-bali-dark/80 leading-snug">
-                  Autorisation d'utiliser la méthode <strong className="text-bali-deep">Massage « Pizza » Enfant</strong>
-                </p>
+                <p className="font-body text-xs text-bali-dark/70 leading-snug">L&apos;école <strong className="text-bali-deep">Bali BISA</strong> a obtenu les certificats d&apos;excellence TripAdvisor</p>
+              </div>
+              <div>
+                <div className="h-16 flex items-center justify-center mb-3">
+                  <Image src="/images/about/logo-fitness-park.png" alt="Fitness Park" width={90} height={31} className="object-contain max-h-16 w-auto" />
+                </div>
+                <p className="font-body text-xs text-bali-dark/70 leading-snug">En <strong className="text-bali-deep">partenariat</strong> avec Perle de Bali depuis 2020</p>
+              </div>
+              <div>
+                <div className="h-16 flex items-center justify-center mb-3">
+                  <Image src="/images/about/logo-zeste-detente.png" alt="Zeste Détente" width={90} height={53} className="object-contain max-h-16 w-auto" />
+                </div>
+                <p className="font-body text-xs text-bali-dark/70 leading-snug">Un merci tout spécial pour votre autorisation à utiliser la méthode <strong className="text-bali-deep">Massage « Pizza » Enfant</strong></p>
+              </div>
+              <div>
+                <div className="h-16 flex items-center justify-center mb-3">
+                  <Image src="/images/about/logo-tripadvisor.jpg" alt="Certificats d'excellence TripAdvisor" width={90} height={43} className="object-contain max-h-16 w-auto" />
+                </div>
+                <p className="font-body text-xs text-bali-dark/70 leading-snug">Certificats d&apos;excellence TripAdvisor 2017 &amp; 2018</p>
+              </div>
+              <div>
+                <div className="h-16 flex items-center justify-center mb-3">
+                  <Image src="/images/about/logo-eis-spa.png" alt="École Internationale du Spa" width={90} height={31} className="object-contain max-h-16 w-auto" />
+                </div>
+                <p className="font-body text-xs text-bali-dark/70 leading-snug">Formée à l&apos;<strong className="text-bali-deep">École Internationale du Spa</strong>, Paris</p>
               </div>
             </div>
           </Reveal>

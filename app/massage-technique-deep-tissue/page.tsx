@@ -72,6 +72,14 @@ export default function DeepTissuePage() {
                 />
               </Reveal>
 
+              <Reveal delay={40} className="grid grid-cols-4 gap-3">
+                {["gallery-1.webp", "gallery-2.webp", "gallery-3.webp", "gallery-4.webp"].map((src) => (
+                  <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image src={`/images/massages/deep-tissue/${src}`} alt="Massage Deep Tissue" fill className="object-cover" />
+                  </div>
+                ))}
+              </Reveal>
+
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
                 <p className="font-body text-sm text-amber-800 font-medium">⚠ Attention : Ce massage est d'intensité soutenue. Il est déconseillé aux personnes très sensibles aux pressions profondes.</p>
               </div>

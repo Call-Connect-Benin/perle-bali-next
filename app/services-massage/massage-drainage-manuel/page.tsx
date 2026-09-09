@@ -48,6 +48,15 @@ export default function MassageDrainagePage() {
                   className="object-cover img-zoom"
                 />
               </Reveal>
+
+              <Reveal delay={40} className="grid grid-cols-2 gap-3">
+                {["gallery-1.jpg", "gallery-2.jpg"].map((src) => (
+                  <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image src={`/images/massages/drainage-manuel/${src}`} alt="Massage Drainage Manuel" fill className="object-cover" />
+                  </div>
+                ))}
+              </Reveal>
+
               <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Detox, légèreté et bien-être immédiat</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">

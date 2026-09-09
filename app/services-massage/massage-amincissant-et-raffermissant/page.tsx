@@ -46,6 +46,15 @@ export default function MassageAmincissantPage() {
                   className="object-cover img-zoom"
                 />
               </Reveal>
+
+              <Reveal delay={40} className="grid grid-cols-4 gap-3">
+                {["gallery-1.jpg", "gallery-2.jpg", "gallery-3.jpg", "gallery-4.jpg"].map((src) => (
+                  <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image src={`/images/massages/amincissant-raffermissant/${src}`} alt="Massage Amincissant et Raffermissant" fill className="object-cover" />
+                  </div>
+                ))}
+              </Reveal>
+
               <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Redessinez votre silhouette</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">

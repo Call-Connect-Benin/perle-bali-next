@@ -79,6 +79,15 @@ export default function MassageEnfantPage() {
                   className="object-cover img-zoom"
                 />
               </Reveal>
+
+              <Reveal delay={40} className="grid grid-cols-4 gap-3">
+                {["gallery-1.webp", "gallery-2.webp", "gallery-3.webp", "gallery-4.webp"].map((src) => (
+                  <div key={src} className="relative aspect-square rounded-xl overflow-hidden">
+                    <Image src={`/images/massages/enfant/${src}`} alt="Massage Enfant Pizza" fill className="object-cover" />
+                  </div>
+                ))}
+              </Reveal>
+
               <Reveal delay={80}>
                 <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un rituel ludique et bienfaisant</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
