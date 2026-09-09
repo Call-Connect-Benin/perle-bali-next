@@ -7,8 +7,15 @@ import { LeafOrnament, SandScatter } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Massage Chi Nei Tsang – 70€ / 50mn",
   description:
-    "Massage Chi Nei Tsang à Orly (94) : soin holistique qui libère les énergies négatives, rééquilibre le système digestif et lève les blocages. 70€.",
+    "Massage Chi Nei Tsang à Orly (94) : technique ancestrale de la médecine chinoise centrée sur le ventre, le « deuxième cerveau » du corps. 70€.",
 };
+
+const benefits = [
+  "de soulager les tensions abdominales et les inconforts digestifs",
+  "de rééquilibrer le système digestif et d'améliorer la circulation de l'énergie vitale (Qi)",
+  "de libérer les émotions enfouies et de favoriser un apaisement profond",
+  "de renforcer le lien entre le corps et l'esprit, pour une meilleure harmonie intérieure",
+];
 
 export default function ChiNeiTsangPage() {
   return (
@@ -51,22 +58,35 @@ export default function ChiNeiTsangPage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un soin pour l'équilibre intérieur</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">L&apos;harmonie du ventre, source de bien-être intérieur</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>Le Chi Nei Tsang est une ancienne technique de guérison taoïste qui travaille sur les organes internes pour libérer les tensions émotionnelles et physiques.</p>
-                  <p>Ce soin libère les énergies négatives génératrices de crispations (inquiétude, stress, colère), lève les blocages et rééquilibre le système digestif.</p>
-                  <p>Une expérience transformatrice qui favorise une détente profonde et un relâchement complet du corps, en agissant sur les causes émotionnelles des tensions physiques.</p>
+                  <p>
+                    Le massage Chi Nei Tsang est une technique ancestrale de la médecine chinoise qui se concentre sur le ventre, considéré comme le « deuxième cerveau » du corps. C&apos;est dans cette zone que résident nos émotions, nos tensions profondes et notre énergie vitale.
+                  </p>
+                  <p>
+                    Ce massage doux et profond agit directement sur les organes internes pour libérer les énergies négatives responsables de crispations émotionnelles telles que le stress, la colère, l&apos;inquiétude ou la tristesse.
+                  </p>
+                  <p>
+                    Grâce à des mouvements de bercement et de pression circulaire, il aide le corps à retrouver son équilibre naturel, tout en procurant une sensation de légèreté et de paix intérieure.
+                  </p>
                 </div>
               </Reveal>
               <Reveal delay={120}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {["Libère les blocages énergétiques", "Rééquilibre le système digestif", "Réduit le stress profond", "Libère les émotions négatives", "Technique taoïste ancestrale", "Détente corps et esprit"].map((b) => (
-                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
-                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
-                    </div>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Les bienfaits du massage Chi Nei Tsang</h3>
+                <p className="font-body text-bali-dark/80 leading-relaxed mb-4">
+                  Ce soin unique offre une approche holistique du bien-être, alliant détente physique et harmonisation énergétique. Il permet notamment :
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {benefits.map((b) => (
+                    <li key={b} className="flex items-start gap-3 font-body text-sm text-bali-dark/80">
+                      <span className="text-bali-gold shrink-0 mt-0.5">✓</span>{b}
+                    </li>
                   ))}
-                </div>
+                </ul>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-3">Une expérience de reconnexion à soi</h3>
+                <p className="font-body text-bali-dark/80 leading-relaxed">
+                  Le Chi Nei Tsang n&apos;est pas un simple massage : c&apos;est une invitation à la reconnexion avec soi-même. En rétablissant la circulation énergétique du ventre, il permet au corps de se régénérer et à l&apos;esprit de s&apos;apaiser. Ce soin s&apos;adresse à toute personne cherchant à retrouver équilibre, sérénité et vitalité à travers une approche douce et naturelle.
+                </p>
               </Reveal>
             </div>
             <Reveal delay={160}>

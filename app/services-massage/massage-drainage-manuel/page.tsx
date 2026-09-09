@@ -49,22 +49,29 @@ export default function MassageDrainagePage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Détoxifiez votre corps en profondeur</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Detox, légèreté et bien-être immédiat</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>Le Drainage Manuel est une technique thérapeutique qui agit sur le système lymphatique pour éliminer les toxines et réduire la rétention d'eau dans l'organisme.</p>
-                  <p>Cette technique combine drainage superficiel, circulatoire et profond, pour une action globale sur la circulation sanguine et lymphatique.</p>
-                  <p>Idéal pour les personnes souffrant de rétention d'eau, de jambes lourdes, ou souhaitant soutenir leur corps dans sa régénération naturelle.</p>
+                  <p>
+                    Offrez à votre corps un véritable coup de fraîcheur et de légèreté grâce à ce massage de drainage manuel. Cette technique unique combine drainage superficiel, circulatoire et profond pour s&apos;adapter parfaitement à votre morphologie et à vos besoins.
+                  </p>
+                  <p>
+                    Grâce à un protocole sur-mesure, le drainage manuel agit en profondeur sur le système lymphatique et favorise l&apos;élimination des toxines. Les mouvements précis stimulent la circulation sanguine et lymphatique, soutiennent la régénération des tissus et aident votre corps à retrouver équilibre et vitalité.
+                  </p>
                 </div>
               </Reveal>
               <Reveal delay={120}>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Les bienfaits du massage drainage manuel</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {["Drainage superficiel & profond", "Améliore la circulation", "Réduit la rétention d'eau", "Détox de l'organisme", "Régénération des tissus", "Jambes légères garanties"].map((b) => (
+                  {["Amélioration de la circulation sanguine et lymphatique", "Détoxification et élimination des toxines", "Lutte contre la rétention d'eau", "Régénération et tonification des tissus", "Sensation de légèreté et de bien-être immédiate"].map((b) => (
                     <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
                       <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
                       <span className="font-body text-sm text-bali-dark/80">{b}</span>
                     </div>
                   ))}
                 </div>
+                <p className="font-body text-bali-dark/80 leading-relaxed mt-5">
+                  Offrez-vous ce moment de détente et de purification pour retrouver un corps plus sain, tonique et harmonieux.
+                </p>
               </Reveal>
             </div>
             <Reveal delay={160}>

@@ -51,22 +51,29 @@ export default function MassageCalifornienPage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Le protocole de relaxation par excellence</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Détente profonde et harmonie du corps</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>Le Massage Californien est une approche douce et enveloppante qui utilise de longs effleurages et des pressions légères pour induire une relaxation profonde et durable.</p>
-                  <p>Ce massage stimule la mémoire corporelle et libère les tensions accumulées au fil du temps. Il agit tant sur le corps que sur l'esprit, pour une détente totale.</p>
-                  <p>Idéal pour les personnes stressées, en manque de sommeil, ou souhaitant simplement s'offrir un moment de pur lâcher-prise. C'est le soin de relaxation par excellence.</p>
+                  <p>
+                    Offrez-vous un moment unique de relaxation totale grâce au massage Californien. Cette approche douce et enveloppante combine pressions légères, longs effleurages, enveloppements apaisants et pétrissages délicats pour relâcher les tensions physiques et mentales.
+                  </p>
+                  <p>
+                    Grâce à ses mouvements amples, lents et harmonieux, le massage Californien stimule la mémoire corporelle, favorise la détente profonde et aide à libérer les tensions accumulées au fil du temps.
+                  </p>
                 </div>
               </Reveal>
               <Reveal delay={120}>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Les bienfaits principaux</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {["Longs effleurages enveloppants", "Pressions légères et douces", "Libère les tensions accumulées", "Stimule la mémoire corporelle", "Idéal contre le stress", "Détente profonde garantie"].map((b) => (
+                  {["Relâchement des tensions musculaires", "Apaisement du stress et de l'anxiété", "Profonde sensation de bien-être et d'harmonie", "Stimulation de la mémoire corporelle"].map((b) => (
                     <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
                       <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
                       <span className="font-body text-sm text-bali-dark/80">{b}</span>
                     </div>
                   ))}
                 </div>
+                <p className="font-body text-bali-dark/80 leading-relaxed mt-5">
+                  Offrez à votre corps et votre esprit un instant de pure harmonie et repartez revitalisé, détendu et léger comme jamais ! Laissez-vous envelopper par le massage Californien et ressentez relaxation, légèreté et harmonie dès la première séance.
+                </p>
               </Reveal>
             </div>
             <Reveal delay={160}>

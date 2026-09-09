@@ -7,8 +7,27 @@ import { LeafOrnament, FlowerOrnament } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Massage Bali Pure Détente – 120€ / 1h30",
   description:
-    "Massage Bali Pure Détente à Orly (94) : l'expérience premium avec bain de pieds balinais aux sels d'Epsom. 1h30 de pur bonheur. 120€.",
+    "Massage Bali Pure Détente à Orly (94) : une invitation à lâcher prise, relaxation complète inspirée des techniques traditionnelles balinaises. 120€.",
 };
+
+const benefits = [
+  {
+    title: "Relaxation totale",
+    desc: "Évacuez le stress et retrouvez un état de calme profond.",
+  },
+  {
+    title: "Soulagement des tensions",
+    desc: "Libérez les nœuds musculaires et relâchez les tensions nerveuses.",
+  },
+  {
+    title: "Harmonie du corps et de l'esprit",
+    desc: "Rééquilibrez vos énergies pour un bien-être durable.",
+  },
+  {
+    title: "Sensation de légèreté",
+    desc: "Repartez avec un corps revitalisé et un esprit apaisé.",
+  },
+];
 
 export default function MassagePureDetentePage() {
   return (
@@ -53,28 +72,31 @@ export default function MassagePureDetentePage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">L'expérience ultime de bien-être</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un instant de sérénité absolue</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>Le Massage Bali Pure Détente est notre soin signature, la quintessence de l'expérience Perle de Bali. En 1h30, vous vivez un véritable rituel balinais de la tête aux pieds.</p>
-                  <p>Unique parmi nos soins, cette expérience est précédée du <strong>traditionnel bain de pieds balinais</strong>, aux sels d'Epsom et sels de la Mer Morte, pour préparer votre corps à la détente totale.</p>
-                  <p>Suivi d'un massage complet incluant le visage et les points d'acupression, ce soin 1h30 est conçu pour une immersion totale dans la sérénité. Une pure détente, un petit bonheur.</p>
+                  <p>
+                    Plongez dans un univers de calme et d&apos;harmonie avec le Massage Bali Pure Détente. Ce soin est une véritable invitation à lâcher prise, conçu pour apaiser votre esprit et relâcher les tensions accumulées dans votre corps. Inspiré des techniques traditionnelles balinaises, il vous promet une expérience sensorielle unique et profondément relaxante.
+                  </p>
+                  <p>
+                    Le Massage Bali Pure Détente est spécialement conçu pour ceux qui recherchent une relaxation complète. Grâce à des mouvements fluides, enveloppants et délicats, ce soin apaise les muscles tendus et stimule une circulation harmonieuse de l&apos;énergie dans tout le corps. Chaque geste est pensé pour vous offrir un moment de paix intérieure.
+                  </p>
                 </div>
               </Reveal>
-              <div className="bg-bali-gold/10 border-l-4 border-bali-gold rounded-r-2xl p-5">
-                <h3 className="font-display text-xl text-bali-deep font-medium mb-3">Le rituel bain de pieds balinais</h3>
-                <p className="font-body text-sm text-bali-dark/80 leading-relaxed">
-                  Tradition millénaire balinaise, le bain de pieds aux sels d'Epsom et sels de la Mer Morte détoxifie, ramollit les peaux et prépare le corps à absorber les bienfaits du massage. Un rituel unique qui transforme votre séance en véritable cérémonie.
-                </p>
-              </div>
               <Reveal delay={120}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {["Bain de pieds balinais inclus", "Sels d'Epsom & Mer Morte", "1h30 de massage complet", "Massage du visage", "Points d'acupression", "Expérience immersive"].map((b) => (
-                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
-                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Les bienfaits du massage Bali Pure Détente</h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {benefits.map((b) => (
+                    <div key={b.title} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-bali-gold text-xs">✓</span>
+                      </span>
+                      <span className="font-body text-sm text-bali-dark/80"><strong className="text-bali-deep">{b.title} :</strong> {b.desc}</span>
                     </div>
                   ))}
                 </div>
+                <p className="font-body text-bali-dark/80 leading-relaxed mt-5">
+                  Ce massage est idéal pour les personnes souhaitant s&apos;accorder un moment de douceur et de répit dans un cadre apaisant. Il est particulièrement recommandé pour évacuer la fatigue mentale et physique, tout en renouant avec une sensation de légèreté et de sérénité.
+                </p>
               </Reveal>
             </div>
             <Reveal delay={160} className="space-y-5">
@@ -86,7 +108,7 @@ export default function MassagePureDetentePage() {
                   <span className="font-body text-bali-sand/70 text-sm">/ 1h30</span>
                 </div>
                 <ul className="space-y-2 mb-6">
-                  {["Bain de pieds balinais", "Sels d'Epsom & Mer Morte", "1h30 de massage complet", "Massage visage & acupression", "Thé offert"].map((f) => (
+                  {["1h30 de relaxation complète", "Mouvements fluides & enveloppants", "Harmonie du corps et de l'esprit", "Thé offert en fin de séance"].map((f) => (
                     <li key={f} className="flex items-start gap-2 font-body text-sm text-bali-sand/80">
                       <span className="text-bali-gold shrink-0 mt-0.5">✓</span>{f}
                     </li>

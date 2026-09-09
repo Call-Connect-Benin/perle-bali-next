@@ -6,7 +6,7 @@ import { FlowerOrnament, LeafOrnament } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Contact – Réservez votre séance",
   description:
-    "Contactez Perle de Bali pour réserver votre massage ou obtenir un devis. Orly (94). Lun–Vend 18h–21h, Sam–Dim 9h–21h.",
+    "Contactez Perle de Bali pour réserver votre massage ou obtenir un devis. Orly (94). Lun–Vend 9h–21h, Sam–Dim 9h–18h.",
 };
 
 export default function ContactPage() {
@@ -145,8 +145,8 @@ export default function ContactPage() {
                   <div>
                     <p className="font-body text-xs text-bali-dark/50 uppercase tracking-wider mb-0.5">Horaires</p>
                     <p className="font-body text-sm text-bali-dark">
-                      <span className="font-medium">Lun – Vend :</span> 18h – 21h<br />
-                      <span className="font-medium">Sam – Dim :</span> 9h – 21h
+                      <span className="font-medium">Lun – Vend :</span> 9h – 21h<br />
+                      <span className="font-medium">Sam – Dim :</span> 9h – 18h
                     </p>
                   </div>
                 </div>

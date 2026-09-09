@@ -47,11 +47,31 @@ export default function MassageAmincissantPage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un programme ciblé pour votre silhouette</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Redessinez votre silhouette</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>Le Massage Amincissant & Raffermissant est un programme en cures conçu pour travailler en profondeur sur les zones ciblées (ventre, cuisses, bras…) selon vos besoins spécifiques.</p>
-                  <p>Chaque séance de 50 minutes agit directement sur le tissu adipeux, stimule la dégradation des graisses et améliore la tonicité de la peau sur les 2 zones sélectionnées.</p>
-                  <p>Ce programme progressif donne des résultats visibles sur la durée. Les cures sont accompagnées de massages offerts pour maximiser vos résultats.</p>
+                  <p>
+                    Offrez à votre corps une véritable cure de légèreté et de tonicité grâce à ce massage amincissant et raffermissant. Cette technique manuelle associe gestes dynamiques et drainage ciblé pour stimuler la dégradation naturelle des graisses tout en raffermissant la peau et en améliorant son élasticité.
+                  </p>
+                  <p>
+                    Le massage amincissant et raffermissant regroupe plusieurs techniques précises qui agissent en profondeur sur le tissu adipeux sans jamais provoquer de douleur. Les mouvements sont à la fois toniques et respectueux du corps, pour activer la circulation sanguine et lymphatique sans l&apos;irriter.
+                  </p>
+                  <p>
+                    Ce soin favorise ainsi la décongestion des zones de stockage (cuisses, ventre, hanches, bras, etc.), la réduction de l&apos;aspect peau d&apos;orange, et une peau plus lisse, plus ferme et plus tonique.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Des résultats visibles et durables</h3>
+                <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
+                  <p>
+                    Les bienfaits du massage amincissant sont décuplés lorsqu&apos;il est intégré dans une hygiène de vie équilibrée : alimentation saine, activité physique régulière, bonne hydratation. En complément, ce soin contribue à réduire l&apos;inflammation du tissu adipeux, favoriser l&apos;élimination des toxines et raffermir durablement la peau.
+                  </p>
+                  <p>
+                    Résultat : une silhouette plus harmonieuse, une peau plus tonique, et une sensation immédiate de bien-être et de légèreté.
+                  </p>
+                  <p>
+                    Parce que chaque corps est unique, ce massage amincissant et raffermissant est avant tout une expérience sur mesure, alliant efficacité, détente et bienveillance.
+                  </p>
                 </div>
               </Reveal>
 

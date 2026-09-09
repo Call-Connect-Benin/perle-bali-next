@@ -5,39 +5,56 @@ import { FlowerOrnament, SandScatter } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Déontologie – Charte éthique de Perle de Bali",
   description:
-    "Découvrez la charte déontologique de Perle de Bali : confidentialité, respect, hygiène, contre-indications et engagements envers nos clients.",
+    "Découvrez les engagements de Perle de Bali envers vous : confidentialité, respect, non-substitution médicale et contre-indications au massage.",
 };
 
 const engagements = [
   {
-    title: "Respect et bienveillance",
-    content:
-      "Chaque client est accueilli avec respect et bienveillance, sans jugement. La diversité des personnes et de leurs besoins est une richesse que je célèbre.",
+    title: "M'abstenir de tout diagnostic médical",
+    content: "Je ne remplace pas un médecin.",
   },
   {
-    title: "Confidentialité absolue",
-    content:
-      "Tout ce qui est partagé lors d'une séance reste strictement confidentiel. Les informations médicales et personnelles ne sont jamais divulguées à des tiers.",
+    title: "Respecter votre traitement en cours",
+    content: "Aucun conseil médical ou interruption de thérapie ne sera proposé.",
   },
   {
-    title: "Hygiène irréprochable",
-    content:
-      "Les draps et serviettes sont changés entre chaque client. Les mains sont lavées avant chaque séance. L'espace de soin est désinfecté régulièrement.",
+    title: "Vous orienter vers un professionnel de santé",
+    content: "Si vous présentez des symptômes anormaux.",
   },
   {
-    title: "Contre-indications respectées",
-    content:
-      "Certains états de santé contre-indiquent le massage (grossesse à risque, phlébite, infections cutanées, cancer en phase active…). Je refuse un soin si la sécurité du client est en jeu.",
+    title: "Respecter votre intégrité physique et morale",
+    content: "En mettant votre confort au cœur de chaque séance.",
   },
   {
-    title: "Formation continue",
-    content:
-      "Pour offrir les meilleurs soins possibles, je me forme régulièrement aux nouvelles techniques et approfondis mes connaissances en anatomie et physiologie.",
+    title: "Garantir une confidentialité totale",
+    content: "Nos échanges et votre bien-être sont protégés.",
   },
   {
-    title: "Non-substitution médicale",
-    content:
-      "Le massage bien-être n'est pas un acte médical et ne remplace pas un traitement médical. En cas de problème de santé, consultez toujours un médecin.",
+    title: "Demander la présence d'un parent",
+    content: "Pour les séances avec mineurs.",
+  },
+];
+
+const contraIndications = [
+  {
+    title: "Tension artérielle non régulée",
+    content: "Les massages peuvent accentuer une irrégularité.",
+  },
+  {
+    title: "Fièvre, grippe, ou infection",
+    content: "Pour éviter la transmission de la maladie.",
+  },
+  {
+    title: "Problèmes cardiaques ou circulatoires",
+    content: "(hypertension, phlébites, varices importantes) : le massage stimule la circulation sanguine, ce qui pourrait aggraver ces conditions.",
+  },
+  {
+    title: "Diabète",
+    content: "Un massage influant sur la circulation peut modifier l'efficacité de votre traitement.",
+  },
+  {
+    title: "Cancer",
+    content: "Le massage pourrait stimuler involontairement des cellules cancéreuses.",
   },
 ];
 
@@ -55,9 +72,9 @@ export default function DeontologiePage() {
             <span className="text-bali-sand/80">Déontologie</span>
           </nav>
           <p className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold mb-4">Éthique & Valeurs</p>
-          <h1 className="font-display text-5xl md:text-6xl text-white font-light mb-6">Déontologie</h1>
+          <h1 className="font-display text-5xl md:text-6xl text-white font-light mb-6">Votre bien-être<br />en toute confiance</h1>
           <p className="font-body text-bali-sand/75 text-lg max-w-xl mx-auto">
-            Ma charte éthique et mes engagements envers vous.
+            Chez Perle de Bali, votre sérénité et votre sécurité sont ma priorité. Les massages bien-être que je propose sont exclusivement dédiés à la relaxation et à l&apos;épanouissement personnel. Ils ne relèvent ni d&apos;une pratique médicale ni des actes réalisés par des professionnels de santé (ostéopathes, kinésithérapeutes, etc.).
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -71,11 +88,13 @@ export default function DeontologiePage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose max-w-none font-body text-bali-dark/80 mb-12">
             <p className="text-lg leading-relaxed">
-              Chez Perle de Bali, l'éthique professionnelle est au cœur de ma pratique. Cette charte déontologique définit les principes qui guident chacune de mes interventions et ma relation avec vous.
+              Je m&apos;engage à offrir un service respectueux, professionnel et éthique, dans un cadre bienveillant.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+          <h2 className="font-display text-3xl text-bali-deep font-light mb-6">Mes engagements envers vous</h2>
+          <p className="font-body text-bali-dark/70 mb-8">Afin de garantir une expérience de qualité, je m&apos;engage à :</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
             {engagements.map((e) => (
               <div key={e.title} className="bg-bali-white rounded-2xl p-6 border border-bali-sand/20 shadow-sm">
                 <div className="flex items-start gap-3 mb-3">
@@ -89,19 +108,27 @@ export default function DeontologiePage() {
             ))}
           </div>
 
-          <div className="bg-bali-cream-dark rounded-2xl p-8 border border-bali-sand/30">
-            <h2 className="font-display text-3xl text-bali-deep font-light mb-4">Mes certifications</h2>
-            <p className="font-body text-bali-dark/80 leading-relaxed mb-6">
-              Formée à l'école Bali BISA (certifiée TripAdvisor Excellence), titulaire de certifications en massage balinais et Californien, et habilitée à pratiquer la méthode Massage « Pizza » Enfant, je m'engage à maintenir le plus haut niveau de compétence professionnelle.
+          <h2 className="font-display text-3xl text-bali-deep font-light mb-4">Les contre-indications : pourquoi elles sont importantes</h2>
+          <p className="font-body text-bali-dark/70 mb-8">
+            Certaines situations de santé nécessitent une vigilance particulière pour votre sécurité. Voici les principales contre-indications au massage :
+          </p>
+          <div className="space-y-4 mb-8">
+            {contraIndications.map((c) => (
+              <div key={c.title} className="bg-bali-white rounded-2xl p-5 border border-bali-sand/20 shadow-sm">
+                <h3 className="font-display text-lg text-bali-deep font-medium mb-1">{c.title}</h3>
+                <p className="font-body text-sm text-bali-dark/75 leading-relaxed">{c.content}</p>
+              </div>
+            ))}
+          </div>
+          <div className="p-4 bg-bali-gold/8 border-l-4 border-bali-gold rounded-r-xl mb-12">
+            <p className="text-sm font-medium text-bali-dark">
+              ⚠ Dans le doute, demandez l&apos;avis de votre médecin.
             </p>
-            <Link href="/a-propos" className="inline-flex items-center gap-2 text-bali-gold font-body text-sm font-medium hover:underline">
-              En savoir plus sur mon parcours →
-            </Link>
           </div>
 
           <div className="text-center mt-10">
             <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-8 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300">
-              Réserver une séance
+              Réservez pour votre bien-être
             </Link>
           </div>
         </div>

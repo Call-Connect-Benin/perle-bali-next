@@ -11,12 +11,18 @@ export const metadata: Metadata = {
 };
 
 const benefits = [
-  "Relaxation profonde du corps et de l'esprit",
-  "Travail des points d'acupression",
-  "Massage complet tête aux pieds",
-  "Réduction du stress et des tensions",
-  "Amélioration de la circulation sanguine",
-  "Revitalisation de l'énergie corporelle",
+  {
+    title: "Détente profonde",
+    desc: "Un enchaînement de gestes fluides et harmonieux qui permet de relâcher les tensions musculaires et nerveuses, tout en procurant une sensation de calme et de tranquillité.",
+  },
+  {
+    title: "Revitalisation de l'énergie",
+    desc: "En stimulant la circulation de l'énergie vitale, ce massage aide à rétablir l'équilibre entre le corps et l'esprit, vous permettant de retrouver un état de bien-être général.",
+  },
+  {
+    title: "Réduction du stress et de l'anxiété",
+    desc: "Ce soin apaise les tensions accumulées, aide à réduire l'anxiété et vous aide à retrouver votre calme intérieur.",
+  },
 ];
 
 const relatedServices = [
@@ -69,32 +75,35 @@ export default function MassageBaliPage() {
               </Reveal>
 
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Une expérience apaisante</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">L&apos;équilibre parfait entre le corps et l&apos;esprit</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
                   <p>
-                    Le Massage Bali Bien-être est une expérience apaisante qui équilibre votre corps et votre esprit, pour une relaxation totale et un bien-être profond. Inspiré des traditions balinaises ancestrales, ce soin d'une heure vous transporte vers un état de sérénité absolue.
+                    Le massage balinais, l&apos;alliance parfaite entre relaxation et revitalisation du corps et de l&apos;esprit. Né en Indonésie, ce massage puise ses racines dans les traditions chinoise et ayurvédique indienne. À la fois doux et énergique, il est une pratique ancestrale qui agit sur tout le corps, de la tête aux pieds.
                   </p>
                   <p>
-                    Chaque geste est pensé pour libérer vos tensions musculaires tout en travaillant les points d'acupression balinais, favorisant ainsi la circulation de l'énergie dans votre corps. De la tête aux pieds, votre corps est entièrement pris en charge.
+                    Sa particularité réside dans la recherche d&apos;un équilibre harmonieux entre le corps et l&apos;esprit, permettant à l&apos;énergie de circuler librement et sans obstacles.
                   </p>
                   <p>
-                    Ce massage est idéal pour les personnes souhaitant une première expérience balinaise ou celles qui cherchent un moment de détente régulière. Il est adapté à tous les profils et peut être personnalisé selon vos zones de tension prioritaires.
+                    Les bienfaits sont nombreux : détente musculaire, soulagement des douleurs lombaires, et élimination de la fatigue et des tensions. Votre corps se revitalise, votre énergie est boostée, et vous retrouvez un bien-être total. Le stress, l&apos;angoisse et la fatigue disparaissent, laissant place à une sensation de légèreté et de sérénité.
                   </p>
                 </div>
               </Reveal>
 
               <Reveal delay={120}>
-                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Bienfaits du soin</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Ce que vous pouvez attendre de ce massage</h3>
+                <div className="grid grid-cols-1 gap-3">
                   {benefits.map((b) => (
-                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                    <div key={b.title} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
                       <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-bali-gold text-xs">✓</span>
                       </span>
-                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                      <span className="font-body text-sm text-bali-dark/80"><strong className="text-bali-deep">{b.title} :</strong> {b.desc}</span>
                     </div>
                   ))}
                 </div>
+                <p className="font-body text-bali-dark/80 leading-relaxed mt-5">
+                  Mon Massage Bali Bien-être est un véritable voyage sensoriel qui agit en profondeur pour libérer votre esprit des pensées stressantes et vous reconnecter à vous-même. Que ce soit pour une relaxation immédiate ou pour améliorer votre bien-être au quotidien, ce soin vous offrira une expérience inoubliable.
+                </p>
               </Reveal>
 
               <div className="bg-bali-cream-dark rounded-2xl p-6 border border-bali-sand/30">

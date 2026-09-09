@@ -7,8 +7,27 @@ import { ShellOrnament, SandScatter } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Massage Bali Évasion – 90€ / 1h30",
   description:
-    "Massage Bali Évasion à Orly (94) : 1h30 de voyage sensoriel balinais, soin personnalisé selon vos zones à problèmes. 90€.",
+    "Massage Bali Évasion à Orly (94) : voyage sensoriel unique inspiré des traditions balinaises, relaxation totale et revitalisation du corps et de l'esprit. 90€.",
 };
+
+const benefits = [
+  {
+    title: "Détente profonde",
+    desc: "Laissez-vous envahir par une sensation de calme et de bien-être.",
+  },
+  {
+    title: "Revitalisation",
+    desc: "Rééquilibrez vos énergies et retrouvez un corps revitalisé.",
+  },
+  {
+    title: "Réduction des tensions",
+    desc: "Éliminez les douleurs musculaires et les tensions accumulées.",
+  },
+  {
+    title: "Amélioration de la circulation",
+    desc: "Favorise une meilleure circulation sanguine et lymphatique.",
+  },
+];
 
 export default function MassageBaliEvasionPage() {
   return (
@@ -53,22 +72,31 @@ export default function MassageBaliEvasionPage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un voyage sensoriel unique</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Une évasion sensorielle profonde</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>Le Massage Bali Évasion est conçu pour vous offrir une évasion parfaite et un lâcher-prise complet. En 1h30, vous êtes transportée dans l'univers balinais, loin du stress du quotidien.</p>
-                  <p>Ce soin est entièrement personnalisé en fonction de vos zones à problèmes : dos, épaules, région lombaire… Chaque séance est unique et pensée pour vous.</p>
-                  <p>Alliant les techniques du massage traditionnel balinais — relaxantes et énergisantes — avec un travail sur les points d'acupression, ce massage est le choix idéal pour une véritable reconnexion à soi.</p>
+                  <p>
+                    Offrez-vous une parenthèse de sérénité avec le Massage Bali Évasion, une expérience unique qui vous transporte au cœur de Bali. Ce soin, inspiré des traditions ancestrales balinaises, est conçu pour vous offrir une relaxation totale tout en revitalisant votre corps et votre esprit.
+                  </p>
+                  <p>
+                    Le Massage Bali Évasion est un véritable voyage pour vos sens. Grâce à une combinaison de techniques douces et toniques, il agit sur les tensions musculaires, tout en favorisant la circulation de l&apos;énergie. Ce massage, qui s&apos;étend de la tête aux pieds, vous plonge dans un état de relaxation profonde, vous permettant de vous reconnecter à votre être intérieur.
+                  </p>
                 </div>
               </Reveal>
               <Reveal delay={120}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {["1h30 de voyage sensoriel", "Soin personnalisé selon vos besoins", "Travail des points d'acupression", "Massage du visage inclus", "Technique balinaise authentique", "Lâcher-prise garanti"].map((b) => (
-                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
-                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Bienfaits du massage Bali Évasion</h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {benefits.map((b) => (
+                    <div key={b.title} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-bali-gold text-xs">✓</span>
+                      </span>
+                      <span className="font-body text-sm text-bali-dark/80"><strong className="text-bali-deep">{b.title} :</strong> {b.desc}</span>
                     </div>
                   ))}
                 </div>
+                <p className="font-body text-bali-dark/80 leading-relaxed mt-5">
+                  Le Massage Bali Évasion est idéal pour s&apos;évader du stress quotidien. Que vous soyez en quête de relaxation ou de revitalisation, ce soin vous offre une expérience complète, alliant bien-être physique et mental. Chaque geste est adapté à vos besoins pour garantir une expérience sur-mesure.
+                </p>
               </Reveal>
             </div>
             <Reveal delay={160} className="space-y-5">
@@ -79,7 +107,7 @@ export default function MassageBaliEvasionPage() {
                   <span className="font-body text-bali-sand/70 text-sm">/ 1h30</span>
                 </div>
                 <ul className="space-y-2 mb-6">
-                  {["1h30 de massage balinais", "Soin sur les zones à problèmes", "Massage visage & acupression", "Thé offert en fin de séance"].map((f) => (
+                  {["1h30 de voyage sensoriel balinais", "Techniques douces et toniques", "De la tête aux pieds", "Thé offert en fin de séance"].map((f) => (
                     <li key={f} className="flex items-start gap-2 font-body text-sm text-bali-sand/80">
                       <span className="text-bali-gold shrink-0 mt-0.5">✓</span>{f}
                     </li>

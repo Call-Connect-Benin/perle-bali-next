@@ -7,8 +7,35 @@ import { FlowerOrnament, ShellOrnament } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Massage Enfant « Pizza » – 30€ / 30mn",
   description:
-    "Massage Enfant à Orly (94) : la méthode « Pizza » pour favoriser le calme de votre enfant et créer un moment privilégié parent-enfant. 30€.",
+    "Massage Enfant à Orly (94) : le massage « Pizza », un rituel ludique et bienfaisant inspiré des gestes de préparation d'une pizza, pour un moment de partage parent-enfant. 30€.",
 };
+
+const benefits = [
+  {
+    title: "Sécurise et apaise",
+    desc: "Idéal pour favoriser un sommeil profond et réparateur.",
+  },
+  {
+    title: "Réduit le stress",
+    desc: "Apaise les tensions liées à l'école, aux écrans ou aux longues journées.",
+  },
+  {
+    title: "Améliore la concentration",
+    desc: "Stimule un état de calme et de focus, même chez les enfants hyperactifs.",
+  },
+  {
+    title: "Relâchement musculaire",
+    desc: "Soulage les douleurs de croissance et les tensions corporelles.",
+  },
+  {
+    title: "Gestion des émotions",
+    desc: "Aide à diminuer l'agressivité et à mieux gérer les frustrations.",
+  },
+  {
+    title: "Moment de complicité",
+    desc: "Apprenez à masser votre enfant pour un moment de pure complicité.",
+  },
+];
 
 export default function MassageEnfantPage() {
   return (
@@ -53,22 +80,34 @@ export default function MassageEnfantPage() {
                 />
               </Reveal>
               <Reveal delay={80}>
-                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un moment de douceur parent-enfant</h2>
+                <h2 className="font-display text-3xl text-bali-deep font-light mb-5">Un rituel ludique et bienfaisant</h2>
                 <div className="space-y-4 font-body text-bali-dark/80 leading-relaxed">
-                  <p>La méthode Massage « Pizza » est spécialement conçue pour les jeunes enfants. Douce, ludique et apaisante, elle favorise le calme et la détente avant le coucher.</p>
-                  <p>Cette séance unique est aussi un moment privilégié parent-enfant : vous apprenez à masser votre enfant avec les bons gestes, pour pouvoir continuer ce rituel à la maison.</p>
-                  <p>Cette méthode est pratiquée avec une autorisation officielle, garantissant une approche sécurisée et adaptée aux enfants.</p>
+                  <p>
+                    Le massage « PIZZA », spécialement conçu pour les enfants, est bien plus qu&apos;un simple soin : c&apos;est une expérience amusante et apaisante qui leur permet de se détendre tout en s&apos;amusant. Cette méthode ludique, facile à apprendre et à reproduire, est un véritable coup de cœur pour les plus jeunes. Inspiré des gestes simples de la préparation d&apos;une « pizza » (pétrir, étaler, saupoudrer), il rend le massage accessible et agréable pour les enfants.
+                  </p>
+                  <p>
+                    Réalisé dans un cadre rassurant, avec leur doudou ou un objet réconfortant à proximité, ce massage devient un moment de partage précieux entre parents et enfants. En quelques minutes seulement, il transforme le rituel du coucher en un instant de douceur et de complicité, tout en offrant des bienfaits durables pour leur bien-être physique et émotionnel.
+                  </p>
+                  <p>
+                    Que ce soit après une longue journée à l&apos;école, un moment de stress ou simplement pour renforcer le lien parent-enfant, le massage « PIZZA » est l&apos;activité parfaite pour instaurer un climat de sérénité et de confiance.
+                  </p>
                 </div>
               </Reveal>
               <Reveal delay={120}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {["Méthode adaptée aux jeunes enfants", "Favorise le calme et le sommeil", "Moment parent-enfant unique", "Apprenez les gestes à la maison", "Méthode autorisée & certifiée", "Ambiance douce et sécurisante"].map((b) => (
-                    <div key={b} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
-                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5"><span className="text-bali-gold text-xs">✓</span></span>
-                      <span className="font-body text-sm text-bali-dark/80">{b}</span>
+                <h3 className="font-display text-2xl text-bali-deep font-light mb-4">Les avantages du massage enfants</h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {benefits.map((b) => (
+                    <div key={b.title} className="flex items-start gap-3 p-3 bg-bali-white rounded-xl border border-bali-sand/20 card-elevate">
+                      <span className="w-5 h-5 rounded-full bg-bali-gold/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <span className="text-bali-gold text-xs">✓</span>
+                      </span>
+                      <span className="font-body text-sm text-bali-dark/80"><strong className="text-bali-deep">{b.title} :</strong> {b.desc}</span>
                     </div>
                   ))}
                 </div>
+                <p className="font-body text-bali-dark/80 leading-relaxed mt-5">
+                  Avec des techniques simples, douces et amusantes, ce massage crée un rituel de coucher réconfortant et relaxant. Il devient une opportunité précieuse pour renforcer le lien parent-enfant, tout en instaurant un environnement de sérénité et de bien-être.
+                </p>
               </Reveal>
             </div>
             <Reveal delay={160}>
@@ -79,7 +118,7 @@ export default function MassageEnfantPage() {
                   <span className="font-body text-bali-sand/70 text-sm">/ 30mn</span>
                 </div>
                 <ul className="space-y-2 mb-6">
-                  {["30mn de massage doux", "Méthode « Pizza » certifiée", "Moment parent-enfant", "Apprentissage des gestes"].map((f) => (
+                  {["30mn de massage doux", "Méthode « Pizza » ludique", "Moment parent-enfant", "Apprentissage des gestes"].map((f) => (
                     <li key={f} className="flex items-start gap-2 font-body text-sm text-bali-sand/80">
                       <span className="text-bali-gold shrink-0 mt-0.5">✓</span>{f}
                     </li>

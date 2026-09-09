@@ -28,54 +28,66 @@ export default function PolitiqueConfidentialitePage() {
 
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto space-y-10 font-body text-bali-dark/80 leading-relaxed">
+          <p>Bienvenue sur le site de Perle de Bali. La protection de vos données personnelles est d’une grande importance pour nous. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site et utilisez nos services.</p>
+
           <div>
-            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">1. Responsable du traitement</h2>
-            <p>Perle de Bali – Françoise, 8 rue Jean Jaurès, 94310 Orly. E-mail : <a href="mailto:fanfankool94@gmail.com" className="text-bali-gold hover:underline">fanfankool94@gmail.com</a>.</p>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Informations que nous collectons</h2>
+            <p>Nous collectons les types d’informations suivants :</p>
+            <div className="mt-4 space-y-3">
+              <p><strong>Informations personnelles :</strong> lorsque vous réservez un rendez-vous ou remplissez un formulaire, nous pouvons collecter des informations personnelles telles que votre nom, prénom, adresse e-mail, numéro de téléphone, et toute autre information que vous choisissez de fournir.</p>
+              <p><strong>Informations de paiement :</strong> si vous effectuez un paiement en ligne, nous collectons également des données de paiement sécurisées.</p>
+              <p><strong>Informations de navigation :</strong> nous collectons des informations sur votre utilisation de notre site, y compris votre adresse IP, votre type de navigateur, vos pages visitées, et la durée de votre visite.</p>
+            </div>
           </div>
 
           <div>
-            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">2. Données collectées</h2>
-            <p>Nous collectons uniquement les données nécessaires à la prise de rendez-vous et à la prestation de services :</p>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Utilisation de vos informations</h2>
+            <p>Nous utilisons vos informations de la manière suivante :</p>
             <ul className="mt-3 space-y-1 list-disc list-inside">
-              <li>Nom et prénom</li>
-              <li>Adresse e-mail</li>
-              <li>Numéro de téléphone</li>
-              <li>Informations de santé pertinentes (communiquées volontairement lors de la prise de rdv)</li>
+              <li>pour traiter vos réservations et paiements ;</li>
+              <li>pour vous contacter en cas de besoin concernant vos réservations ou nos services ;</li>
+              <li>pour améliorer notre site et nos services en fonction de vos retours ;</li>
+              <li>pour envoyer des newsletters et des offres promotionnelles, si vous avez consenti à les recevoir.</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">3. Finalités du traitement</h2>
-            <p>Vos données sont utilisées pour :</p>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Partage de vos informations</h2>
+            <p>Nous ne vendons ni ne louons vos informations personnelles. Nous pouvons partager vos informations avec :</p>
             <ul className="mt-3 space-y-1 list-disc list-inside">
-              <li>Gérer vos réservations et rendez-vous</li>
-              <li>Vous contacter pour confirmer vos séances</li>
-              <li>Adapter les soins à vos besoins spécifiques</li>
-              <li>Répondre à vos demandes d'information</li>
+              <li><strong>Prestataires de services :</strong> des tiers pour traiter les paiements, envoyer des e-mails, ou effectuer d’autres services en notre nom.</li>
+              <li><strong>Obligations légales :</strong> lorsque cela est requis par la loi ou pour protéger nos droits.</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">4. Conservation des données</h2>
-            <p>Vos données sont conservées pour la durée nécessaire à la réalisation des finalités ci-dessus, et au maximum 3 ans après le dernier contact.</p>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Protection de vos informations</h2>
+            <p>Nous prenons des mesures de sécurité appropriées pour protéger vos informations personnelles contre toute perte, vol ou accès non autorisé. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n’est entièrement sûre.</p>
           </div>
 
           <div>
-            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">5. Vos droits (RGPD)</h2>
-            <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Vos droits</h2>
+            <p>Vous avez le droit de :</p>
             <ul className="mt-3 space-y-1 list-disc list-inside">
-              <li>Droit d'accès à vos données</li>
-              <li>Droit de rectification</li>
-              <li>Droit à l'effacement (« droit à l'oubli »)</li>
-              <li>Droit à la portabilité</li>
-              <li>Droit d'opposition</li>
+              <li>accéder à vos informations personnelles que nous détenons ;</li>
+              <li>demander la correction de vos informations si elles sont inexactes ;</li>
+              <li>demander la suppression de vos informations, sous réserve de certaines exceptions ;</li>
+              <li>vous opposer à l’utilisation de vos données personnelles à des fins de marketing.</li>
             </ul>
-            <p className="mt-3">Pour exercer ces droits : <a href="mailto:fanfankool94@gmail.com" className="text-bali-gold hover:underline">fanfankool94@gmail.com</a>. En cas de litige, vous pouvez saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-bali-gold hover:underline">CNIL</a>.</p>
           </div>
 
           <div>
-            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">6. Cookies</h2>
-            <p>Ce site utilise des cookies techniques essentiels au bon fonctionnement. Aucun cookie publicitaire n'est déposé. <Link href="/cookie-policy" className="text-bali-gold hover:underline">Politique cookies →</Link></p>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Modifications de cette politique de confidentialité</h2>
+            <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle politique sur notre site.</p>
+          </div>
+
+          <div>
+            <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Contact</h2>
+            <p>Si vous avez des questions concernant cette politique de confidentialité ou sur l’utilisation de vos informations, veuillez nous contacter à :</p>
+            <p className="mt-3 font-semibold text-bali-deep">Perle de Bali</p>
+            <p>Adresse : 8 rue Jean Jaurès – 94310 Orly</p>
+            <p>Téléphone : <a href="tel:+33756139596" className="text-bali-gold hover:underline">+33 7 56 13 95 96</a></p>
+            <p>Email : <a href="mailto:fanfankool94@gmail.com" className="text-bali-gold hover:underline">fanfankool94@gmail.com</a></p>
           </div>
 
           <div className="pt-4 border-t border-bali-sand/30">

@@ -8,46 +8,23 @@ export const metadata: Metadata = {
     "Offrez une carte cadeau Perle de Bali : un moment de détente et de bien-être balinais à Orly (94). Le cadeau parfait pour vos proches.",
 };
 
-const giftOptions = [
-  {
-    title: "Massage Bali Bien-être",
-    price: "70€",
-    duration: "1h",
-    href: "/services-massage/massage-bali-bien-etre",
-  },
-  {
-    title: "Massage Bali Évasion",
-    price: "90€",
-    duration: "1h30",
-    href: "/services-massage/massage-bali-evasion",
-  },
-  {
-    title: "Massage Bali Pure Détente",
-    price: "120€",
-    duration: "1h30",
-    href: "/services-massage/massage-bali-pure-detente",
-  },
-  {
-    title: "Massage Deep Tissue",
-    price: "80€",
-    duration: "50mn",
-    href: "/massage-technique-deep-tissue",
-  },
-  {
-    title: "Massage Californien",
-    price: "70€",
-    duration: "50mn",
-    href: "/services-massage/massage-californien",
-  },
-  {
-    title: "Montant libre",
-    price: "Sur mesure",
-    duration: "Selon choix",
-    href: "/contact",
-  },
+const reasons = [
+  { title: "Un massage relaxant", desc: "pour apaiser les tensions." },
+  { title: "Un moment de quiétude", desc: "pour retrouver l'énergie." },
+  { title: "Un cadeau qui touche", desc: "pour un moment précieux." },
 ];
 
-export default function CarteKCadeauPage() {
+const occasions = [
+  { title: "Les fêtes de fin d'année", desc: "un moment zen pour bien commencer l'année." },
+  { title: "La Saint-Valentin", desc: "un geste rempli d'amour et d'attention." },
+  { title: "Anniversaires et célébrations", desc: "pour marquer une journée spéciale." },
+  { title: "Avant un événement important", desc: "une pause pour se préparer en toute sérénité." },
+  { title: "Un remerciement sincère", desc: "pour montrer votre gratitude." },
+  { title: "Simplement pour dire", desc: "« Je t'aime » ou « Tu comptes pour moi »." },
+  { title: "Sans raison particulière", desc: "parfois, les gestes spontanés ont le plus grand impact." },
+];
+
+export default function CarteCadeauPage() {
   return (
     <>
       <section className="bg-bali-deep pt-28 pb-20 px-6 relative overflow-hidden">
@@ -65,11 +42,11 @@ export default function CarteKCadeauPage() {
           </nav>
           <p className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold mb-4">Offrir le bien-être</p>
           <h1 className="font-display text-5xl md:text-6xl text-white font-light mb-6">
-            Carte Cadeau<br />
-            <span className="text-bali-gold">Perle de Bali</span>
+            Offrez le cadeau inestimable<br />
+            <span className="text-bali-gold">du bien-être</span>
           </h1>
           <p className="font-body text-bali-sand/75 text-lg max-w-xl mx-auto">
-            Le cadeau parfait pour offrir un moment de sérénité à une personne que vous aimez.
+            Dans un monde où tout va trop vite, prendre soin de soi est souvent relégué au second plan. Pourtant, le temps pour soi est l&apos;un des plus beaux cadeaux que l&apos;on puisse offrir.
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -80,63 +57,45 @@ export default function CarteKCadeauPage() {
       </section>
 
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl text-bali-deep font-light mb-4">Choisissez votre carte cadeau</h2>
-            <p className="font-body text-bali-dark/70 max-w-xl mx-auto">
-              Contactez-moi pour commander votre carte cadeau. Je vous l'enverrai par e-mail ou vous la remettrai en main propre.
-            </p>
-          </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-body text-bali-dark/80 text-lg leading-relaxed mb-12">
+            Avec ma carte-cadeau, vous offrez bien plus qu&apos;un simple moment de détente, vous offrez une expérience de sérénité, un instant précieux pour se déconnecter du stress quotidien et se recentrer.
+          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-            {giftOptions.map((opt) => (
-              <div
-                key={opt.title}
-                className="pricing-card bg-bali-white rounded-2xl p-6 shadow-sm border border-bali-sand/30 flex flex-col"
-              >
-                <div className="w-full aspect-[3/2] rounded-xl mb-4 flex items-center justify-center relative overflow-hidden"
-                  style={{ background: "linear-gradient(135deg, #7A2C52 0%, #7FA588 100%)" }}>
-                  <div className="text-center text-white">
-                    <p className="font-display text-3xl font-semibold text-bali-gold">{opt.price}</p>
-                    <p className="font-body text-xs text-white/70 mt-1">{opt.duration}</p>
-                  </div>
-                </div>
-                <h3 className="font-display text-xl text-bali-deep font-medium mb-4">{opt.title}</h3>
-                <Link
-                  href="/contact"
-                  className="mt-auto w-full text-center font-body text-sm font-medium py-2.5 px-4 rounded-full border border-bali-gold text-bali-gold hover:bg-bali-gold hover:text-white transition-colors"
-                >
-                  Offrir ce soin
-                </Link>
+          <h2 className="font-display text-3xl text-bali-deep font-light mb-8">Pourquoi choisir une carte-cadeau bien-être ?</h2>
+          <p className="font-body text-bali-dark/70 mb-8">Parce que nous vivons des temps exigeants où chacun mérite une pause :</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-16 text-left">
+            {reasons.map((r) => (
+              <div key={r.title} className="bg-bali-white rounded-xl p-5 shadow-sm border border-bali-sand/20">
+                <p className="font-display text-lg text-bali-deep font-medium mb-1">{r.title}</p>
+                <p className="font-body text-sm text-bali-dark/70">{r.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-bali-deep text-white rounded-2xl p-8 text-center relative overflow-hidden">
+          <h2 className="font-display text-3xl text-bali-deep font-light mb-4">Pour quelles occasions ?</h2>
+          <p className="font-body text-bali-dark/70 mb-8">Ma carte-cadeau s&apos;adapte à toutes les circonstances, grandes ou petites :</p>
+          <ul className="text-left space-y-3 mb-16">
+            {occasions.map((o) => (
+              <li key={o.title} className="font-body text-sm text-bali-dark/80 leading-relaxed">
+                <span className="font-medium text-bali-deep">{o.title} :</span> {o.desc}
+              </li>
+            ))}
+          </ul>
+
+          <div className="bg-bali-deep text-white rounded-2xl p-8 relative overflow-hidden">
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(ellipse at 50% 50%, rgba(127, 165, 136,0.5) 0%, transparent 65%)" }} />
             <div className="relative">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-bali-gold mb-3">Comment ça marche ?</p>
-              <h3 className="font-display text-3xl text-white font-light mb-6">En 3 étapes simples</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                {[
-                  { step: "1", title: "Contactez-moi", desc: "Par téléphone ou e-mail, indiquez le soin souhaité." },
-                  { step: "2", title: "Recevez la carte", desc: "Je vous envoie votre carte cadeau personnalisée." },
-                  { step: "3", title: "Offrez le bonheur", desc: "La personne réserve sa séance à sa convenance." },
-                ].map((s) => (
-                  <div key={s.step} className="text-center">
-                    <div className="w-10 h-10 rounded-full bg-bali-gold text-white font-display text-lg font-semibold flex items-center justify-center mx-auto mb-3">
-                      {s.step}
-                    </div>
-                    <h4 className="font-display text-lg text-white font-medium mb-1">{s.title}</h4>
-                    <p className="font-body text-sm text-bali-sand/70">{s.desc}</p>
-                  </div>
-                ))}
-              </div>
+              <h3 className="font-display text-2xl text-white font-light mb-3">Prêt à offrir un moment unique ?</h3>
+              <p className="font-body text-bali-sand/75 mb-6">
+                Achetez votre carte-cadeau maintenant et redonnez le sourire à vos proches dès à présent. Pour tout conseil, contactez-moi au{" "}
+                <a href="tel:+33756139596" className="text-bali-gold hover:underline">07 56 13 95 96</a>.
+              </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-bali-gold to-bali-rose-deep text-white font-body font-medium px-8 py-3 rounded-full shadow-sm hover:shadow-lg hover:shadow-bali-gold/30 hover:-translate-y-0.5 transition-all duration-300"
               >
-                Commander une carte cadeau
+                Achetez une carte cadeau
               </Link>
             </div>
           </div>

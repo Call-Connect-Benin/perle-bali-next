@@ -13,7 +13,7 @@ const services = [
   {
     title: "Massage Bali Bien-être",
     description:
-      "Une expérience apaisante qui équilibre votre corps et votre esprit, pour une relaxation totale et un bien-être profond. Massage de la tête aux pieds avec travail sur les points d'acupression.",
+      "Plongez dans un univers de relaxation profonde avec ce massage inspiré des techniques balinaises traditionnelles. Idéal pour apaiser les tensions du quotidien et revitaliser votre esprit.",
     price: "70€",
     duration: "1h",
     href: "/services-massage/massage-bali-bien-etre",
@@ -23,7 +23,7 @@ const services = [
   {
     title: "Massage Bali Évasion",
     description:
-      "Laissez-vous emporter par un voyage sensoriel unique, conçu pour vous offrir une évasion parfaite. Soin personnalisé en fonction de vos zones à problèmes.",
+      "Un soin complet qui vous transporte au cœur de Bali. Ce massage combine des gestes fluides et des pressions ciblées pour une détente totale et une évasion sensorielle incomparable.",
     price: "90€",
     duration: "1h30",
     href: "/services-massage/massage-bali-evasion",
@@ -33,7 +33,7 @@ const services = [
   {
     title: "Massage Bali Pure Détente",
     description:
-      "L'expérience premium de Perle de Bali. Précédé du traditionnel bain de pieds balinais aux sels d'Epsom, pour une immersion totale dans la culture du bien-être balinais.",
+      "Ce massage est conçu pour vous offrir une expérience de relaxation ultime. Laissez-vous emporter par des mouvements doux et enveloppants, parfaits pour relâcher les tensions et retrouver votre équilibre intérieur.",
     price: "120€",
     duration: "1h30",
     href: "/services-massage/massage-bali-pure-detente",
@@ -44,7 +44,7 @@ const services = [
   {
     title: "Massage Deep Tissue",
     description:
-      "Massage fortement appuyé pour libérer les tensions profondes. Idéal pour la préparation et la récupération sportive. Utilisation des paumes, poings et coudes.",
+      "Un soin en profondeur pour soulager les douleurs musculaires et éliminer les nœuds. Parfait après une activité sportive ou pour ceux qui recherchent un massage plus intense.",
     price: "80€",
     duration: "50mn",
     href: "/massage-technique-deep-tissue",
@@ -55,7 +55,7 @@ const services = [
   {
     title: "Massage Californien",
     description:
-      "L'art de la détente enveloppante. Pressions légères et longs effleurages pour une profonde relaxation. Le protocole de relaxation par excellence.",
+      "Offrez-vous un moment de pure détente grâce à un massage enveloppant et apaisant qui libère les tensions et réunit le corps et l'esprit dans une harmonie totale.",
     price: "70€",
     duration: "50mn",
     href: "/services-massage/massage-californien",
@@ -65,7 +65,7 @@ const services = [
   {
     title: "Massage Drainage Manuel",
     description:
-      "Technique de drainage superficiel, circulatoire et profond. Améliore la circulation, détoxifie le corps et lutte contre la rétention d'eau.",
+      "Réveillez votre vitalité avec un massage doux qui stimule la circulation, élimine les toxines et procure une agréable sensation de légèreté immédiate.",
     price: "70€",
     duration: "50mn",
     href: "/services-massage/massage-drainage-manuel",
@@ -75,7 +75,7 @@ const services = [
   {
     title: "Massage Chi Nei Tsang",
     description:
-      "Soin holistique qui libère les énergies négatives, lève les blocages et rééquilibre le système digestif. Une profonde transformation intérieure.",
+      "Libérez les tensions profondes et les émotions accumulées grâce à ce massage abdominal inspiré de la médecine chinoise. Un véritable soin d'équilibre intérieur et de bien-être global.",
     price: "70€",
     duration: "50mn",
     href: "/services-massage/massage-chi-nei-tsang",
@@ -85,7 +85,7 @@ const services = [
   {
     title: "Massage Amincissant & Raffermissant",
     description:
-      "Programme de cures (5 ou 10 séances) ciblées sur 2 zones selon vos besoins. Action sur le tissu adipeux pour améliorer la tonicité de la peau.",
+      "Sculptez votre silhouette naturellement grâce à un massage tonique qui stimule la dégradation des graisses, raffermit la peau et redonne énergie et légèreté à votre corps.",
     price: "à partir de 350€",
     duration: "Cure 5 × 50mn",
     href: "/services-massage/massage-amincissant-et-raffermissant",
@@ -96,7 +96,7 @@ const services = [
   {
     title: "Massage Enfant « Pizza »",
     description:
-      "Moment de partage unique entre parents et enfants. Favorise le calme avant le coucher et apprend aux parents à masser leur enfant.",
+      "Parce que les plus jeunes aussi méritent des moments de bien-être, ce massage doux et apaisant est spécialement conçu pour les enfants, afin de les aider à se détendre et à relâcher les tensions.",
     price: "30€",
     duration: "30mn",
     href: "/services-massage/massage-enfant",
@@ -130,7 +130,7 @@ export default function ServicesMassagePage() {
             Soins & Massages
           </h1>
           <p className="font-body text-bali-sand/75 text-lg max-w-xl mx-auto">
-            Découvrez l'ensemble de mes massages, issus des traditions balinaises et adaptés à vos besoins.
+            Inspirés des traditions balinaises, mes soins sont conçus pour répondre à vos besoins spécifiques et vous offrir un moment unique de détente dans un cadre apaisant.
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">

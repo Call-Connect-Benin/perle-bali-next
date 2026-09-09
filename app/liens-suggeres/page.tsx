@@ -5,37 +5,34 @@ import { ShellOrnament, LeafOrnament } from "@/components/Ornaments";
 export const metadata: Metadata = {
   title: "Liens suggérés – Ressources bien-être",
   description:
-    "Liens utiles recommandés par Perle de Bali : ressources bien-être, partenaires, associations et liens vers nos pages services.",
+    "Remerciements et liens vers les écoles, formations et partenaires de Perle de Bali : Zeste Détente, Bali BISA, EIS Paris, Fitness Park Orly.",
 };
 
-const internalLinks = [
-  { label: "Accueil Perle de Bali", href: "/", desc: "Découvrez notre univers de bien-être balinais." },
-  { label: "Nos tarifs", href: "/tarifs", desc: "Tous nos prix et formules de massage." },
-  { label: "À propos de Françoise", href: "/a-propos", desc: "Mon parcours, mes certifications, ma philosophie." },
-  { label: "Tous nos massages", href: "/services-massage", desc: "L'ensemble de nos soins et massages." },
-  { label: "Carnet de voyages", href: "/carnet-de-voyages", desc: "Articles et inspirations autour du bien-être balinais." },
-  { label: "Carte cadeau", href: "/carte-cadeau", desc: "Offrez un soin à quelqu'un que vous aimez." },
-  { label: "Contact & Réservation", href: "/contact", desc: "Prenez rendez-vous facilement." },
-  { label: "Déontologie", href: "/deontologie", desc: "Notre charte éthique et nos engagements." },
-];
-
-const massageLinks = [
-  { label: "Massage Bali Bien-être", href: "/services-massage/massage-bali-bien-etre" },
-  { label: "Massage Bali Évasion", href: "/services-massage/massage-bali-evasion" },
-  { label: "Massage Bali Pure Détente", href: "/services-massage/massage-bali-pure-detente" },
-  { label: "Massage Deep Tissue", href: "/massage-technique-deep-tissue" },
-  { label: "Massage Enfant « Pizza »", href: "/services-massage/massage-enfant" },
-  { label: "Massage Chi Nei Tsang", href: "/services-massage/massage-chi-nei-tsang" },
-  { label: "Massage Californien", href: "/services-massage/massage-californien" },
-  { label: "Massage Drainage Manuel", href: "/services-massage/massage-drainage-manuel" },
-  { label: "Massage Amincissant & Raffermissant", href: "/services-massage/massage-amincissant-et-raffermissant" },
-];
-
-const legalLinks = [
-  { label: "Politique de confidentialité", href: "/politique-de-confidentialite" },
-  { label: "Mentions légales", href: "/mentions-legales" },
-  { label: "Conditions générales d'utilisation", href: "/conditions-generales-dutilisation" },
-  { label: "Cookie Policy", href: "/cookie-policy" },
+const links = [
+  {
+    title: "Zeste Détente – Canada",
+    desc: "Merci à Chrystine ROY pour l'utilisation du massage « pizza ». Formations en ligne disponibles et blog très plaisant sur les massages enfants.",
+    urls: [
+      { label: "Formation en ligne – massage enfant", href: "https://www.zestedetente.com/boutique/formation-en-ligne-massage-enfant" },
+      { label: "Formation en ligne – massage bébé", href: "https://www.zestedetente.com/boutique/formations-en-ligne-massage-bebe/" },
+      { label: "DVD – Le massage des bébés et des enfants", href: "https://www.zestedetente.com/boutique/le-massage-des-bebes-et-des-enfants/" },
+    ],
+  },
+  {
+    title: "Bali BISA – Indonésie",
+    desc: "Bali International Spa Academy. Excellent accueil des étudiants. Merci à Ruma pour sa patience, son professionnalisme et son sourire. En complément du massage balinais, de nombreux massages et autres cours sont dispensés à des personnes venues de plusieurs continents. Qualité des cours nec plus ultra !",
+    urls: [{ label: "Cours en ligne – Bali BISA", href: "https://balibisa.podia.com/" }],
+  },
+  {
+    title: "EIS – École Internationale du Spa, Paris",
+    desc: "Merci pour la qualité des cours dispensés. Nombreux cours à la carte tout au long de l'année. Formation via CPF possible.",
+    urls: [{ label: "École Internationale du Spa", href: "https://ecole-spa-international.com/" }],
+  },
+  {
+    title: "Fitness Park – Orly",
+    desc: "1er partenariat avec le Groupe Fitness Park, Orly (Journée de la Femme 2020). Merci ! Cardio-training, musculation, cours collectifs. Ouvert 7j/7, de 6h00 à 23h00.",
+    urls: [{ label: "Fitness Park Orly", href: "https://www.fitnesspark.fr/club/orly/" }],
+  },
 ];
 
 export default function LiensSuggeresPage() {
@@ -61,53 +58,26 @@ export default function LiensSuggeresPage() {
       </section>
 
       <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto space-y-14">
-          <div>
-            <h2 className="font-display text-3xl text-bali-deep font-light mb-6">Pages principales</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {internalLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="group bg-bali-white rounded-xl p-4 border border-bali-sand/20 hover:border-bali-gold/40 hover:shadow-sm transition-all"
-                >
-                  <p className="font-body font-medium text-bali-deep group-hover:text-bali-gold transition-colors">{l.label}</p>
-                  <p className="font-body text-sm text-bali-dark/60 mt-0.5">{l.desc}</p>
-                </Link>
-              ))}
+        <div className="max-w-3xl mx-auto space-y-10">
+          {links.map((l) => (
+            <div key={l.title} className="bg-bali-white rounded-2xl p-6 border border-bali-sand/20 shadow-sm">
+              <h2 className="font-display text-2xl text-bali-deep font-medium mb-2">{l.title}</h2>
+              <p className="font-body text-sm text-bali-dark/75 leading-relaxed mb-4">{l.desc}</p>
+              <div className="flex flex-col gap-2">
+                {l.urls.map((u) => (
+                  <a
+                    key={u.href}
+                    href={u.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-sm text-bali-gold hover:underline break-all"
+                  >
+                    {u.label} →
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div>
-            <h2 className="font-display text-3xl text-bali-deep font-light mb-6">Nos soins & massages</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {massageLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="font-body text-sm text-bali-dark/80 hover:text-bali-gold transition-colors flex items-center gap-2 p-3 bg-bali-white rounded-xl border border-bali-sand/20 hover:border-bali-gold/30"
-                >
-                  <span className="text-bali-gold text-xs">→</span>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="font-display text-3xl text-bali-deep font-light mb-6">Informations légales</h2>
-            <div className="flex flex-wrap gap-3">
-              {legalLinks.map((l) => (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  className="font-body text-sm text-bali-dark/70 hover:text-bali-gold transition-colors border border-bali-sand/40 px-4 py-2 rounded-full hover:border-bali-gold/40"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>

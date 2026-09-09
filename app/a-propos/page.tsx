@@ -2,19 +2,27 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import Counter from "@/components/Counter";
 import { ShellOrnament, FlowerOrnament } from "@/components/Ornaments";
 
 export const metadata: Metadata = {
   title: "À propos – Françoise, votre masseuse Balinaise",
   description:
-    "Passionnée par Bali et les traditions de bien-être, Françoise vous accueille à Orly pour des massages balinais sur-mesure depuis plus de 6 ans.",
+    "Passionnée par Bali et les traditions de bien-être, Françoise vous accueille à Orly pour des massages balinais sur-mesure depuis plus de 7 ans.",
 };
 
 const qualities = [
-  "Expertise de plus de 6 ans",
+  "Expertise de plus de 7 ans",
   "Soins personnalisés",
   "Ambiance zen et authentique",
   "Clientèle 100 % satisfaite",
+];
+
+const stats = [
+  { value: "5+", label: "d'expériences" },
+  { value: "95%", label: "des soins personnalisés" },
+  { value: "98%", label: "de clients séduits par l'ambiance" },
+  { value: "100%", label: "clients satisfaits" },
 ];
 
 const faqs = [
@@ -26,37 +34,37 @@ const faqs = [
   {
     question: "Dois-je réserver à l'avance ?",
     answer:
-      "La réservation à l'avance est fortement conseillée pour garantir votre créneau. Vous pouvez me contacter par téléphone ou par e-mail pour prendre rendez-vous.",
+      "Oui, je vous recommande vivement de réserver à l'avance, notamment en période de forte affluence. Cela garantit la disponibilité du créneau qui vous convient le mieux.",
   },
   {
     question: "Quels produits utilisez-vous pour les massages ?",
     answer:
-      "J'utilise des huiles naturelles de qualité, sélectionnées pour leurs propriétés relaxantes et nourrissantes, en harmonie avec les traditions balinaises.",
+      "Je privilégie des huiles naturelles et des produits de qualité supérieure. Chaque ingrédient est sélectionné avec soin pour respecter votre peau, favoriser votre bien-être et prolonger les bienfaits du massage.",
   },
   {
     question: "Puis-je personnaliser mon massage ?",
     answer:
-      "Absolument ! Avant chaque séance, nous échangeons sur vos attentes et besoins afin que je puisse adapter chaque geste à votre état physique du moment.",
+      "Bien sûr ! Lors de votre rendez-vous, j'échangerai avec vous pour comprendre vos attentes et adapter les techniques, la pression et les zones ciblées. Chaque massage est conçu pour répondre à vos besoins uniques.",
   },
   {
     question: "Proposez-vous des offres ou abonnements ?",
     answer:
-      "Oui, je propose des cures de 5 ou 10 massages amincissants à tarif préférentiel, avec des massages offerts en bonus. Consultez la page Tarifs pour les détails.",
+      "Oui, je propose une carte de fidélité : 5 massages effectués, le 6ème est offert.",
   },
   {
     question: "Combien de temps dure une séance de massage ?",
     answer:
-      "La durée varie selon le soin choisi : 30 minutes pour le massage enfant, 50 minutes pour les soins spécialisés (Deep Tissue, Californien…), 60 minutes pour le bien-être balinais, et 90 minutes pour les soins Évasion et Pure Détente.",
+      "La durée de mes massages varie : 60 minutes pour un massage Deep Tissue (récupération sportive), 60 minutes pour une relaxation complète, 90 minutes pour une expérience approfondie et immersive.",
   },
   {
     question: "Proposez-vous des massages pour les couples ?",
     answer:
-      "Les massages sont proposés en séances individuelles. N'hésitez pas à me contacter pour discuter de vos besoins spécifiques.",
+      "Oui, les massages en duo sont possibles, 2 solutions : soit je masse les personnes successivement, soit je fais appel à un confrère de confiance pour réaliser un massage en duo dans mon salon. Dans les deux cas, vous partagerez un moment de relaxation unique. N'hésitez pas à me contacter pour plus de détails.",
   },
   {
     question: "Quels sont vos horaires d'ouverture ?",
     answer:
-      "Lundi au vendredi : 18h – 21h. Samedi et dimanche : 9h – 21h.",
+      "Je suis ouverte du lundi au vendredi de 09:00 à 21:00, et le samedi et dimanche de 09:00 à 18:00.",
   },
   {
     question: "Y a-t-il des contre-indications aux massages ?",
@@ -96,6 +104,20 @@ export default function AProposPage() {
           <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-8">
             <path d="M0 40L1440 40L1440 0C1200 25 960 40 720 30C480 20 240 0 0 15L0 40Z" fill="#FDF8F6" />
           </svg>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-14 px-6 bg-bali-cream">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="font-display text-4xl text-bali-deep font-medium mb-1">
+                <Counter value={s.value} />
+              </p>
+              <p className="font-body text-xs text-bali-dark/60 leading-snug">{s.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -121,6 +121,32 @@ const pricingItems = [
     featured: false,
   },
   {
+    title: "Massage Amincissant et Raffermissant",
+    price: "350",
+    duration: "5 x 50mn",
+    features: [
+      "50mn de massage sur 2 zones ciblées, selon les besoins spécifiques.",
+      "Action sur le tissu adipeux, stimule la dégradation des graisses.",
+      "Favorise l'élimination des toxines et améliore la tonicité de la peau.",
+      "+1 massage offert",
+    ],
+    href: "/services-massage/massage-amincissant-et-raffermissant",
+    featured: false,
+  },
+  {
+    title: "Massage Amincissant et Raffermissant",
+    price: "700",
+    duration: "10 x 50mn",
+    features: [
+      "50mn de massage sur 2 zones ciblées, selon les besoins spécifiques.",
+      "Action sur le tissu adipeux, stimule la dégradation des graisses.",
+      "Favorise l'élimination des toxines et améliore la tonicité de la peau.",
+      "+1 massage offert, bonus : 1 massage d'entretien offert jusqu'à 12 mois après la cure.",
+    ],
+    href: "/services-massage/massage-amincissant-et-raffermissant",
+    featured: false,
+  },
+  {
     title: "Massage Bali Pure Détente",
     price: "120",
     duration: "1H30",
@@ -398,7 +424,7 @@ export default function HomePage() {
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-3">
             Réservez votre moment de détente
           </h2>
-          <p className="font-body text-white/80 mb-6">Disponible lundi–vendredi 18h–21h · samedi–dimanche 9h–21h</p>
+          <p className="font-body text-white/80 mb-6">Disponible lundi–vendredi 9h–21h · samedi–dimanche 9h–18h</p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
               href="tel:+33756139596"
@@ -617,7 +643,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="font-body text-xs text-bali-sand/50 uppercase tracking-wider">Horaires</p>
-                  <p className="font-body text-sm text-white">Lun–Vend 18h–21h · Sam–Dim 9h–21h</p>
+                  <p className="font-body text-sm text-white">Lun–Vend 9h–21h · Sam–Dim 9h–18h</p>
                 </div>
               </div>
             </Reveal>
