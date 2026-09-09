@@ -43,7 +43,7 @@ export default function MentionsLegalesPage() {
           <div>
             <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Responsable de la publication</h2>
             <p><strong>Nom :</strong> Françoise NGUYEN TRUNG</p>
-            <p><strong>Email :</strong> <a href="mailto:fanfankool@gmail.com" className="text-bali-gold hover:underline">fanfankool@gmail.com</a></p>
+            <p><strong>Email :</strong> <a href="mailto:perledebali@gmail.com" className="text-bali-gold hover:underline">perledebali@gmail.com</a></p>
             <p><strong>Téléphone :</strong> <a href="tel:+33756139596" className="text-bali-gold hover:underline">07 56 13 95 96</a></p>
             <p><strong>Ville du tribunal de compétence en cas de litige :</strong> Créteil</p>
           </div>
@@ -52,7 +52,7 @@ export default function MentionsLegalesPage() {
             <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Webmaster</h2>
             <p><strong>Nom :</strong> Françoise NGUYEN TRUNG</p>
             <p><strong>Adresse :</strong> 8 rue Jean Jaurès, 94310 Orly, France</p>
-            <p><strong>Email :</strong> <a href="mailto:fanfankool@gmail.com" className="text-bali-gold hover:underline">fanfankool@gmail.com</a></p>
+            <p><strong>Email :</strong> <a href="mailto:perledebali@gmail.com" className="text-bali-gold hover:underline">perledebali@gmail.com</a></p>
             <p><strong>Téléphone :</strong> <a href="tel:+33756139596" className="text-bali-gold hover:underline">07 56 13 95 96</a></p>
           </div>
 

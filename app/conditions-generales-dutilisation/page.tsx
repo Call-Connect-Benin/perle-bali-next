@@ -74,7 +74,7 @@ export default function CGUPage() {
 
           <div>
             <h2 className="font-display text-2xl text-bali-deep font-medium mb-4">Contact</h2>
-            <p>Pour toute question relative aux présentes CGU, vous pouvez me contacter par e-mail à <a href="mailto:fanfankool94@gmail.com" className="text-bali-gold hover:underline">fanfankool94@gmail.com</a> ou par téléphone au <a href="tel:+33756139596" className="text-bali-gold hover:underline">+33 7 56 13 95 96</a>.</p>
+            <p>Pour toute question relative aux présentes CGU, vous pouvez me contacter par e-mail à <a href="mailto:perledebali@gmail.com" className="text-bali-gold hover:underline">perledebali@gmail.com</a> ou par téléphone au <a href="tel:+33756139596" className="text-bali-gold hover:underline">+33 7 56 13 95 96</a>.</p>
           </div>
 
           <div className="pt-4 border-t border-bali-sand/30">

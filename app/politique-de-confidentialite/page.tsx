@@ -87,7 +87,7 @@ export default function PolitiqueConfidentialitePage() {
             <p className="mt-3 font-semibold text-bali-deep">Perle de Bali</p>
             <p>Adresse : 8 rue Jean Jaurès – 94310 Orly</p>
             <p>Téléphone : <a href="tel:+33756139596" className="text-bali-gold hover:underline">+33 7 56 13 95 96</a></p>
-            <p>Email : <a href="mailto:fanfankool94@gmail.com" className="text-bali-gold hover:underline">fanfankool94@gmail.com</a></p>
+            <p>Email : <a href="mailto:perledebali@gmail.com" className="text-bali-gold hover:underline">perledebali@gmail.com</a></p>
           </div>
 
           <div className="pt-4 border-t border-bali-sand/30">
