@@ -28,7 +28,7 @@ const articles = [
     readTime: "2 min",
     href: "/carnet-de-voyages/journee-de-la-femme-2020",
     category: "Bien-être",
-    image: "/images/blog/journee-femme.webp",
+    image: "/images/blog/journee-femme.jpg",
   },
   {
     title: "Le massage à travers le temps",
@@ -38,7 +38,7 @@ const articles = [
     readTime: "7 min",
     href: "/carnet-de-voyages/le-massage-a-travers-le-temps",
     category: "Histoire",
-    image: "/images/blog/histoire-massage.webp",
+    image: "/images/blog/histoire-massage.jpg",
   },
 ];
 

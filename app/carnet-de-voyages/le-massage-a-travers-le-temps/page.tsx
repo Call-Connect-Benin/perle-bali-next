@@ -35,7 +35,7 @@ export default function MassageTraversLeTempPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10 relative">
-            <Image src="/images/blog/histoire-massage.webp" alt="Le massage à travers le temps" fill className="object-cover" />
+            <Image src="/images/blog/histoire-massage.jpg" alt="Le massage à travers le temps" fill className="object-cover" />
           </div>
 
           <div className="space-y-6 font-body text-bali-dark/80 leading-relaxed">

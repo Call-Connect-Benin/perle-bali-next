@@ -35,7 +35,7 @@ export default function JourneeDesFemmesPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="w-full aspect-video rounded-2xl overflow-hidden mb-10 relative">
-            <Image src="/images/blog/journee-femme.webp" alt="Journée de la Femme 2020" fill className="object-cover" />
+            <Image src="/images/blog/journee-femme.jpg" alt="Journée de la Femme 2020" fill className="object-cover" />
           </div>
 
           <div className="space-y-6 font-body text-bali-dark/80 leading-relaxed">
