@@ -28,6 +28,11 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  useEffect(() => {
+    setDropdownOpen(false);
+    setMobileOpen(false);
+  }, [pathname]);
+
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
     return pathname === href || pathname.startsWith(href + "/");
@@ -95,34 +100,33 @@ export default function Header() {
                 </svg>
               </button>
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[30rem] pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-64 pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   dropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-1.5 pointer-events-none"
                 }`}
               >
-                <div className="rounded-2xl border border-bali-gold/20 bg-bali-deep/98 backdrop-blur-md p-3 shadow-2xl">
-                  <ul className="grid grid-cols-2 gap-1">
-                    {services.map((s) => (
-                      <li key={s.href}>
-                        <Link
-                          href={s.href}
-                          className="block rounded-lg px-3 py-2.5 text-xs tracking-wide uppercase text-bali-sand/80 hover:bg-bali-gold/10 hover:text-bali-gold transition-colors"
-                          onClick={() => setDropdownOpen(false)}
-                        >
-                          {s.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="border-t border-white/10 mt-2 pt-2">
+                <ul className="rounded-2xl border border-bali-gold/20 bg-bali-deep/98 backdrop-blur-md py-2 shadow-2xl">
+                  {services.map((s) => (
+                    <li key={s.href}>
+                      <Link
+                        href={s.href}
+                        className="block px-5 py-2.5 text-xs tracking-wide uppercase text-bali-sand/80 hover:bg-bali-gold/10 hover:text-bali-gold transition-colors"
+                        onClick={() => setDropdownOpen(false)}
+                      >
+                        {s.label}
+                      </Link>
+                    </li>
+                  ))}
+                  <li className="border-t border-white/10 mx-4 my-1" />
+                  <li>
                     <Link
                       href="/services-massage"
-                      className="block rounded-lg px-3 py-2.5 text-xs tracking-wide uppercase font-medium text-bali-gold hover:bg-bali-gold/10 transition-colors"
+                      className="block px-5 py-2.5 text-xs tracking-wide uppercase font-medium text-bali-gold hover:bg-bali-gold/10 transition-colors"
                       onClick={() => setDropdownOpen(false)}
                     >
                       Voir tous les soins →
                     </Link>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
 
