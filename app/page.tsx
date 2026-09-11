@@ -261,6 +261,15 @@ export default function HomePage() {
                 Découvrir les soins
               </Link>
             </div>
+            <div
+              className="mt-6 flex items-center justify-center lg:justify-start gap-2.5 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "440ms" }}
+            >
+              <StarRating />
+              <span className="font-body text-sm text-bali-sand/75">
+                <span className="text-white font-medium">18 avis</span> sur Google
+              </span>
+            </div>
           </div>
 
           {/* Photo showcase, framed rather than as a full-bleed background */}

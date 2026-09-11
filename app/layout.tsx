@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import MobileBookingBar from "@/components/MobileBookingBar";
 
 // Mêmes polices que l'ancien site WordPress : Calligraffitti pour les titres
 // (h1-h6 sur perle-bali.fr), Imprima pour le corps de texte.
@@ -80,7 +81,7 @@ export default function RootLayout({
       lang="fr"
       className={`${calligraffitti.variable} ${imprima.variable} ${cormorant.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-bali-cream text-bali-dark">
+      <body className="min-h-screen flex flex-col bg-bali-cream text-bali-dark pb-20 lg:pb-0">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -120,6 +121,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <CookieConsent />
+        <MobileBookingBar />
       </body>
     </html>
   );
