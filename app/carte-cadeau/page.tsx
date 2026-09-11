@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SandScatter, ShellOrnament } from "@/components/Ornaments";
 
@@ -58,6 +59,14 @@ export default function CarteCadeauPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
+          <div className="relative w-full max-w-md mx-auto aspect-[4/3] rounded-2xl overflow-hidden shadow-lg mb-12">
+            <Image
+              src="/images/carte-cadeau/carte-cadeau-visuel.jpg"
+              alt="Carte cadeau Perle de Bali, pour un massage balinais"
+              fill
+              className="object-cover"
+            />
+          </div>
           <p className="font-body text-bali-dark/80 text-lg leading-relaxed mb-12">
             Avec ma carte-cadeau, vous offrez bien plus qu&apos;un simple moment de détente, vous offrez une expérience de sérénité, un instant précieux pour se déconnecter du stress quotidien et se recentrer.
           </p>
