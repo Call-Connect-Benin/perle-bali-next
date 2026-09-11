@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,11 +27,30 @@ export default function Header() {
   const pathname = usePathname() ?? "";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setDropdownOpen(false);
     setMobileOpen(false);
   }, [pathname]);
+
+  // Belt-and-suspenders: close on any click/tap outside the dropdown,
+  // regardless of hover state — covers touch devices and any case where
+  // mouseleave doesn't fire before a navigation.
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    function handlePointerDown(e: MouseEvent | TouchEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+    };
+  }, [dropdownOpen]);
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
@@ -84,6 +103,7 @@ export default function Header() {
 
             {/* Services dropdown */}
             <div
+              ref={dropdownRef}
               className="relative"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
